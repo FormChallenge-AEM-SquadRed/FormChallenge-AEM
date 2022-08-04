@@ -14,8 +14,6 @@
  ~ limitations under the License.
  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-.page {
-  max-width: 1024px;
+ .page {
   margin: 0 auto;
-  padding: 12px;
 }

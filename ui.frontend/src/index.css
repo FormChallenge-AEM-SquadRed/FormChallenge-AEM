@@ -28,16 +28,26 @@ body {
 
 body {
   background-color: #ffffff;
+  padding: 0 !important;
 }
+
 
 h1,
 h2,
 h3,
 h4,
 h5,
-p,
+p{
+  margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
 .nav-container,
-.rw-box {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
-  color: #000000;
+.rw-box{
+  font-family: 'Nunito', sans-serif;
+	user-select: none;
+  color:#000000;
 }
