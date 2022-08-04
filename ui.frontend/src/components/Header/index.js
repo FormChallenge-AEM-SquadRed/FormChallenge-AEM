@@ -10,14 +10,15 @@ import { TabsContext } from "../../contexts/TabsProvider";
 
 const options = ["First", "Second", "Third", "Success"];
 
-const Header = () => {
+const Header = (textTitle, text) => {
   const [selectedTab] = useContext(TabsContext);
   return (
     <ContainerHeader>
-      <SmallTitleHeader>Forms</SmallTitleHeader>
-      <BigestTitleHeader>{options[selectedTab]} Tab</BigestTitleHeader>
+      <SmallTitleHeader>{textTitle ? textTitle : "Forms"}</SmallTitleHeader>
+      <BigestTitleHeader>{text ? text : options[selectedTab] + " Tab"}</BigestTitleHeader>
     </ContainerHeader>
   );
 };
 
 export default MapTo("reactapp/components/header")(Header);
+
