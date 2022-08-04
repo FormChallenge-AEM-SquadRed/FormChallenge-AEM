@@ -10,7 +10,7 @@ import { TabsContext } from "../../contexts/TabsProvider";
 
 const options = ["First", "Second", "Third", "Success"];
 
-const Header = (textTitle, text) => {
+const Header = ({textTitle, text}) => {
   const [selectedTab] = useContext(TabsContext);
   return (
     <ContainerHeader>
