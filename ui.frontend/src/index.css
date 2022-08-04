@@ -15,39 +15,39 @@
  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 /* Global styles */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@600;700&family=Nunito&display=swap");
 
 html,
 body {
-  border: 0;
-  font: inherit;
-  font-size: 100%;
-  margin: 0;
-  padding: 0;
-  vertical-align: baseline;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
 }
 
 body {
-  background-color: #ffffff;
-  padding: 0 !important;
+    background-color: #ffffff;
+    padding: 0 !important;
 }
-
 
 h1,
 h2,
 h3,
 h4,
 h5,
-p{
-  margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+p {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
 .nav-container,
-.rw-box{
-  font-family: 'Nunito', sans-serif;
-	user-select: none;
-  color:#000000;
+.rw-box {
+    font-family: "Nunito", sans-serif;
+    user-select: none;
+    color: #000000;
 }
