@@ -21,6 +21,7 @@ import "./ExperienceFragment/ExperienceFragment";
 import "./XxXxx";
 import "./CardComponent";
 import MeuComponente from "./MeuComponente";
+import "./Header";
 
 import { MapTo } from "@adobe/aem-react-editable-components";
 
@@ -118,9 +119,3 @@ const TextEditConfig = {
 
 MapTo("reactapp/components/text")(LazyTextComponent, TextEditConfig);
 
-const authorAcessibility = { isEmpty: (props) => !props.any };
-
-MapTo("reactapp/components/meu-componente")(MeuComponente, {
-  emptyLabel: "Meu Componente",
-  authorAcessibility,
-});
