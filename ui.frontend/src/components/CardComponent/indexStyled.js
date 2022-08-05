@@ -8,9 +8,10 @@ export const Card = styled.div`
     margin: 0px;
     padding: 0px;
 
-    @media (max-width: 1210px) {
+  @media (max-width: 1210px) {
+    display: flex;
     width: 100vw;
-    height: 800px;        
+    height: 80vh;        
     border-radius: 0px;
   }
 `;
