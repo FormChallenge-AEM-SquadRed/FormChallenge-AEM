@@ -21,6 +21,6 @@ export const Container = styled.div`
   align-items: center;
   margin-bottom: 10rem;
   @media (max-width: 768px) {
-    margin-bottom: 10rem;
+    margin-bottom: 0rem;
   }
 `;
