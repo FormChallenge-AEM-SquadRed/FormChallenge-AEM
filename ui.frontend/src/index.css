@@ -17,6 +17,9 @@
 /* Global styles */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@600;700&family=Nunito&display=swap");
 
+* {
+    box-sizing: border-box; 
+}
 html {       
     font-size: 62.5%; 
     }
@@ -34,7 +37,6 @@ body {
     background-color: #e5e5e5;
     padding: 0 !important;
     font-size: 1.6rem;
-    box-sizing: border-box;
 }
 
 h1,
