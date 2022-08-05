@@ -10,12 +10,12 @@ import { TabsContext } from "../../contexts/TabsProvider";
 
 const options = ["First", "Second", "Third", "Success"];
 
-const Header = ({textTitle, text}) => {
+const Header = ({containerColor, textTitle, colorTitle, text, colorText}) => {
   const [selectedTab] = useContext(TabsContext);
   return (
-    <ContainerHeader>
-      <SmallTitleHeader>{textTitle ? textTitle : "Forms"}</SmallTitleHeader>
-      <BigestTitleHeader>{text ? text : options[selectedTab] + " Tab"}</BigestTitleHeader>
+    <ContainerHeader containerColor={containerColor}>
+      <SmallTitleHeader colorText={colorText}>{text ? text : "Forms"}</SmallTitleHeader>
+      <BigestTitleHeader colorTitle={colorTitle}>{textTitle ? textTitle : options[selectedTab] + " Tab"}</BigestTitleHeader>
     </ContainerHeader>
   );
 };
