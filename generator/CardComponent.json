@@ -8,8 +8,8 @@
     "model-interface-pkg": "com.reactapp.core.models",
     "model-impl-pkg": "com.reactapp.core.models.impl"
   },
-  "name": "meu-componente",
-  "title": "Meu Componente",
+  "name": "card-component",
+  "title": "Card Component",
   "group": "React App - Content",
   "type": "components",
   "options": {
@@ -29,11 +29,11 @@
     "generic-javadoc": false,
     "properties": [
       {
-        "field": "text",
-        "label": "Digite um texto aqui por favor.",
+        "field": "color",
+        "label": "Escolha uma cor para o card.",
         "type": "textfield",
         "json-expose": true,
-        "json-property": "text"
+        "json-property": "color"
       }
     ]
   }
