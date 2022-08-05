@@ -31,9 +31,10 @@ body {
 }
 
 body {
-    background-color: #ffffff;
+    background-color: #e5e5e5;
     padding: 0 !important;
     font-size: 1.6rem;
+    box-sizing: border-box;
 }
 
 h1,
