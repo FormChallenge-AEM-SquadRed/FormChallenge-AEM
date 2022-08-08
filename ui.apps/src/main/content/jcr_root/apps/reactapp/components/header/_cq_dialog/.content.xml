@@ -33,16 +33,31 @@
          <column jcr:primaryType="nt:unstructured"
                  sling:resourceType="granite/ui/components/coral/foundation/container">
             <items jcr:primaryType="nt:unstructured">
-               <textTitle cq-msm-lockable="./textTitle"
-                          fieldLabel="Digite um texto aqui por favor."
-                          jcr:primaryType="nt:unstructured"
-                          name="./textTitle"
-                          sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+               <containerColor cq-msm-lockable="./containerColor"
+                               fieldLabel="Choose header background color"
+                               jcr:primaryType="nt:unstructured"
+                               name="./containerColor"
+                               sling:resourceType="granite/ui/components/coral/foundation/form/colorfield"/>
                <text cq-msm-lockable="./text"
-                     fieldLabel="Digite um texto aqui por favor."
+                     fieldLabel="Type a text here please"
                      jcr:primaryType="nt:unstructured"
                      name="./text"
                      sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+               <colorText cq-msm-lockable="./colorText"
+                          fieldLabel="Choose title color please"
+                          jcr:primaryType="nt:unstructured"
+                          name="./colorText"
+                          sling:resourceType="granite/ui/components/coral/foundation/form/colorfield"/>
+               <textTitle cq-msm-lockable="./textTitle"
+                          fieldLabel="Type a title here please"
+                          jcr:primaryType="nt:unstructured"
+                          name="./textTitle"
+                          sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+               <colorTitle cq-msm-lockable="./colorTitle"
+                           fieldLabel="Choose title color please"
+                           jcr:primaryType="nt:unstructured"
+                           name="./colorTitle"
+                           sling:resourceType="granite/ui/components/coral/foundation/form/colorfield"/>
             </items>
          </column>
       </items>

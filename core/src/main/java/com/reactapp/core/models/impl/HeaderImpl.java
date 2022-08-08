@@ -42,11 +42,35 @@ public class HeaderImpl
 {
 
     @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
-    private String textTitle;
+    private String containerColor;
     @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
     private String text;
+    @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
+    private String colorText;
+    @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
+    private String textTitle;
+    @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
+    private String colorTitle;
     @SlingObject
     private Resource resource;
+
+    @Override
+    @JsonProperty("containerColor")
+    public String getContainerColor() {
+        return containerColor;
+    }
+
+    @Override
+    @JsonProperty("text")
+    public String getText() {
+        return text;
+    }
+
+    @Override
+    @JsonProperty("colorText")
+    public String getColorText() {
+        return colorText;
+    }
 
     @Override
     @JsonProperty("textTitle")
@@ -55,9 +79,9 @@ public class HeaderImpl
     }
 
     @Override
-    @JsonProperty("text")
-    public String getText() {
-        return text;
+    @JsonProperty("colorTitle")
+    public String getColorTitle() {
+        return colorTitle;
     }
 
     @Override
