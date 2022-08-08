@@ -1,0 +1,149 @@
+{
+  "project-settings": {
+    "code-owner": "React App",
+    "bundle-path": "../core/src/main/java",
+    "test-path": "../core/src/test/java",
+    "apps-path": "../ui.apps/src/main/content/jcr_root/apps",
+    "component-path": "reactapp",
+    "model-interface-pkg": "com.reactapp.core.models",
+    "model-impl-pkg": "com.reactapp.core.models.impl"
+  },
+  "name": "multifield-tabs",
+  "title": "Multifield Tabs",
+  "group": "React App - Content",
+  "type": "components",
+  "options": {
+    "js": false,
+    "jstxt": false,
+    "css": false,
+    "csstxt": false,
+    "html": false,
+    "html-content": false,
+    "slingmodel": true,
+    "testclass": false,
+    "junit-major-version": 5,
+    "content-exporter": true,
+    "model-adaptables": ["request"],
+    "generic-javadoc": false,
+    "properties-tabs": [
+      {
+        "id": "basic",
+        "label": "Multifield Basic",
+        "fields": ["multifieldBasic"]
+      },
+      {
+        "id": "sucess",
+        "label": "Multifield Sucess",
+        "fields": ["multifieldSucess"]
+      },
+      {
+        "id": "social",
+        "label": "Multifield Social",
+        "fields": ["multifieldsocial"]
+      },
+      {
+        "id": "certificates",
+        "label": "Multifield Certificates",
+        "fields": ["multifieldcertificates"]
+      }
+    ],
+    "properties": [
+      {
+        "field": "basic",
+        "type": "multifield",
+        "label": "Simples",
+        "model-name": "basicModel",
+        "use-existing-model": false,
+        "json-expose": true,
+        "items": [
+          {
+            "field": "inputtextbasic",
+            "type": "textfield",
+            "label": "Digite o texto:",
+            "json-expose": true,
+            "json-property": "inputtextbasic"
+          },
+          {
+            "field": "buttonlabelbasic",
+            "type": "textfield",
+            "label": "Digite a label:",
+            "json-expose": true,
+            "json-property": "buttonlabelbasic"
+          }
+        ]
+      },
+      {
+        "field": "sucess",
+        "type": "multifield",
+        "label": "Composto",
+        "model-name": "sucessModel",
+        "use-existing-model": false,
+        "json-expose": true,
+        "items": [
+          {
+            "field": "inputtextsucess",
+            "type": "textfield",
+            "label": "Digite o texto:",
+            "json-expose": true,
+            "json-property": "inputtextsucess"
+          },
+          {
+            "field": "buttonlabelsucess",
+            "type": "textfield",
+            "label": "Digite a label:",
+            "json-expose": true,
+            "json-property": "buttonlabelsucess"
+          }
+        ]
+      },
+      {
+        "field": "social",
+        "type": "multifield",
+        "label": "Composto",
+        "model-name": "socialModel",
+        "use-existing-model": false,
+        "json-expose": true,
+        "items": [
+          {
+            "field": "inputtextsocial",
+            "type": "textfield",
+            "label": "Digite o texto:",
+            "json-expose": true,
+            "json-property": "inputtextsocial"
+          },
+          {
+            "field": "buttonlabelsocial",
+            "type": "textfield",
+            "label": "Digite a label:",
+            "json-expose": true,
+            "json-property": "buttonlabelsocial"
+          }
+        ]
+      },
+      {
+        "field": "certificates",
+        "type": "multifield",
+        "label": "Composto",
+        "model-name": "certificatesModel",
+        "use-existing-model": false,
+        "json-expose": true,
+        "items": [
+          {
+            "field": "inputtextcertificates",
+            "type": "textfield",
+            "label": "Digite o texto:",
+            "json-expose": true,
+            "json-property": "inputtextcertificates"
+          },
+          {
+            "field": "buttonlabelcertificates",
+            "type": "textfield",
+            "label": "Digite a label:",
+            "json-expose": true,
+            "json-property": "buttonlabelcertificates"
+          }
+        ]
+      }
+    ]
+  }
+}
