@@ -18,9 +18,7 @@ import withAsyncImport from "../utils/withAsyncImport";
 import "./Page/Page";
 import "./Container/Container";
 import "./ExperienceFragment/ExperienceFragment";
-import "./XxXxx";
 import "./CardComponent";
-import MeuComponente from "./MeuComponente";
 import "./Header";
 import "./Birthday";
 
