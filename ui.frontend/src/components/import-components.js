@@ -22,6 +22,7 @@ import "./XxXxx";
 import "./CardComponent";
 import MeuComponente from "./MeuComponente";
 import "./Header";
+import "./TabsComponent";
 
 import { MapTo } from "@adobe/aem-react-editable-components";
 

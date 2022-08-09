@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ |  ***********************************************************************
+ |  React App CONFIDENTIAL
+ |  ___________________
+ |
+ |  Copyright 2022 React App
+ |  All Rights Reserved.
+ |
+ |  NOTICE:  All information contained herein is, and remains the property
+ |  of React App and its suppliers, if any. The intellectual and
+ |  technical concepts contained herein are proprietary to React App
+ |  and its suppliers and are protected by trade secret or copyright law.
+ |  Dissemination of this information or reproduction of this material
+ |  is strictly forbidden unless prior written permission is obtained
+ |  from React App.
+ |  ***********************************************************************
+-->
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          jcr:primaryType="nt:unstructured"
+          jcr:title="Multifield Tabs"
+          sling:resourceType="cq/gui/components/authoring/dialog">
+   <content jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/container">
+      <items jcr:primaryType="nt:unstructured">
+         <tabs jcr:primaryType="nt:unstructured"
+               sling:resourceType="granite/ui/components/coral/foundation/tabs">
+            <items jcr:primaryType="nt:unstructured">
+               <tab-1 jcr:primaryType="nt:unstructured"
+                      jcr:title="Multifield Basic"
+                      sling:resourceType="granite/ui/components/coral/foundation/container">
+                  <layout jcr:primaryType="nt:unstructured"
+                          sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"/>
+                  <items jcr:primaryType="nt:unstructured">
+                     <column jcr:primaryType="nt:unstructured"
+                             sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                           <basic composite="{Boolean}true"
+                                  fieldLabel="basic"
+                                  jcr:primaryType="nt:unstructured"
+                                  sling:resourceType="granite/ui/components/coral/foundation/form/multifield">
+                              <field cq-msm-lockable="./basic"
+                                     jcr:primaryType="nt:unstructured"
+                                     name="./basic"
+                                     sling:resourceType="granite/ui/components/foundation/form/fieldset">
+                                 <items jcr:primaryType="nt:unstructured">
+                                    <titletext fieldLabel="Digite o texto do titulo:"
+                                               jcr:primaryType="nt:unstructured"
+                                               name="./titletext"
+                                               sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                                    <titlecolor fieldLabel="Escolha a cor do titulo: "
+                                                jcr:primaryType="nt:unstructured"
+                                                name="./titlecolor"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                                    <labeltextbasic fieldLabel="Digite o texto da label:"
+                                                    jcr:primaryType="nt:unstructured"
+                                                    name="./labeltextbasic"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                                    <labelcolorbasic fieldLabel="Escolha a cor da label:"
+                                                     jcr:primaryType="nt:unstructured"
+                                                     name="./labelcolorbasic"
+                                                     sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                                    <placeholdertextbasic fieldLabel="Digite o texto do plaholder:"
+                                                          jcr:primaryType="nt:unstructured"
+                                                          name="./placeholdertextbasic"
+                                                          sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                                    <placeholdercolorbasic fieldLabel="Escolha a cor do placeholder:"
+                                                           jcr:primaryType="nt:unstructured"
+                                                           name="./placeholdercolorbasic"
+                                                           sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                                    <inputbackgroundcolorbasic fieldLabel="Escolha o background do input:"
+                                                               jcr:primaryType="nt:unstructured"
+                                                               name="./inputbackgroundcolorbasic"
+                                                               sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                                    <checkboxtext fieldLabel="Digite o texto do checkbox:"
+                                                  jcr:primaryType="nt:unstructured"
+                                                  name="./checkboxtext"
+                                                  sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                                    <checkboxcolor fieldLabel="Escolha a cor do checkbox:"
+                                                   jcr:primaryType="nt:unstructured"
+                                                   name="./checkboxcolor"
+                                                   sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                                    <buttonlabelbasic fieldLabel="Digite a label do botão:"
+                                                      jcr:primaryType="nt:unstructured"
+                                                      name="./buttonlabelbasic"
+                                                      sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                                    <buttonlabelcolorbasic fieldLabel="Escolha a cor da label do botão: "
+                                                           jcr:primaryType="nt:unstructured"
+                                                           name="./buttonlabelcolorbasic"
+                                                           sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                                    <buttonbackgroundcolorbasic fieldLabel="Escolha o background do input:"
+                                                                jcr:primaryType="nt:unstructured"
+                                                                name="./buttonbackgroundcolorbasic"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                                 </items>
+                              </field>
+                           </basic>
+                        </items>
+                     </column>
+                  </items>
+               </tab-1>
+               <tab-2 jcr:primaryType="nt:unstructured"
+                      jcr:title="Multifield Social"
+                      sling:resourceType="granite/ui/components/coral/foundation/container">
+                  <layout jcr:primaryType="nt:unstructured"
+                          sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"/>
+                  <items jcr:primaryType="nt:unstructured">
+                     <column jcr:primaryType="nt:unstructured"
+                             sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                           <social composite="{Boolean}true"
+                                   fieldLabel="social"
+                                   jcr:primaryType="nt:unstructured"
+                                   sling:resourceType="granite/ui/components/coral/foundation/form/multifield">
+                              <field cq-msm-lockable="./social"
+                                     jcr:primaryType="nt:unstructured"
+                                     name="./social"
+                                     sling:resourceType="granite/ui/components/foundation/form/fieldset">
+                                 <items jcr:primaryType="nt:unstructured">
+                                    <titletext fieldLabel="Digite o texto do titulo:"
+                                               jcr:primaryType="nt:unstructured"
+                                               name="./titletext"
+                                               sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                                    <titlecolor fieldLabel="Escolha a cor do titulo: "
+                                                jcr:primaryType="nt:unstructured"
+                                                name="./titlecolor"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                                    <labeltextsocial fieldLabel="Digite o texto da label:"
+                                                     jcr:primaryType="nt:unstructured"
+                                                     name="./labeltextsocial"
+                                                     sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                                    <labelcolorsocial fieldLabel="Escolha a cor da label:"
+                                                      jcr:primaryType="nt:unstructured"
+                                                      name="./labelcolorsocial"
+                                                      sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                                    <placeholdertextsocial fieldLabel="Digite o texto do plaholder:"
+                                                           jcr:primaryType="nt:unstructured"
+                                                           name="./placeholdertextsocial"
+                                                           sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                                    <placeholdercolorsocial fieldLabel="Escolha a cor do placeholder:"
+                                                            jcr:primaryType="nt:unstructured"
+                                                            name="./placeholdercolorsocial"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                                    <inputbackgroundcolorsocial fieldLabel="Escolha o background do input:"
+                                                                jcr:primaryType="nt:unstructured"
+                                                                name="./inputbackgroundcolorsocial"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                                    <buttonlabelsocial fieldLabel="Digite a label do botão:"
+                                                       jcr:primaryType="nt:unstructured"
+                                                       name="./buttonlabelsocial"
+                                                       sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                                    <buttonlabelcolorsocial fieldLabel="Escolha a cor da label do botão: "
+                                                            jcr:primaryType="nt:unstructured"
+                                                            name="./buttonlabelcolorsocial"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                                    <buttonbackgroundcolorsocial fieldLabel="Escolha o background do input:"
+                                                                 jcr:primaryType="nt:unstructured"
+                                                                 name="./buttonbackgroundcolorsocial"
+                                                                 sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                                 </items>
+                              </field>
+                           </social>
+                        </items>
+                     </column>
+                  </items>
+               </tab-2>
+               <tab-3 jcr:primaryType="nt:unstructured"
+                      jcr:title="Multifield Certificates"
+                      sling:resourceType="granite/ui/components/coral/foundation/container">
+                  <layout jcr:primaryType="nt:unstructured"
+                          sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"/>
+                  <items jcr:primaryType="nt:unstructured">
+                     <column jcr:primaryType="nt:unstructured"
+                             sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                           <certificates composite="{Boolean}true"
+                                         fieldLabel="certificates"
+                                         jcr:primaryType="nt:unstructured"
+                                         sling:resourceType="granite/ui/components/coral/foundation/form/multifield">
+                              <field cq-msm-lockable="./certificates"
+                                     jcr:primaryType="nt:unstructured"
+                                     name="./certificates"
+                                     sling:resourceType="granite/ui/components/foundation/form/fieldset">
+                                 <items jcr:primaryType="nt:unstructured">
+                                    <titletext fieldLabel="Digite o texto do titulo:"
+                                               jcr:primaryType="nt:unstructured"
+                                               name="./titletext"
+                                               sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                                    <titlecolor fieldLabel="Escolha a cor do titulo: "
+                                                jcr:primaryType="nt:unstructured"
+                                                name="./titlecolor"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                                    <labeltextcertificates fieldLabel="Digite o texto da label:"
+                                                           jcr:primaryType="nt:unstructured"
+                                                           name="./labeltextcertificates"
+                                                           sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                                    <labelcolorcertificates fieldLabel="Escolha a cor da label:"
+                                                            jcr:primaryType="nt:unstructured"
+                                                            name="./labelcolorcertificates"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                                    <placeholdertextcertificates fieldLabel="Digite o texto do plaholder:"
+                                                                 jcr:primaryType="nt:unstructured"
+                                                                 name="./placeholdertextcertificates"
+                                                                 sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                                    <placeholdercolorcertificates fieldLabel="Escolha a cor do placeholder:"
+                                                                  jcr:primaryType="nt:unstructured"
+                                                                  name="./placeholdercolorcertificates"
+                                                                  sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                                    <inputbackgroundcolorcertificates fieldLabel="Escolha o background do input:"
+                                                                      jcr:primaryType="nt:unstructured"
+                                                                      name="./inputbackgroundcolorcertificates"
+                                                                      sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                                    <buttonlabelcertificates fieldLabel="Digite a label do botão:"
+                                                             jcr:primaryType="nt:unstructured"
+                                                             name="./buttonlabelcertificates"
+                                                             sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                                    <buttonlabelcolorcertificates fieldLabel="Escolha a cor da label do botão: "
+                                                                  jcr:primaryType="nt:unstructured"
+                                                                  name="./buttonlabelcolorcertificates"
+                                                                  sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                                    <buttonbackgroundcolorcertificates fieldLabel="Escolha o background do input:"
+                                                                       jcr:primaryType="nt:unstructured"
+                                                                       name="./buttonbackgroundcolorcertificates"
+                                                                       sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                                    <buttonlabelcertificates2 fieldLabel="Digite a label do botão:"
+                                                              jcr:primaryType="nt:unstructured"
+                                                              name="./buttonlabelcertificates2"
+                                                              sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                                    <buttonlabelcolorcertificates2 fieldLabel="Escolha a cor da label do botão: "
+                                                                   jcr:primaryType="nt:unstructured"
+                                                                   name="./buttonlabelcolorcertificates2"
+                                                                   sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                                    <buttonbackgroundcolorcertificates2 fieldLabel="Escolha o background do input:"
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        name="./buttonbackgroundcolorcertificates2"
+                                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                                 </items>
+                              </field>
+                           </certificates>
+                        </items>
+                     </column>
+                  </items>
+               </tab-3>
+               <tab-4 jcr:primaryType="nt:unstructured"
+                      jcr:title="Multifield Sucess"
+                      sling:resourceType="granite/ui/components/coral/foundation/container">
+                  <layout jcr:primaryType="nt:unstructured"
+                          sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"/>
+                  <items jcr:primaryType="nt:unstructured">
+                     <column jcr:primaryType="nt:unstructured"
+                             sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                           <sucess composite="{Boolean}true"
+                                   fieldLabel="sucess"
+                                   jcr:primaryType="nt:unstructured"
+                                   sling:resourceType="granite/ui/components/coral/foundation/form/multifield">
+                              <field cq-msm-lockable="./sucess"
+                                     jcr:primaryType="nt:unstructured"
+                                     name="./sucess"
+                                     sling:resourceType="granite/ui/components/foundation/form/fieldset">
+                                 <items jcr:primaryType="nt:unstructured">
+                                    <titletext fieldLabel="Digite o texto do titulo:"
+                                               jcr:primaryType="nt:unstructured"
+                                               name="./titletext"
+                                               sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                                    <titlecolor fieldLabel="Escolha a cor do titulo: "
+                                                jcr:primaryType="nt:unstructured"
+                                                name="./titlecolor"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                                    <labeltextsucess fieldLabel="Digite o texto da label:"
+                                                     jcr:primaryType="nt:unstructured"
+                                                     name="./labeltextsucess"
+                                                     sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                                    <labelcolorsucess fieldLabel="Escolha a cor da label:"
+                                                      jcr:primaryType="nt:unstructured"
+                                                      name="./labelcolorsucess"
+                                                      sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                                    <buttonlabelsucess fieldLabel="Digite a label do botão:"
+                                                       jcr:primaryType="nt:unstructured"
+                                                       name="./buttonlabelsucess"
+                                                       sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                                    <buttonlabelcolorsucess fieldLabel="Escolha a cor da label do botão: "
+                                                            jcr:primaryType="nt:unstructured"
+                                                            name="./buttonlabelcolorsucess"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                                    <buttonbackgroundcolorsucess fieldLabel="Escolha o background do input:"
+                                                                 jcr:primaryType="nt:unstructured"
+                                                                 name="./buttonbackgroundcolorsucess"
+                                                                 sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                                 </items>
+                              </field>
+                           </sucess>
+                        </items>
+                     </column>
+                  </items>
+               </tab-4>
+            </items>
+         </tabs>
+      </items>
+   </content>
+</jcr:root>

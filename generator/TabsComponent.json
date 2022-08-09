@@ -27,120 +27,358 @@
     "generic-javadoc": false,
     "properties-tabs": [
       {
-        "id": "basic",
+        "id": "tab-1",
         "label": "Multifield Basic",
-        "fields": ["multifieldBasic"]
+        "fields": ["basic"]
       },
       {
-        "id": "sucess",
-        "label": "Multifield Sucess",
-        "fields": ["multifieldSucess"]
-      },
-      {
-        "id": "social",
+        "id": "tab-2",
         "label": "Multifield Social",
-        "fields": ["multifieldsocial"]
+        "fields": ["social"]
       },
       {
-        "id": "certificates",
+        "id": "tab-3",
         "label": "Multifield Certificates",
-        "fields": ["multifieldcertificates"]
+        "fields": ["certificates"]
+      },
+      {
+        "id": "tab-4",
+        "label": "Multifield Sucess",
+        "fields": ["sucess"]
       }
     ],
     "properties": [
       {
         "field": "basic",
         "type": "multifield",
-        "label": "Simples",
+        "label": "basic",
         "model-name": "basicModel",
         "use-existing-model": false,
         "json-expose": true,
         "items": [
           {
-            "field": "inputtextbasic",
+            "field": "titletext",
             "type": "textfield",
-            "label": "Digite o texto:",
+            "label": "Digite o texto do titulo:",
             "json-expose": true,
-            "json-property": "inputtextbasic"
+            "json-property": "titletext"
+          },
+          {
+            "field": "titlecolor",
+            "type": "textfield",
+            "label": "Escolha a cor do titulo: ",
+            "json-expose": true,
+            "json-property": "titlecolor"
+          },
+          {
+            "field": "labeltextbasic",
+            "type": "textfield",
+            "label": "Digite o texto da label:",
+            "json-expose": true,
+            "json-property": "labeltextbasic"
+          },
+          {
+            "field": "labelcolorbasic",
+            "type": "textfield",
+            "label": "Escolha a cor da label:",
+            "json-expose": true,
+            "json-property": "labelcolorsbasic"
+          },
+          {
+            "field": "placeholdertextbasic",
+            "type": "textfield",
+            "label": "Digite o texto do plaholder:",
+            "json-expose": true,
+            "json-property": "placeholdertextbasic"
+          },
+          {
+            "field": "placeholdercolorbasic",
+            "type": "textfield",
+            "label": "Escolha a cor do placeholder:",
+            "json-expose": true,
+            "json-property": "placeholdercolorbasic"
+          },
+          {
+            "field": "inputbackgroundcolorbasic",
+            "type": "textfield",
+            "label": "Escolha o background do input:",
+            "json-expose": true,
+            "json-property": "inputbackgroundcolorbasic"
+          },
+          {
+            "field": "checkboxtext",
+            "type": "textfield",
+            "label": "Digite o texto do checkbox:",
+            "json-expose": true,
+            "json-property": "checkboxtext"
+          },
+          {
+            "field": "checkboxcolor",
+            "type": "textfield",
+            "label": "Escolha a cor do checkbox:",
+            "json-expose": true,
+            "json-property": "checkboxcolor"
           },
           {
             "field": "buttonlabelbasic",
             "type": "textfield",
-            "label": "Digite a label:",
+            "label": "Digite a label do botão:",
             "json-expose": true,
             "json-property": "buttonlabelbasic"
+          },
+          {
+            "field": "buttonlabelcolorbasic",
+            "type": "textfield",
+            "label": "Escolha a cor da label do botão: ",
+            "json-expose": true,
+            "json-property": "buttonlabelcolorbasic"
+          },
+          {
+            "field": "buttonbackgroundcolorbasic",
+            "type": "textfield",
+            "label": "Escolha o background do input:",
+            "json-expose": true,
+            "json-property": "buttonbackgroundcolorbasic"
+          }   
+        ]
+      },
+      {
+        "field": "social",
+        "type": "multifield",
+        "label": "social",
+        "model-name": "socialModel",
+        "use-existing-model": false,
+        "json-expose": true,
+        "items": [
+          {
+            "field": "titletext",
+            "type": "textfield",
+            "label": "Digite o texto do titulo:",
+            "json-expose": true,
+            "json-property": "titletext"
+          },
+          {
+            "field": "titlecolor",
+            "type": "textfield",
+            "label": "Escolha a cor do titulo: ",
+            "json-expose": true,
+            "json-property": "titlecolor"
+          },
+          {
+            "field": "labeltextsocial",
+            "type": "textfield",
+            "label": "Digite o texto da label:",
+            "json-expose": true,
+            "json-property": "labeltextsocial"
+          },
+          {
+            "field": "labelcolorsocial",
+            "type": "textfield",
+            "label": "Escolha a cor da label:",
+            "json-expose": true,
+            "json-property": "labelcolorsocial"
+          },
+          {
+            "field": "placeholdertextsocial",
+            "type": "textfield",
+            "label": "Digite o texto do plaholder:",
+            "json-expose": true,
+            "json-property": "placeholdertextsocial"
+          },
+          {
+            "field": "placeholdercolorsocial",
+            "type": "textfield",
+            "label": "Escolha a cor do placeholder:",
+            "json-expose": true,
+            "json-property": "placeholdercolorsocial"
+          },
+          {
+            "field": "inputbackgroundcolorsocial",
+            "type": "textfield",
+            "label": "Escolha o background do input:",
+            "json-expose": true,
+            "json-property": "inputbackgroundcolorsocial"
+          },
+          {
+            "field": "buttonlabelsocial",
+            "type": "textfield",
+            "label": "Digite a label do botão:",
+            "json-expose": true,
+            "json-property": "buttonlabelbasic"
+          },
+          {
+            "field": "buttonlabelcolorsocial",
+            "type": "textfield",
+            "label": "Escolha a cor da label do botão: ",
+            "json-expose": true,
+            "json-property": "buttonlabelcolorbasic"
+          },
+          {
+            "field": "buttonbackgroundcolorsocial",
+            "type": "textfield",
+            "label": "Escolha o background do input:",
+            "json-expose": true,
+            "json-property": "buttonbackgroundcolorsocial"
+          }   
+        ]
+      },
+      {
+        "field": "certificates",
+        "type": "multifield",
+        "label": "certificates",
+        "model-name": "certificatesModel",
+        "use-existing-model": false,
+        "json-expose": true,
+        "items": [
+          {
+            "field": "titletext",
+            "type": "textfield",
+            "label": "Digite o texto do titulo:",
+            "json-expose": true,
+            "json-property": "titletext"
+          },
+          {
+            "field": "titlecolor",
+            "type": "textfield",
+            "label": "Escolha a cor do titulo: ",
+            "json-expose": true,
+            "json-property": "titlecolor"
+          },
+          {
+            "field": "labeltextcertificates",
+            "type": "textfield",
+            "label": "Digite o texto da label:",
+            "json-expose": true,
+            "json-property": "labeltextcertificates"
+          },
+          {
+            "field": "labelcolorcertificates",
+            "type": "textfield",
+            "label": "Escolha a cor da label:",
+            "json-expose": true,
+            "json-property": "labelcolorcertificates"
+          },
+          {
+            "field": "placeholdertextcertificates",
+            "type": "textfield",
+            "label": "Digite o texto do plaholder:",
+            "json-expose": true,
+            "json-property": "placeholdertextcertificates"
+          },
+          {
+            "field": "placeholdercolorcertificates",
+            "type": "textfield",
+            "label": "Escolha a cor do placeholder:",
+            "json-expose": true,
+            "json-property": "placeholdercolorcertificates"
+          },
+          {
+            "field": "inputbackgroundcolorcertificates",
+            "type": "textfield",
+            "label": "Escolha o background do input:",
+            "json-expose": true,
+            "json-property": "inputbackgroundcolorcertificates"
+          },
+          {
+            "field": "buttonlabelcertificates",
+            "type": "textfield",
+            "label": "Digite a label do botão:",
+            "json-expose": true,
+            "json-property": "buttonlabelcertificates"
+          },
+          {
+            "field": "buttonlabelcolorcertificates",
+            "type": "textfield",
+            "label": "Escolha a cor da label do botão: ",
+            "json-expose": true,
+            "json-property": "buttonlabelcolorcertificates"
+          },
+          {
+            "field": "buttonbackgroundcolorcertificates",
+            "type": "textfield",
+            "label": "Escolha o background do input:",
+            "json-expose": true,
+            "json-property": "buttonbackgroundcolorcertificates"
+          },
+          {
+            "field": "buttonlabelcertificates2",
+            "type": "textfield",
+            "label": "Digite a label do botão:",
+            "json-expose": true,
+            "json-property": "buttonlabelcertificates2"
+          },
+          {
+            "field": "buttonlabelcolorcertificates2",
+            "type": "textfield",
+            "label": "Escolha a cor da label do botão: ",
+            "json-expose": true,
+            "json-property": "buttonlabelcolorcertificates2"
+          },
+          {
+            "field": "buttonbackgroundcolorcertificates2",
+            "type": "textfield",
+            "label": "Escolha o background do input:",
+            "json-expose": true,
+            "json-property": "buttonbackgroundcolorcertificates2"
           }
         ]
       },
       {
         "field": "sucess",
         "type": "multifield",
-        "label": "Composto",
+        "label": "sucess",
         "model-name": "sucessModel",
         "use-existing-model": false,
         "json-expose": true,
         "items": [
           {
-            "field": "inputtextsucess",
+            "field": "titletext",
             "type": "textfield",
-            "label": "Digite o texto:",
+            "label": "Digite o texto do titulo:",
             "json-expose": true,
-            "json-property": "inputtextsucess"
+            "json-property": "titletext"
+          },
+          {
+            "field": "titlecolor",
+            "type": "textfield",
+            "label": "Escolha a cor do titulo: ",
+            "json-expose": true,
+            "json-property": "titlecolor"
+          },
+          {
+            "field": "labeltextsucess",
+            "type": "textfield",
+            "label": "Digite o texto da label:",
+            "json-expose": true,
+            "json-property": "labeltextsucess"
+          },
+          {
+            "field": "labelcolorsucess",
+            "type": "textfield",
+            "label": "Escolha a cor da label:",
+            "json-expose": true,
+            "json-property": "labelcolorsucess"
           },
           {
             "field": "buttonlabelsucess",
             "type": "textfield",
-            "label": "Digite a label:",
+            "label": "Digite a label do botão:",
             "json-expose": true,
             "json-property": "buttonlabelsucess"
-          }
-        ]
-      },
-      {
-        "field": "social",
-        "type": "multifield",
-        "label": "Composto",
-        "model-name": "socialModel",
-        "use-existing-model": false,
-        "json-expose": true,
-        "items": [
-          {
-            "field": "inputtextsocial",
-            "type": "textfield",
-            "label": "Digite o texto:",
-            "json-expose": true,
-            "json-property": "inputtextsocial"
           },
           {
-            "field": "buttonlabelsocial",
+            "field": "buttonlabelcolorsucess",
             "type": "textfield",
-            "label": "Digite a label:",
+            "label": "Escolha a cor da label do botão: ",
             "json-expose": true,
-            "json-property": "buttonlabelsocial"
-          }
-        ]
-      },
-      {
-        "field": "certificates",
-        "type": "multifield",
-        "label": "Composto",
-        "model-name": "certificatesModel",
-        "use-existing-model": false,
-        "json-expose": true,
-        "items": [
-          {
-            "field": "inputtextcertificates",
-            "type": "textfield",
-            "label": "Digite o texto:",
-            "json-expose": true,
-            "json-property": "inputtextcertificates"
+            "json-property": "buttonlabelcolorsucess"
           },
           {
-            "field": "buttonlabelcertificates",
+            "field": "buttonbackgroundcolorsucess",
             "type": "textfield",
-            "label": "Digite a label:",
+            "label": "Escolha o background do input:",
             "json-expose": true,
-            "json-property": "buttonlabelcertificates"
+            "json-property": "buttonbackgroundcolorsucess"
           }
         ]
       }
