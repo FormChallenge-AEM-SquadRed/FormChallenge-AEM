@@ -21,6 +21,7 @@ import "./ExperienceFragment/ExperienceFragment";
 import "./CardComponent";
 import "./Header";
 import "./Birthday";
+import "./Buttons";
 
 import {MapTo} from "@adobe/aem-react-editable-components";
 
