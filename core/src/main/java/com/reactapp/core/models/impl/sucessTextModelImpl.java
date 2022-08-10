@@ -21,7 +21,7 @@ package com.reactapp.core.models.impl;
 import com.adobe.cq.export.json.ComponentExporter;
 import com.adobe.cq.export.json.ExporterConstants;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.reactapp.core.models.socialModel;
+import com.reactapp.core.models.sucessTextModel;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.Exporter;
@@ -33,31 +33,39 @@ import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
 @Model(adaptables = {
     SlingHttpServletRequest.class
 }, adapters = {
-    socialModel.class,
+    sucessTextModel.class,
     ComponentExporter.class
 })
 @Exporter(name = ExporterConstants.SLING_MODEL_EXPORTER_NAME, extensions = ExporterConstants.SLING_MODEL_EXTENSION)
-public class socialModelImpl
-    implements socialModel
+public class sucessTextModelImpl
+    implements sucessTextModel
 {
 
     @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
-    private String inputtextsocial;
+    private String resulttext;
     @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
-    private String buttonlabelsocial;
+    private String resultcolor;
+    @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
+    private String fonts;
     @SlingObject
     private Resource resource;
 
     @Override
-    @JsonProperty("inputtextsocial")
-    public String getInputtextsocial() {
-        return inputtextsocial;
+    @JsonProperty("resulttext")
+    public String getResulttext() {
+        return resulttext;
     }
 
     @Override
-    @JsonProperty("buttonlabelsocial")
-    public String getButtonlabelsocial() {
-        return buttonlabelsocial;
+    @JsonProperty("resultcolor")
+    public String getResultcolor() {
+        return resultcolor;
+    }
+
+    @Override
+    @JsonProperty("fonts")
+    public String getFonts() {
+        return fonts;
     }
 
     @Override

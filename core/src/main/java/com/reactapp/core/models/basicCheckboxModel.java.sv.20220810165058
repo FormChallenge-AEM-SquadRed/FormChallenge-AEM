@@ -24,35 +24,20 @@ import org.osgi.annotation.versioning.ConsumerType;
 
 
 /**
- * Defines the {@code sucessModel} Sling Model used for the multifield in {@code reactapp/components/multifield-tabs} component.
+ * Defines the {@code basicCheckboxModel} Sling Model used for the multifield in {@code reactapp/components/multifield-tabs} component.
  * 
  */
 @ConsumerType
-public interface sucessModel
+public interface basicCheckboxModel
     extends ComponentExporter
 {
 
 
-    @JsonProperty("titletext")
-    String getTitletext();
+    @JsonProperty("checkboxtext")
+    String getCheckboxtext();
 
-    @JsonProperty("titlecolor")
-    String getTitlecolor();
-
-    @JsonProperty("labeltextsucess")
-    String getLabeltextsucess();
-
-    @JsonProperty("labelcolorsucess")
-    String getLabelcolorsucess();
-
-    @JsonProperty("buttonlabelsucess")
-    String getButtonlabelsucess();
-
-    @JsonProperty("buttonlabelcolorsucess")
-    String getButtonlabelcolorsucess();
-
-    @JsonProperty("buttonbackgroundcolorsucess")
-    String getButtonbackgroundcolorsucess();
+    @JsonProperty("checkboxcolor")
+    String getCheckboxcolor();
 
     @JsonProperty("fonts")
     String getFonts();

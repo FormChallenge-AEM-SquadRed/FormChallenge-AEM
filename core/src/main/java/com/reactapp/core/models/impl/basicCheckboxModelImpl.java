@@ -21,7 +21,7 @@ package com.reactapp.core.models.impl;
 import com.adobe.cq.export.json.ComponentExporter;
 import com.adobe.cq.export.json.ExporterConstants;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.reactapp.core.models.sucessModel;
+import com.reactapp.core.models.basicCheckboxModel;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.Exporter;
@@ -33,73 +33,33 @@ import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
 @Model(adaptables = {
     SlingHttpServletRequest.class
 }, adapters = {
-    sucessModel.class,
+    basicCheckboxModel.class,
     ComponentExporter.class
 })
 @Exporter(name = ExporterConstants.SLING_MODEL_EXPORTER_NAME, extensions = ExporterConstants.SLING_MODEL_EXTENSION)
-public class sucessModelImpl
-    implements sucessModel
+public class basicCheckboxModelImpl
+    implements basicCheckboxModel
 {
 
     @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
-    private String titletext;
+    private String checkboxtext;
     @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
-    private String titlecolor;
-    @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
-    private String labeltextsucess;
-    @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
-    private String labelcolorsucess;
-    @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
-    private String buttonlabelsucess;
-    @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
-    private String buttonlabelcolorsucess;
-    @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
-    private String buttonbackgroundcolorsucess;
+    private String checkboxcolor;
     @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
     private String fonts;
     @SlingObject
     private Resource resource;
 
     @Override
-    @JsonProperty("titletext")
-    public String getTitletext() {
-        return titletext;
+    @JsonProperty("checkboxtext")
+    public String getCheckboxtext() {
+        return checkboxtext;
     }
 
     @Override
-    @JsonProperty("titlecolor")
-    public String getTitlecolor() {
-        return titlecolor;
-    }
-
-    @Override
-    @JsonProperty("labeltextsucess")
-    public String getLabeltextsucess() {
-        return labeltextsucess;
-    }
-
-    @Override
-    @JsonProperty("labelcolorsucess")
-    public String getLabelcolorsucess() {
-        return labelcolorsucess;
-    }
-
-    @Override
-    @JsonProperty("buttonlabelsucess")
-    public String getButtonlabelsucess() {
-        return buttonlabelsucess;
-    }
-
-    @Override
-    @JsonProperty("buttonlabelcolorsucess")
-    public String getButtonlabelcolorsucess() {
-        return buttonlabelcolorsucess;
-    }
-
-    @Override
-    @JsonProperty("buttonbackgroundcolorsucess")
-    public String getButtonbackgroundcolorsucess() {
-        return buttonbackgroundcolorsucess;
+    @JsonProperty("checkboxcolor")
+    public String getCheckboxcolor() {
+        return checkboxcolor;
     }
 
     @Override

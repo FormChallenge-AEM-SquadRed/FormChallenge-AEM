@@ -33,12 +33,32 @@ public interface MultifieldTabs
 {
 
 
-    List<basicModel> getBasic();
+    List<basicTitleModel> getBasicTitle();
 
-    List<socialModel> getSocial();
+    List<basicInputModel> getBasicInput();
 
-    List<certificatesModel> getCertificates();
+    List<basicCheckboxModel> getBasicCheckbox();
 
-    List<sucessModel> getSucess();
+    List<basicButtonModel> getBasicButton();
+
+    List<socialTitleModel> getSocialTitle();
+
+    List<socialInputModel> getSocialInput();
+
+    List<socialButtonModel> getSocialButton();
+
+    List<certificatesTitleModel> getCertificatesTitle();
+
+    List<certificatesInputModel> getCertificatesInput();
+
+    List<certificatesMoreModel> getCertificatesMore();
+
+    List<certificatesFinishModel> getCertificatesFinish();
+
+    List<basicTitleModel> getSucessTitle();
+
+    List<sucessTextModel> getSucessText();
+
+    List<sucessButtonModel> getSucessButton();
 
 }

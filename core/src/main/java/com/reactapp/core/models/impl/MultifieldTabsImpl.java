@@ -24,10 +24,18 @@ import com.adobe.acs.commons.models.injectors.annotation.ChildResourceFromReques
 import com.adobe.cq.export.json.ComponentExporter;
 import com.adobe.cq.export.json.ExporterConstants;
 import com.reactapp.core.models.MultifieldTabs;
-import com.reactapp.core.models.basicModel;
-import com.reactapp.core.models.certificatesModel;
-import com.reactapp.core.models.socialModel;
-import com.reactapp.core.models.sucessModel;
+import com.reactapp.core.models.basicButtonModel;
+import com.reactapp.core.models.basicCheckboxModel;
+import com.reactapp.core.models.basicInputModel;
+import com.reactapp.core.models.certificatesFinishModel;
+import com.reactapp.core.models.certificatesInputModel;
+import com.reactapp.core.models.certificatesMoreModel;
+import com.reactapp.core.models.certificatesTitleModel;
+import com.reactapp.core.models.socialButtonModel;
+import com.reactapp.core.models.socialInputModel;
+import com.reactapp.core.models.socialTitleModel;
+import com.reactapp.core.models.sucessButtonModel;
+import com.reactapp.core.models.sucessTextModel;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.Exporter;
@@ -47,34 +55,104 @@ public class MultifieldTabsImpl
 {
 
     @ChildResourceFromRequest(injectionStrategy = InjectionStrategy.OPTIONAL)
-    private List<basicModel> basic;
+    private List<com.reactapp.core.models.basicTitleModel> basicTitle;
     @ChildResourceFromRequest(injectionStrategy = InjectionStrategy.OPTIONAL)
-    private List<socialModel> social;
+    private List<basicInputModel> basicInput;
     @ChildResourceFromRequest(injectionStrategy = InjectionStrategy.OPTIONAL)
-    private List<certificatesModel> certificates;
+    private List<basicCheckboxModel> basicCheckbox;
     @ChildResourceFromRequest(injectionStrategy = InjectionStrategy.OPTIONAL)
-    private List<sucessModel> sucess;
+    private List<basicButtonModel> basicButton;
+    @ChildResourceFromRequest(injectionStrategy = InjectionStrategy.OPTIONAL)
+    private List<socialTitleModel> socialTitle;
+    @ChildResourceFromRequest(injectionStrategy = InjectionStrategy.OPTIONAL)
+    private List<socialInputModel> socialInput;
+    @ChildResourceFromRequest(injectionStrategy = InjectionStrategy.OPTIONAL)
+    private List<socialButtonModel> socialButton;
+    @ChildResourceFromRequest(injectionStrategy = InjectionStrategy.OPTIONAL)
+    private List<certificatesTitleModel> certificatesTitle;
+    @ChildResourceFromRequest(injectionStrategy = InjectionStrategy.OPTIONAL)
+    private List<certificatesInputModel> certificatesInput;
+    @ChildResourceFromRequest(injectionStrategy = InjectionStrategy.OPTIONAL)
+    private List<certificatesMoreModel> certificatesMore;
+    @ChildResourceFromRequest(injectionStrategy = InjectionStrategy.OPTIONAL)
+    private List<certificatesFinishModel> certificatesFinish;
+    @ChildResourceFromRequest(injectionStrategy = InjectionStrategy.OPTIONAL)
+    private List<com.reactapp.core.models.basicTitleModel> sucessTitle;
+    @ChildResourceFromRequest(injectionStrategy = InjectionStrategy.OPTIONAL)
+    private List<sucessTextModel> sucessText;
+    @ChildResourceFromRequest(injectionStrategy = InjectionStrategy.OPTIONAL)
+    private List<sucessButtonModel> sucessButton;
     @SlingObject
     private Resource resource;
 
     @Override
-    public List<basicModel> getBasic() {
-        return basic != null ? Collections.unmodifiableList(basic) : null;
+    public List<com.reactapp.core.models.basicTitleModel> getBasicTitle() {
+        return basicTitle != null ? Collections.unmodifiableList(basicTitle) : null;
     }
 
     @Override
-    public List<socialModel> getSocial() {
-        return social != null ? Collections.unmodifiableList(social) : null;
+    public List<basicInputModel> getBasicInput() {
+        return basicInput != null ? Collections.unmodifiableList(basicInput) : null;
     }
 
     @Override
-    public List<certificatesModel> getCertificates() {
-        return certificates != null ? Collections.unmodifiableList(certificates) : null;
+    public List<basicCheckboxModel> getBasicCheckbox() {
+        return basicCheckbox != null ? Collections.unmodifiableList(basicCheckbox) : null;
     }
 
     @Override
-    public List<sucessModel> getSucess() {
-        return sucess != null ? Collections.unmodifiableList(sucess) : null;
+    public List<basicButtonModel> getBasicButton() {
+        return basicButton != null ? Collections.unmodifiableList(basicButton) : null;
+    }
+
+    @Override
+    public List<socialTitleModel> getSocialTitle() {
+        return socialTitle != null ? Collections.unmodifiableList(socialTitle) : null;
+    }
+
+    @Override
+    public List<socialInputModel> getSocialInput() {
+        return socialInput != null ? Collections.unmodifiableList(socialInput) : null;
+    }
+
+    @Override
+    public List<socialButtonModel> getSocialButton() {
+        return socialButton != null ? Collections.unmodifiableList(socialButton) : null;
+    }
+
+    @Override
+    public List<certificatesTitleModel> getCertificatesTitle() {
+        return certificatesTitle != null ? Collections.unmodifiableList(certificatesTitle) : null;
+    }
+
+    @Override
+    public List<certificatesInputModel> getCertificatesInput() {
+        return certificatesInput != null ? Collections.unmodifiableList(certificatesInput) : null;
+    }
+
+    @Override
+    public List<certificatesMoreModel> getCertificatesMore() {
+        return certificatesMore != null ? Collections.unmodifiableList(certificatesMore) : null;
+    }
+
+    @Override
+    public List<certificatesFinishModel> getCertificatesFinish() {
+        return certificatesFinish != null ? Collections.unmodifiableList(certificatesFinish) : null;
+    }
+
+    @Override
+    public List<com.reactapp.core.models.basicTitleModel> getSucessTitle() {
+        return sucessTitle != null ? Collections.unmodifiableList(sucessTitle) : null;
+    }
+
+    @Override
+    public List<sucessTextModel> getSucessText() {
+        return sucessText != null ? Collections.unmodifiableList(sucessText) : null;
+    }
+
+    @Override
+    public List<sucessButtonModel> getSucessButton() {
+        return sucessButton != null ? Collections.unmodifiableList(sucessButton) : null;
     }
 
     @Override

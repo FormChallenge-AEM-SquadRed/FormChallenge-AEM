@@ -21,7 +21,7 @@ package com.reactapp.core.models.impl;
 import com.adobe.cq.export.json.ComponentExporter;
 import com.adobe.cq.export.json.ExporterConstants;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.reactapp.core.models.sucessModel;
+import com.reactapp.core.models.certificatesTitleModel;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.Exporter;
@@ -33,28 +33,28 @@ import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
 @Model(adaptables = {
     SlingHttpServletRequest.class
 }, adapters = {
-    sucessModel.class,
+    certificatesTitleModel.class,
     ComponentExporter.class
 })
 @Exporter(name = ExporterConstants.SLING_MODEL_EXPORTER_NAME, extensions = ExporterConstants.SLING_MODEL_EXTENSION)
-public class sucessModelImpl
-    implements sucessModel
+public class certificatesTitleModelImpl
+    implements certificatesTitleModel
 {
 
     @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
-    private String titletext;
+    private String certificatesTitleText;
     @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
-    private String titlecolor;
+    private String certificatesTitleColor;
     @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
-    private String labeltextsucess;
+    private String certificatesLabelText;
     @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
-    private String labelcolorsucess;
+    private String certificatesLabelColor;
     @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
-    private String buttonlabelsucess;
+    private String certificatesPlaceholderText;
     @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
-    private String buttonlabelcolorsucess;
+    private String certificatesPlaceholderColor;
     @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
-    private String buttonbackgroundcolorsucess;
+    private String certificatesInputTextColor;
     @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
     private String fonts;
     @SlingObject
@@ -62,44 +62,44 @@ public class sucessModelImpl
 
     @Override
     @JsonProperty("titletext")
-    public String getTitletext() {
-        return titletext;
+    public String getCertificatesTitleText() {
+        return certificatesTitleText;
     }
 
     @Override
-    @JsonProperty("titlecolor")
-    public String getTitlecolor() {
-        return titlecolor;
+    @JsonProperty("certificatesTitleColor")
+    public String getCertificatesTitleColor() {
+        return certificatesTitleColor;
     }
 
     @Override
-    @JsonProperty("labeltextsucess")
-    public String getLabeltextsucess() {
-        return labeltextsucess;
+    @JsonProperty("certificatesLabelText")
+    public String getCertificatesLabelText() {
+        return certificatesLabelText;
     }
 
     @Override
-    @JsonProperty("labelcolorsucess")
-    public String getLabelcolorsucess() {
-        return labelcolorsucess;
+    @JsonProperty("certificatesLabelColor")
+    public String getCertificatesLabelColor() {
+        return certificatesLabelColor;
     }
 
     @Override
-    @JsonProperty("buttonlabelsucess")
-    public String getButtonlabelsucess() {
-        return buttonlabelsucess;
+    @JsonProperty("certificatesPlaceholderText")
+    public String getCertificatesPlaceholderText() {
+        return certificatesPlaceholderText;
     }
 
     @Override
-    @JsonProperty("buttonlabelcolorsucess")
-    public String getButtonlabelcolorsucess() {
-        return buttonlabelcolorsucess;
+    @JsonProperty("certificatesPlaceholderColor")
+    public String getCertificatesPlaceholderColor() {
+        return certificatesPlaceholderColor;
     }
 
     @Override
-    @JsonProperty("buttonbackgroundcolorsucess")
-    public String getButtonbackgroundcolorsucess() {
-        return buttonbackgroundcolorsucess;
+    @JsonProperty("certificatesInputTextColor")
+    public String getCertificatesInputTextColor() {
+        return certificatesInputTextColor;
     }
 
     @Override

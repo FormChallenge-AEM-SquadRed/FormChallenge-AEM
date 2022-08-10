@@ -24,19 +24,22 @@ import org.osgi.annotation.versioning.ConsumerType;
 
 
 /**
- * Defines the {@code basicModel} Sling Model used for the multifield in {@code reactapp/components/multifield-tabs} component.
+ * Defines the {@code sucessButtonModel} Sling Model used for the multifield in {@code reactapp/components/multifield-tabs} component.
  * 
  */
 @ConsumerType
-public interface basicModel
+public interface sucessButtonModel
     extends ComponentExporter
 {
 
 
-    @JsonProperty("inputtextbasic")
-    String getInputtextbasic();
+    @JsonProperty("resulttext")
+    String getResulttext();
 
-    @JsonProperty("buttonlabelbasic")
-    String getButtonlabelbasic();
+    @JsonProperty("resultcolor")
+    String getResultcolor();
+
+    @JsonProperty("fonts")
+    String getFonts();
 
 }

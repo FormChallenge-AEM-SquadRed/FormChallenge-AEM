@@ -21,7 +21,7 @@ package com.reactapp.core.models.impl;
 import com.adobe.cq.export.json.ComponentExporter;
 import com.adobe.cq.export.json.ExporterConstants;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.reactapp.core.models.sucessModel;
+import com.reactapp.core.models.certificatesInputModel;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.Exporter;
@@ -33,73 +33,57 @@ import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
 @Model(adaptables = {
     SlingHttpServletRequest.class
 }, adapters = {
-    sucessModel.class,
+    certificatesInputModel.class,
     ComponentExporter.class
 })
 @Exporter(name = ExporterConstants.SLING_MODEL_EXPORTER_NAME, extensions = ExporterConstants.SLING_MODEL_EXTENSION)
-public class sucessModelImpl
-    implements sucessModel
+public class certificatesInputModelImpl
+    implements certificatesInputModel
 {
 
     @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
-    private String titletext;
+    private String labeltext;
     @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
-    private String titlecolor;
+    private String labelcolor;
     @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
-    private String labeltextsucess;
+    private String placeholdertext;
     @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
-    private String labelcolorsucess;
+    private String placeholdercolor;
     @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
-    private String buttonlabelsucess;
-    @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
-    private String buttonlabelcolorsucess;
-    @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
-    private String buttonbackgroundcolorsucess;
+    private String textcolor;
     @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
     private String fonts;
     @SlingObject
     private Resource resource;
 
     @Override
-    @JsonProperty("titletext")
-    public String getTitletext() {
-        return titletext;
+    @JsonProperty("labeltext")
+    public String getLabeltext() {
+        return labeltext;
     }
 
     @Override
-    @JsonProperty("titlecolor")
-    public String getTitlecolor() {
-        return titlecolor;
+    @JsonProperty("labelcolor")
+    public String getLabelcolor() {
+        return labelcolor;
     }
 
     @Override
-    @JsonProperty("labeltextsucess")
-    public String getLabeltextsucess() {
-        return labeltextsucess;
+    @JsonProperty("placeholdertext")
+    public String getPlaceholdertext() {
+        return placeholdertext;
     }
 
     @Override
-    @JsonProperty("labelcolorsucess")
-    public String getLabelcolorsucess() {
-        return labelcolorsucess;
+    @JsonProperty("placeholdercolor")
+    public String getPlaceholdercolor() {
+        return placeholdercolor;
     }
 
     @Override
-    @JsonProperty("buttonlabelsucess")
-    public String getButtonlabelsucess() {
-        return buttonlabelsucess;
-    }
-
-    @Override
-    @JsonProperty("buttonlabelcolorsucess")
-    public String getButtonlabelcolorsucess() {
-        return buttonlabelcolorsucess;
-    }
-
-    @Override
-    @JsonProperty("buttonbackgroundcolorsucess")
-    public String getButtonbackgroundcolorsucess() {
-        return buttonbackgroundcolorsucess;
+    @JsonProperty("textcolor")
+    public String getTextcolor() {
+        return textcolor;
     }
 
     @Override

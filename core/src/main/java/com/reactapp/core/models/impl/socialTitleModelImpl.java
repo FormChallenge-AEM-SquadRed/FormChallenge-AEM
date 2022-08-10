@@ -21,7 +21,7 @@ package com.reactapp.core.models.impl;
 import com.adobe.cq.export.json.ComponentExporter;
 import com.adobe.cq.export.json.ExporterConstants;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.reactapp.core.models.basicModel;
+import com.reactapp.core.models.socialTitleModel;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.Exporter;
@@ -33,31 +33,39 @@ import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
 @Model(adaptables = {
     SlingHttpServletRequest.class
 }, adapters = {
-    basicModel.class,
+    socialTitleModel.class,
     ComponentExporter.class
 })
 @Exporter(name = ExporterConstants.SLING_MODEL_EXPORTER_NAME, extensions = ExporterConstants.SLING_MODEL_EXTENSION)
-public class basicModelImpl
-    implements basicModel
+public class socialTitleModelImpl
+    implements socialTitleModel
 {
 
     @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
-    private String inputtextbasic;
+    private String titletext;
     @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
-    private String buttonlabelbasic;
+    private String titlecolor;
+    @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
+    private String fonts;
     @SlingObject
     private Resource resource;
 
     @Override
-    @JsonProperty("inputtextbasic")
-    public String getInputtextbasic() {
-        return inputtextbasic;
+    @JsonProperty("titletext")
+    public String getTitletext() {
+        return titletext;
     }
 
     @Override
-    @JsonProperty("buttonlabelbasic")
-    public String getButtonlabelbasic() {
-        return buttonlabelbasic;
+    @JsonProperty("titlecolor")
+    public String getTitlecolor() {
+        return titlecolor;
+    }
+
+    @Override
+    @JsonProperty("fonts")
+    public String getFonts() {
+        return fonts;
     }
 
     @Override

@@ -24,19 +24,22 @@ import org.osgi.annotation.versioning.ConsumerType;
 
 
 /**
- * Defines the {@code socialModel} Sling Model used for the multifield in {@code reactapp/components/multifield-tabs} component.
+ * Defines the {@code basicTitleModel} Sling Model used for the multifield in {@code reactapp/components/multifield-tabs} component.
  * 
  */
 @ConsumerType
-public interface socialModel
+public interface basicTitleModel
     extends ComponentExporter
 {
 
 
-    @JsonProperty("inputtextsocial")
-    String getInputtextsocial();
+    @JsonProperty("titletext")
+    String getTitletext();
 
-    @JsonProperty("buttonlabelsocial")
-    String getButtonlabelsocial();
+    @JsonProperty("titlecolor")
+    String getTitlecolor();
+
+    @JsonProperty("fonts")
+    String getFonts();
 
 }

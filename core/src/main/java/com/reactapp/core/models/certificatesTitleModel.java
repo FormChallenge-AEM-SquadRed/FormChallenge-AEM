@@ -24,19 +24,37 @@ import org.osgi.annotation.versioning.ConsumerType;
 
 
 /**
- * Defines the {@code sucessModel} Sling Model used for the multifield in {@code reactapp/components/multifield-tabs} component.
+ * Defines the {@code certificatesTitleModel} Sling Model used for the multifield in {@code reactapp/components/multifield-tabs} component.
  * 
  */
 @ConsumerType
-public interface sucessModel
+public interface certificatesTitleModel
     extends ComponentExporter
 {
 
 
-    @JsonProperty("inputtextsucess")
-    String getInputtextsucess();
+    @JsonProperty("titletext")
+    String getCertificatesTitleText();
 
-    @JsonProperty("buttonlabelsucess")
-    String getButtonlabelsucess();
+    @JsonProperty("certificatesTitleColor")
+    String getCertificatesTitleColor();
+
+    @JsonProperty("certificatesLabelText")
+    String getCertificatesLabelText();
+
+    @JsonProperty("certificatesLabelColor")
+    String getCertificatesLabelColor();
+
+    @JsonProperty("certificatesPlaceholderText")
+    String getCertificatesPlaceholderText();
+
+    @JsonProperty("certificatesPlaceholderColor")
+    String getCertificatesPlaceholderColor();
+
+    @JsonProperty("certificatesInputTextColor")
+    String getCertificatesInputTextColor();
+
+    @JsonProperty("fonts")
+    String getFonts();
 
 }

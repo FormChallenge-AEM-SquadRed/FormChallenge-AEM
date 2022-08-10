@@ -24,35 +24,35 @@ import org.osgi.annotation.versioning.ConsumerType;
 
 
 /**
- * Defines the {@code sucessModel} Sling Model used for the multifield in {@code reactapp/components/multifield-tabs} component.
+ * Defines the {@code certificatesTitleModel} Sling Model used for the multifield in {@code reactapp/components/multifield-tabs} component.
  * 
  */
 @ConsumerType
-public interface sucessModel
+public interface certificatesTitleModel
     extends ComponentExporter
 {
 
 
     @JsonProperty("titletext")
-    String getTitletext();
+    String getCertificatesTitleText();
 
-    @JsonProperty("titlecolor")
-    String getTitlecolor();
+    @JsonProperty("certificatesTitleColor")
+    String getCertificatesTitleColor();
 
-    @JsonProperty("labeltextsucess")
-    String getLabeltextsucess();
+    @JsonProperty("certificatesLabelText")
+    String getCertificatesLabelText();
 
-    @JsonProperty("labelcolorsucess")
-    String getLabelcolorsucess();
+    @JsonProperty("certificatesLabelColor")
+    String getCertificatesLabelColor();
 
-    @JsonProperty("buttonlabelsucess")
-    String getButtonlabelsucess();
+    @JsonProperty("certificatesPlaceholderText")
+    String getCertificatesPlaceholderText();
 
-    @JsonProperty("buttonlabelcolorsucess")
-    String getButtonlabelcolorsucess();
+    @JsonProperty("certificatesPlaceholderColor")
+    String getCertificatesPlaceholderColor();
 
-    @JsonProperty("buttonbackgroundcolorsucess")
-    String getButtonbackgroundcolorsucess();
+    @JsonProperty("certificatesInputTextColor")
+    String getCertificatesInputTextColor();
 
     @JsonProperty("fonts")
     String getFonts();
