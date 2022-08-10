@@ -68,13 +68,6 @@
               "text": "Botão Certificates",
               "value": "certificates"
             }
-          },
-          {
-            "field": "removeCertificate",
-            "attributes": {
-              "text": "Botão RemoveCertificates",
-              "value": "removeCertificate"
-            }
           }
         ]
       },

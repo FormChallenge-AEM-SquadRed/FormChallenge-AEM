@@ -24,7 +24,7 @@ export const ButtonNextStyled = styled.button`
 
   &:hover {
     cursor: pointer;
-    background-color: #20b7d8;
+    background-color:  rgba(157, 172, 209, 0.6); 
   }
 `;
 
@@ -42,11 +42,11 @@ export const ButtonMoreStyled = styled.button`
 
   &:hover {
     cursor: pointer;
-    background-color: #20b7d8;
+    background-color:  rgba(157, 172, 209, 0.6); 
   }
 
   @media (max-width: 350px) {
-    width: 8rem;
+    width: 18rem;
     font-size: 1rem;
   }
 `;
@@ -66,7 +66,7 @@ export const ButtonFinishStyled = styled.button`
 
   &:hover {
     cursor: pointer;
-    background-color: #20b7d8;
+    background-color: rgba(157, 172, 209, 0.6); 
   }
 `;
 
@@ -118,4 +118,3 @@ export const ButtonRemoveCertificates = styled.button`
     cursor: pointer;
   }
 `;
-

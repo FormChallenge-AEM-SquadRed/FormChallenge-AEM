@@ -18,8 +18,8 @@ import { MdKeyboardArrowRight } from "react-icons/md";
 import { HiCheck } from "react-icons/hi";
 import { IoIosArrowDown } from "react-icons/io";
 
-const Button = ({ text, buttons, bgcolor, colortext}) => {
-  console.log(buttons)
+const Button = ({ text, buttons, bgcolor, colortext, children }) => {
+  console.log(buttons);
   if (buttons) {
     if (buttons === "next")
       return (
@@ -100,12 +100,10 @@ const Button = ({ text, buttons, bgcolor, colortext}) => {
     if (buttons === "removeCertificate")
       return (
         <ContainerRemoveCertificates>
-          <LinkCertificates>Remover Certificado</LinkCertificates>
+          <LinkCertificates>{children}</LinkCertificates>
           <ButtonRemoveCertificates
             type={"button"}
             onClick={() => console.log("buttonRemoveCertificate")}
-            bgcolor={bgcolor}
-            colortext={colortext}
           >
             <ContainerIcons>
               <AiOutlineClose

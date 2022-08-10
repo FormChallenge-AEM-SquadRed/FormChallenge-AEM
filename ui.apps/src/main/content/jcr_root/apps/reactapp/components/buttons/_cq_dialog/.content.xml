@@ -53,9 +53,6 @@
                      <certificates jcr:primaryType="nt:unstructured"
                                    text="Botão Certificates"
                                    value="certificates"/>
-                     <removeCertificate jcr:primaryType="nt:unstructured"
-                                        text="Botão RemoveCertificates"
-                                        value="removeCertificate"/>
                   </items>
                </buttons>
                <text cq-msm-lockable="./text"
@@ -67,12 +64,12 @@
                           fieldLabel="Cor do texto do botão"
                           jcr:primaryType="nt:unstructured"
                           name="./colortext"
-                          sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                          sling:resourceType="granite/ui/components/coral/foundation/form/colorfield"/>
                <bgcolor cq-msm-lockable="./bgcolor"
                         fieldLabel="Cor do background do botão"
                         jcr:primaryType="nt:unstructured"
                         name="./bgcolor"
-                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                        sling:resourceType="granite/ui/components/coral/foundation/form/colorfield"/>
             </items>
          </column>
       </items>
