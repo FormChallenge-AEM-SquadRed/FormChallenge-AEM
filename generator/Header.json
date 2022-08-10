@@ -29,18 +29,39 @@
     "generic-javadoc": false,
     "properties": [
       {
+        "field": "containerColor",
+        "label": "Choose header background color",
+        "type": "textfield",
+        "json-expose": true,
+        "json-property": "containerColor"
+      },
+      {
+        "field": "text",
+        "label": "Type a text here please",
+        "type": "textfield",
+        "json-expose": true,
+        "json-property": "text"
+      },
+      {
+        "field": "colorText",
+        "label": "Choose title color please",
+        "type": "textfield",
+        "json-expose": true,
+        "json-property": "colorText"
+      },
+      {
         "field": "textTitle",
-        "label": "Digite um texto aqui por favor.",
+        "label": "Type a title here please",
         "type": "textfield",
         "json-expose": true,
         "json-property": "textTitle"
       },
       {
-        "field": "text",
-        "label": "Digite um texto aqui por favor.",
+        "field": "colorTitle",
+        "label": "Choose title color please",
         "type": "textfield",
         "json-expose": true,
-        "json-property": "text"
+        "json-property": "colorTitle"
       }
     ]
   }

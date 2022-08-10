@@ -33,10 +33,19 @@ public interface Header
 {
 
 
-    @JsonProperty("textTitle")
-    String getTextTitle();
+    @JsonProperty("containerColor")
+    String getContainerColor();
 
     @JsonProperty("text")
     String getText();
+
+    @JsonProperty("colorText")
+    String getColorText();
+
+    @JsonProperty("textTitle")
+    String getTextTitle();
+
+    @JsonProperty("colorTitle")
+    String getColorTitle();
 
 }

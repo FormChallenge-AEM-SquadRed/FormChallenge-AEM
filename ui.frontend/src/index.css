@@ -18,23 +18,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@600;700&family=Nunito&display=swap");
 
 * {
-    box-sizing: border-box; 
+    box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
+    user-select: none;
 }
-html {       
-    font-size: 62.5%; 
-    }
+
+html {
+    font-size: 62.5%;
+}
+
 html,
 body {
     border: 0;
-    font: inherit;
-    font-size: 100%;
     margin: 0;
     padding: 0;
     vertical-align: baseline;
 }
 
 body {
-
     background-color: #e5e5e5;
     padding: 0 !important;
     font-size: 1.6rem;
@@ -49,15 +50,10 @@ p {
     margin: 0;
     padding: 0;
     border: 0;
-    font-size: 100%;
-    font: inherit;
     vertical-align: baseline;
 }
+
 .nav-container,
 .rw-box {
-    font-family: "Nunito", sans-serif;
-    user-select: none;
     color: #000000;
 }
-
-    

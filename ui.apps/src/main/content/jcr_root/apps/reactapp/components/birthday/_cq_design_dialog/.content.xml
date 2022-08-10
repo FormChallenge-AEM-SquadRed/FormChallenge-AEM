@@ -22,24 +22,20 @@
           xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
           xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
           jcr:primaryType="nt:unstructured"
-          jcr:title="Meu Componente"
+          jcr:title="Birthday Design Dialog"
           sling:resourceType="cq/gui/components/authoring/dialog">
    <content jcr:primaryType="nt:unstructured"
             sling:resourceType="granite/ui/components/coral/foundation/container">
-      <layout jcr:primaryType="nt:unstructured"
-              margin="{Boolean}false"
-              sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
       <items jcr:primaryType="nt:unstructured">
-         <column jcr:primaryType="nt:unstructured"
-                 sling:resourceType="granite/ui/components/coral/foundation/container">
+         <tabs jcr:primaryType="nt:unstructured"
+               maximized="{Boolean}true"
+               sling:resourceType="granite/ui/components/coral/foundation/tabs">
             <items jcr:primaryType="nt:unstructured">
-               <text cq-msm-lockable="./text"
-                     fieldLabel="Digite um texto aqui por favor."
-                     jcr:primaryType="nt:unstructured"
-                     name="./text"
-                     sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+               <styletab jcr:primaryType="nt:unstructured"
+                         path="/mnt/overlay/cq/gui/components/authoring/dialog/style/tab_design/styletab"
+                         sling:resourceType="granite/ui/components/coral/foundation/include"/>
             </items>
-         </column>
+         </tabs>
       </items>
    </content>
 </jcr:root>

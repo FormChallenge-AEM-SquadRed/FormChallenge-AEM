@@ -21,6 +21,6 @@
           xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
           xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
           xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
-          componentGroup="React App - Content"
-          jcr:primaryType="cq:Component"
-          jcr:title="Meu Componente"/>
+          jcr:primaryType="nt:unstructured"
+          jcr:title="Birthday"
+          sling:resourceType="cq/gui/components/authoring/dialog"/>
