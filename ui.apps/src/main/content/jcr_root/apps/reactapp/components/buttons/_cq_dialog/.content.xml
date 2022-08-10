@@ -33,31 +33,31 @@
          <column jcr:primaryType="nt:unstructured"
                  sling:resourceType="granite/ui/components/coral/foundation/container">
             <items jcr:primaryType="nt:unstructured">
-               <buttonType cq-msm-lockable="./buttonType"
-                           fieldLabel="Escolha um tipo de botão"
-                           jcr:primaryType="nt:unstructured"
-                           name="./buttonType"
-                           sling:resourceType="granite/ui/components/coral/foundation/form/select">
+               <buttons cq-msm-lockable="./buttons"
+                        fieldLabel="Escolha um tipo de botão"
+                        jcr:primaryType="nt:unstructured"
+                        name="./buttons"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/select">
                   <items jcr:primaryType="nt:unstructured">
-                     <Next jcr:primaryType="nt:unstructured"
+                     <next jcr:primaryType="nt:unstructured"
                            selected="true"
                            text="Botão Next"
-                           value="Next"/>
-                     <More jcr:primaryType="nt:unstructured" text="Botão More" value="More"/>
-                     <Finish jcr:primaryType="nt:unstructured"
+                           value="next"/>
+                     <more jcr:primaryType="nt:unstructured" text="Botão More" value="more"/>
+                     <finish jcr:primaryType="nt:unstructured"
                              text="Botão Finish"
-                             value="Finish"/>
-                     <Return jcr:primaryType="nt:unstructured"
+                             value="finish"/>
+                     <return jcr:primaryType="nt:unstructured"
                              text="Botão Return"
-                             value="Return"/>
-                     <Certificates jcr:primaryType="nt:unstructured"
+                             value="return"/>
+                     <certificates jcr:primaryType="nt:unstructured"
                                    text="Botão Certificates"
-                                   value="Certificates"/>
-                     <RemoveCertificate jcr:primaryType="nt:unstructured"
+                                   value="certificates"/>
+                     <removeCertificate jcr:primaryType="nt:unstructured"
                                         text="Botão RemoveCertificates"
-                                        value="RemoveCertificate"/>
+                                        value="removeCertificate"/>
                   </items>
-               </buttonType>
+               </buttons>
                <text cq-msm-lockable="./text"
                      fieldLabel="Digite um texto aqui por favor."
                      jcr:primaryType="nt:unstructured"
@@ -67,12 +67,12 @@
                           fieldLabel="Cor do texto do botão"
                           jcr:primaryType="nt:unstructured"
                           name="./colortext"
-                          sling:resourceType="granite/ui/components/coral/foundation/form/colorfield"/>
+                          sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
                <bgcolor cq-msm-lockable="./bgcolor"
                         fieldLabel="Cor do background do botão"
                         jcr:primaryType="nt:unstructured"
                         name="./bgcolor"
-                        sling:resourceType="granite/ui/components/coral/foundation/form/colorfield"/>
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
             </items>
          </column>
       </items>

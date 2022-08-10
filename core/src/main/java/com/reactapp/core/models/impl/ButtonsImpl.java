@@ -42,7 +42,7 @@ public class ButtonsImpl
 {
 
     @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
-    private String buttonType;
+    private String buttons;
     @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
     private String text;
     @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
@@ -53,9 +53,9 @@ public class ButtonsImpl
     private Resource resource;
 
     @Override
-    @JsonProperty("buttonType")
-    public String getButtonType() {
-        return buttonType;
+    @JsonProperty("buttons")
+    public String getButtons() {
+        return buttons;
     }
 
     @Override

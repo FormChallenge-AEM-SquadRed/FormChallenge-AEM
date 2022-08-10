@@ -33,8 +33,8 @@ public interface Buttons
 {
 
 
-    @JsonProperty("buttonType")
-    String getButtonType();
+    @JsonProperty("buttons")
+    String getButtons();
 
     @JsonProperty("text")
     String getText();

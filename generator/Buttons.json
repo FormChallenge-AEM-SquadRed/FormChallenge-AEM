@@ -27,53 +27,53 @@
     "generic-javadoc": false,
     "properties": [
       {
-        "field": "buttonType",
+        "field": "buttons",
         "type": "select",
         "label": "Escolha um tipo de botão",
         "json-expose": true,
-        "json-property": "buttonType",
+        "json-property": "buttons",
         "items": [
           {
-            "field": "Next",
+            "field": "next",
             "attributes": {
               "selected": "true",
               "text": "Botão Next",
-              "value": "Next"
+              "value": "next"
             }
           },
           {
-            "field": "More",
+            "field": "more",
             "attributes": {
               "text": "Botão More",
-              "value": "More"
+              "value": "more"
             }
           },
           {
-            "field": "Finish",
+            "field": "finish",
             "attributes": {
               "text": "Botão Finish",
-              "value": "Finish"
+              "value": "finish"
             }
           },
           {
-            "field": "Return",
+            "field": "return",
             "attributes": {
               "text": "Botão Return",
-              "value": "Return"
+              "value": "return"
             }
           },
           {
-            "field": "Certificates",
+            "field": "certificates",
             "attributes": {
               "text": "Botão Certificates",
-              "value": "Certificates"
+              "value": "certificates"
             }
           },
           {
-            "field": "RemoveCertificate",
+            "field": "removeCertificate",
             "attributes": {
               "text": "Botão RemoveCertificates",
-              "value": "RemoveCertificate"
+              "value": "removeCertificate"
             }
           }
         ]
