@@ -1,18 +1,13 @@
-import React from 'react';
-import { MapTo } from '@adobe/aem-react-editable-components';
-import { Card, Container } from './indexStyled.js';
+import React from "react";
+import {MapTo} from "@adobe/aem-react-editable-components";
+import {Card, Container} from "./style";
 
-const CardComponent = ({color}) => {
-    return(
+const CardComponent = ({cardColor}) => {
+    return (
         <Container>
-             <Card cardcolor = {color} />
+            <Card cardColor={cardColor} />
         </Container>
-           
     );
-}
+};
 
-
-
-
-
-export default MapTo('reactapp/components/card-component')(CardComponent);
+export default MapTo("reactapp/components/multifield-card")(CardComponent);
