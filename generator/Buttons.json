@@ -23,11 +23,61 @@
     "testclass": false,
     "junit-major-version": 5,
     "content-exporter": true,
-    "model-adaptables": [
-      "request"
-    ],
+    "model-adaptables": ["request"],
     "generic-javadoc": false,
     "properties": [
+      {
+        "field": "buttonType",
+        "type": "select",
+        "label": "Escolha um tipo de botão",
+        "json-expose": true,
+        "json-property": "buttonType",
+        "items": [
+          {
+            "field": "Next",
+            "attributes": {
+              "selected": "true",
+              "text": "Botão Next",
+              "value": "Next"
+            }
+          },
+          {
+            "field": "More",
+            "attributes": {
+              "text": "Botão More",
+              "value": "More"
+            }
+          },
+          {
+            "field": "Finish",
+            "attributes": {
+              "text": "Botão Finish",
+              "value": "Finish"
+            }
+          },
+          {
+            "field": "Return",
+            "attributes": {
+              "text": "Botão Return",
+              "value": "Return"
+            }
+          },
+          {
+            "field": "Certificates",
+            "attributes": {
+              "text": "Botão Certificates",
+              "value": "Certificates"
+            }
+          },
+          {
+            "field": "RemoveCertificate",
+            "attributes": {
+              "text": "Botão RemoveCertificates",
+              "value": "RemoveCertificate"
+            }
+          }
+        ]
+      },
       {
         "field": "text",
         "label": "Digite um texto aqui por favor.",
@@ -48,13 +98,6 @@
         "type": "textfield",
         "json-expose": true,
         "json-property": "bgcolor"
-      },
-      {
-        "field": "id",
-        "label": "Digite o id do botão que deseja: ",
-        "type": "textfield",
-        "json-expose": true,
-        "json-property": "id"
       }
     ]
   }

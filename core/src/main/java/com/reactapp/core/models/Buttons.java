@@ -33,6 +33,9 @@ public interface Buttons
 {
 
 
+    @JsonProperty("buttonType")
+    String getButtonType();
+
     @JsonProperty("text")
     String getText();
 
@@ -41,8 +44,5 @@ public interface Buttons
 
     @JsonProperty("bgcolor")
     String getBgcolor();
-
-    @JsonProperty("id")
-    String getId();
 
 }

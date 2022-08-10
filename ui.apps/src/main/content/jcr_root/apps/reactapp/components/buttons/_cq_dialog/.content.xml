@@ -33,6 +33,31 @@
          <column jcr:primaryType="nt:unstructured"
                  sling:resourceType="granite/ui/components/coral/foundation/container">
             <items jcr:primaryType="nt:unstructured">
+               <buttonType cq-msm-lockable="./buttonType"
+                           fieldLabel="Escolha um tipo de botão"
+                           jcr:primaryType="nt:unstructured"
+                           name="./buttonType"
+                           sling:resourceType="granite/ui/components/coral/foundation/form/select">
+                  <items jcr:primaryType="nt:unstructured">
+                     <Next jcr:primaryType="nt:unstructured"
+                           selected="true"
+                           text="Botão Next"
+                           value="Next"/>
+                     <More jcr:primaryType="nt:unstructured" text="Botão More" value="More"/>
+                     <Finish jcr:primaryType="nt:unstructured"
+                             text="Botão Finish"
+                             value="Finish"/>
+                     <Return jcr:primaryType="nt:unstructured"
+                             text="Botão Return"
+                             value="Return"/>
+                     <Certificates jcr:primaryType="nt:unstructured"
+                                   text="Botão Certificates"
+                                   value="Certificates"/>
+                     <RemoveCertificate jcr:primaryType="nt:unstructured"
+                                        text="Botão RemoveCertificates"
+                                        value="RemoveCertificate"/>
+                  </items>
+               </buttonType>
                <text cq-msm-lockable="./text"
                      fieldLabel="Digite um texto aqui por favor."
                      jcr:primaryType="nt:unstructured"
@@ -48,11 +73,6 @@
                         jcr:primaryType="nt:unstructured"
                         name="./bgcolor"
                         sling:resourceType="granite/ui/components/coral/foundation/form/colorfield"/>
-               <id cq-msm-lockable="./id"
-                   fieldLabel="Digite o id do botão que deseja: "
-                   jcr:primaryType="nt:unstructured"
-                   name="./id"
-                   sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
             </items>
          </column>
       </items>

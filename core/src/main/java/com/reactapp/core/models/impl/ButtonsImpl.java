@@ -42,15 +42,21 @@ public class ButtonsImpl
 {
 
     @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
+    private String buttonType;
+    @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
     private String text;
     @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
     private String colortext;
     @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
     private String bgcolor;
-    @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
-    private String id;
     @SlingObject
     private Resource resource;
+
+    @Override
+    @JsonProperty("buttonType")
+    public String getButtonType() {
+        return buttonType;
+    }
 
     @Override
     @JsonProperty("text")
@@ -68,12 +74,6 @@ public class ButtonsImpl
     @JsonProperty("bgcolor")
     public String getBgcolor() {
         return bgcolor;
-    }
-
-    @Override
-    @JsonProperty("id")
-    public String getId() {
-        return id;
     }
 
     @Override

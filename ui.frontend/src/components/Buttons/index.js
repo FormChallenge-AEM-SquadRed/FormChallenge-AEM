@@ -18,9 +18,10 @@ import { MdKeyboardArrowRight } from "react-icons/md";
 import { HiCheck } from "react-icons/hi";
 import { IoIosArrowDown } from "react-icons/io";
 
-const Button = ({ id, text, bgcolor, colortext }) => {
-  if (id) {
-    if (id === "Next")
+const Button = ({ text, buttonType, bgcolor, colortext, buttons }) => {
+  console.log(buttons);
+  if (buttonType) {
+    if (buttonType === "Next")
       return (
         <ButtonNextStyled
           type={"submit"}
@@ -34,7 +35,7 @@ const Button = ({ id, text, bgcolor, colortext }) => {
         </ButtonNextStyled>
       );
 
-    if (id === "More")
+    if (buttonType === "More")
       return (
         <ButtonMoreStyled
           type={"submit"}
@@ -52,7 +53,7 @@ const Button = ({ id, text, bgcolor, colortext }) => {
         </ButtonMoreStyled>
       );
 
-    if (id === "Finish")
+    if (buttonType === "Finish")
       return (
         <ButtonFinishStyled
           type={"submit"}
@@ -66,7 +67,7 @@ const Button = ({ id, text, bgcolor, colortext }) => {
         </ButtonFinishStyled>
       );
 
-    if (id === "Return")
+    if (buttonType === "Return")
       return (
         <ButtonReturnStyled
           type={"button"}
@@ -81,7 +82,7 @@ const Button = ({ id, text, bgcolor, colortext }) => {
         </ButtonReturnStyled>
       );
 
-    if (id === "Certificates")
+    if (buttonType === "Certificates")
       return (
         <ButtonCertificatesStyled
           type={"button"}
@@ -96,7 +97,7 @@ const Button = ({ id, text, bgcolor, colortext }) => {
         </ButtonCertificatesStyled>
       );
 
-    if (id === "RemoveCertificate")
+    if (buttonType === "RemoveCertificate")
       return (
         <ContainerRemoveCertificates>
           <LinkCertificates>Remover Certificado</LinkCertificates>
