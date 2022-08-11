@@ -59,7 +59,7 @@
             {
                 "id": "tab-4",
                 "label": "Tab Success",
-                "fields": ["successTitle", "sucessText", "successButton"]
+                "fields": ["successTitle", "successText", "successButton"]
             }
         ],
         "properties": [
@@ -380,7 +380,7 @@
                     {
                         "field": "titlecolor",
                         "type": "textfield",
-                        "label": "Escolha a cor do titulo: ",
+                        "label": "Escolha a cor do titulo:",
                         "json-expose": true,
                         "json-property": "titlecolor"
                     },
@@ -540,7 +540,7 @@
                     {
                         "field": "buttonbckgcolor",
                         "type": "textfield",
-                        "label": "Escolha o background do input:",
+                        "label": "Escolha o background do botão:",
                         "json-expose": true,
                         "json-property": "buttonbckgcolor"
                     },
@@ -606,44 +606,9 @@
                     {
                         "field": "certificatesTitleColor",
                         "type": "textfield",
-                        "label": "Escolha a cor do titulo: ",
+                        "label": "Escolha a cor do titulo:",
                         "json-expose": true,
                         "json-property": "certificatesTitleColor"
-                    },
-                    {
-                        "field": "certificatesLabelText",
-                        "type": "textfield",
-                        "label": "Digite o texto da label:",
-                        "json-expose": true,
-                        "json-property": "certificatesLabelText"
-                    },
-                    {
-                        "field": "certificatesLabelColor",
-                        "type": "textfield",
-                        "label": "Escolha a cor da label:",
-                        "json-expose": true,
-                        "json-property": "certificatesLabelColor"
-                    },
-                    {
-                        "field": "certificatesPlaceholderText",
-                        "type": "textfield",
-                        "label": "Digite o texto do placeholder:",
-                        "json-expose": true,
-                        "json-property": "certificatesPlaceholderText"
-                    },
-                    {
-                        "field": "certificatesPlaceholderColor",
-                        "type": "textfield",
-                        "label": "Escolha a cor do placeholder:",
-                        "json-expose": true,
-                        "json-property": "certificatesPlaceholderColor"
-                    },
-                    {
-                        "field": "certificatesInputTextColor",
-                        "type": "textfield",
-                        "label": "Escolha a cor do texto do input:",
-                        "json-expose": true,
-                        "json-property": "certificatesInputTextColor"
                     },
                     {
                         "field": "fonts",
@@ -794,14 +759,14 @@
                     {
                         "field": "buttonlabelcolor",
                         "type": "textfield",
-                        "label": "Escolha a cor da label do botão: ",
+                        "label": "Escolha a cor da label do botão:",
                         "json-expose": true,
                         "json-property": "buttonlabelcolor"
                     },
                     {
                         "field": "buttonbckgcolor",
                         "type": "textfield",
-                        "label": "Escolha o background do input:",
+                        "label": "Escolha o background do botão:",
                         "json-expose": true,
                         "json-property": "buttonbckgcolor"
                     },
@@ -874,7 +839,7 @@
                     {
                         "field": "buttonbckgcolor",
                         "type": "textfield",
-                        "label": "Escolha o background do input:",
+                        "label": "Escolha o background do botão:",
                         "json-expose": true,
                         "json-property": "buttonbckgcolor"
                     },
@@ -923,10 +888,10 @@
                 ]
             },
             {
-                "field": "sucessTitle",
+                "field": "successTitle",
                 "type": "multifield",
                 "label": "Title",
-                "model-name": "basicTitleModel",
+                "model-name": "successTitleModel",
                 "use-existing-model": false,
                 "json-expose": true,
                 "items": [
@@ -989,10 +954,10 @@
                 ]
             },
             {
-                "field": "sucessText",
+                "field": "successText",
                 "type": "multifield",
                 "label": "Text",
-                "model-name": "sucessTextModel",
+                "model-name": "successTextModel",
                 "use-existing-model": false,
                 "json-expose": true,
                 "items": [
@@ -1055,31 +1020,38 @@
                 ]
             },
             {
-                "field": "sucessButton",
+                "field": "successButton",
                 "type": "multifield",
                 "label": "Button",
-                "model-name": "sucessButtonModel",
+                "model-name": "successButtonModel",
                 "use-existing-model": false,
                 "json-expose": true,
                 "items": [
                     {
                         "field": "resulttext",
                         "type": "textfield",
-                        "label": "Digite o texto do titulo:",
+                        "label": "Digite o texto do botão:",
                         "json-expose": true,
                         "json-property": "resulttext"
                     },
                     {
                         "field": "resultcolor",
                         "type": "textfield",
-                        "label": "Escolha a cor do titulo:",
+                        "label": "Escolha a cor do texto do botão:",
                         "json-expose": true,
                         "json-property": "resultcolor"
                     },
                     {
+                        "field": "buttonbckgcolor",
+                        "type": "textfield",
+                        "label": "Escolha o background do botão:",
+                        "json-expose": true,
+                        "json-property": "buttonbckgcolor"
+                    },
+                    {
                         "field": "fonts",
                         "type": "select",
-                        "label": "Fonte para o texto:",
+                        "label": "Fonte para o texto do botão:",
                         "json-expose": true,
                         "json-property": "fonts",
                         "attributes": {
