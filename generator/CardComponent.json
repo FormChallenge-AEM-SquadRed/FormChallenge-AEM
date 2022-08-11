@@ -216,6 +216,62 @@
                 }
               }
             ]
+          },
+          {
+            "field": "types",
+            "type": "select",
+            "label": "Selecione o tipo do input:",
+            "json-expose": true,
+            "json-property": "types",
+            "attributes": {
+              "defaultValue": "types",
+              "value": false
+            },
+            "items": [
+              {
+                "field": "text",
+                "attributes": {
+                  "selected": "true",
+                  "text": "Text",
+                  "value": "text"
+                }
+              },
+              {
+                "field": "email",
+                "attributes": {
+                  "text": "Email",
+                  "value": "email"
+                }
+              },
+              {
+                "field": "tel",
+                "attributes": {
+                  "text": "Tel",
+                  "value": "tel"
+                }
+              },
+              {
+                "field": "password",
+                "attributes": {
+                  "text": "Password",
+                  "value": "password"
+                }
+              },
+              {
+                "field": "number",
+                "attributes": {
+                  "text": "Number",
+                  "value": "number"
+                }
+              },
+              {
+                "field": "date",
+                "attributes": {
+                  "text": "Date",
+                  "value": "date"
+                }
+              }
+            ]
           }
         ]
       },
@@ -555,6 +611,62 @@
                 }
               }
             ]
+          },
+          {
+            "field": "types",
+            "type": "select",
+            "label": "Selecione o tipo do input:",
+            "json-expose": true,
+            "json-property": "types",
+            "attributes": {
+              "defaultValue": "types",
+              "value": false
+            },
+            "items": [
+              {
+                "field": "text",
+                "attributes": {
+                  "selected": "true",
+                  "text": "Text",
+                  "value": "text"
+                }
+              },
+              {
+                "field": "email",
+                "attributes": {
+                  "text": "Email",
+                  "value": "email"
+                }
+              },
+              {
+                "field": "tel",
+                "attributes": {
+                  "text": "Tel",
+                  "value": "tel"
+                }
+              },
+              {
+                "field": "password",
+                "attributes": {
+                  "text": "Password",
+                  "value": "password"
+                }
+              },
+              {
+                "field": "number",
+                "attributes": {
+                  "text": "Number",
+                  "value": "number"
+                }
+              },
+              {
+                "field": "date",
+                "attributes": {
+                  "text": "Date",
+                  "value": "date"
+                }
+              }
+            ]
           }
         ]
       },
@@ -823,6 +935,62 @@
                 "attributes": {
                   "text": "Roboto",
                   "value": "roboto"
+                }
+              }
+            ]
+          },
+          {
+            "field": "types",
+            "type": "select",
+            "label": "Selecione o tipo do input:",
+            "json-expose": true,
+            "json-property": "types",
+            "attributes": {
+              "defaultValue": "types",
+              "value": false
+            },
+            "items": [
+              {
+                "field": "text",
+                "attributes": {
+                  "selected": "true",
+                  "text": "Text",
+                  "value": "text"
+                }
+              },
+              {
+                "field": "email",
+                "attributes": {
+                  "text": "Email",
+                  "value": "email"
+                }
+              },
+              {
+                "field": "tel",
+                "attributes": {
+                  "text": "Tel",
+                  "value": "tel"
+                }
+              },
+              {
+                "field": "password",
+                "attributes": {
+                  "text": "Password",
+                  "value": "password"
+                }
+              },
+              {
+                "field": "number",
+                "attributes": {
+                  "text": "Number",
+                  "value": "number"
+                }
+              },
+              {
+                "field": "date",
+                "attributes": {
+                  "text": "Date",
+                  "value": "date"
                 }
               }
             ]

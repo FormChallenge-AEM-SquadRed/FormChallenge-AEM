@@ -29,6 +29,7 @@ import com.reactapp.core.models.basicButtonModel;
 import com.reactapp.core.models.basicCheckboxModel;
 import com.reactapp.core.models.basicInputModel;
 import com.reactapp.core.models.basicTitleModel;
+import com.reactapp.core.models.certificatesCertificateModel;
 import com.reactapp.core.models.certificatesFinishModel;
 import com.reactapp.core.models.certificatesInputModel;
 import com.reactapp.core.models.certificatesMoreModel;
@@ -82,6 +83,8 @@ public class MultifieldCardImpl
     private List<certificatesMoreModel> certificatesMore;
     @ChildResourceFromRequest(injectionStrategy = InjectionStrategy.OPTIONAL)
     private List<certificatesFinishModel> certificatesFinish;
+    @ChildResourceFromRequest(injectionStrategy = InjectionStrategy.OPTIONAL)
+    private List<certificatesCertificateModel> certificatesCertificate;
     @ChildResourceFromRequest(injectionStrategy = InjectionStrategy.OPTIONAL)
     private List<successTitleModel> successTitle;
     @ChildResourceFromRequest(injectionStrategy = InjectionStrategy.OPTIONAL)
@@ -150,6 +153,11 @@ public class MultifieldCardImpl
     @Override
     public List<certificatesFinishModel> getCertificatesFinish() {
         return certificatesFinish != null ? Collections.unmodifiableList(certificatesFinish) : null;
+    }
+
+    @Override
+    public List<certificatesCertificateModel> getCertificatesCertificate() {
+        return certificatesCertificate != null ? Collections.unmodifiableList(certificatesCertificate) : null;
     }
 
     @Override

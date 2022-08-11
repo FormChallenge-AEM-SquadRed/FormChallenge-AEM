@@ -51,4 +51,7 @@ public interface certificatesInputModel
     @JsonProperty("fonts")
     String getFonts();
 
+    @JsonProperty("types")
+    String getTypes();
+
 }

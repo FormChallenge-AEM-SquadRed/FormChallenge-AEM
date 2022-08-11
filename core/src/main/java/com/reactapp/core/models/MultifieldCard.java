@@ -59,6 +59,8 @@ public interface MultifieldCard
 
     List<certificatesFinishModel> getCertificatesFinish();
 
+    List<certificatesCertificateModel> getCertificatesCertificate();
+
     List<successTitleModel> getSuccessTitle();
 
     List<successTextModel> getSuccessText();

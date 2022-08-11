@@ -51,4 +51,7 @@ public interface basicInputModel
     @JsonProperty("fonts")
     String getFonts();
 
+    @JsonProperty("types")
+    String getTypes();
+
 }

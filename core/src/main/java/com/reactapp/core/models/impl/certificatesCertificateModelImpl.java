@@ -21,7 +21,7 @@ package com.reactapp.core.models.impl;
 import com.adobe.cq.export.json.ComponentExporter;
 import com.adobe.cq.export.json.ExporterConstants;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.reactapp.core.models.socialInputModel;
+import com.reactapp.core.models.certificatesCertificateModel;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.Exporter;
@@ -33,59 +33,43 @@ import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
 @Model(adaptables = {
     SlingHttpServletRequest.class
 }, adapters = {
-    socialInputModel.class,
+    certificatesCertificateModel.class,
     ComponentExporter.class
 })
 @Exporter(name = ExporterConstants.SLING_MODEL_EXPORTER_NAME, extensions = ExporterConstants.SLING_MODEL_EXTENSION)
-public class socialInputModelImpl
-    implements socialInputModel
+public class certificatesCertificateModelImpl
+    implements certificatesCertificateModel
 {
 
     @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
-    private String labeltext;
+    private String buttonlabel;
     @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
-    private String labelcolor;
+    private String buttonlabelcolor;
     @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
-    private String placeholdertext;
-    @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
-    private String placeholdercolor;
-    @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
-    private String textcolor;
+    private String buttonbckgcolor;
     @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
     private String fonts;
     @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
-    private String types;
+    private String buttons;
     @SlingObject
     private Resource resource;
 
     @Override
-    @JsonProperty("labeltext")
-    public String getLabeltext() {
-        return labeltext;
+    @JsonProperty("buttonlabel")
+    public String getButtonlabel() {
+        return buttonlabel;
     }
 
     @Override
-    @JsonProperty("labelcolor")
-    public String getLabelcolor() {
-        return labelcolor;
+    @JsonProperty("buttonlabelcolor")
+    public String getButtonlabelcolor() {
+        return buttonlabelcolor;
     }
 
     @Override
-    @JsonProperty("placeholdertext")
-    public String getPlaceholdertext() {
-        return placeholdertext;
-    }
-
-    @Override
-    @JsonProperty("placeholdercolor")
-    public String getPlaceholdercolor() {
-        return placeholdercolor;
-    }
-
-    @Override
-    @JsonProperty("textcolor")
-    public String getTextcolor() {
-        return textcolor;
+    @JsonProperty("buttonbckgcolor")
+    public String getButtonbckgcolor() {
+        return buttonbckgcolor;
     }
 
     @Override
@@ -95,9 +79,9 @@ public class socialInputModelImpl
     }
 
     @Override
-    @JsonProperty("types")
-    public String getTypes() {
-        return types;
+    @JsonProperty("buttons")
+    public String getButtons() {
+        return buttons;
     }
 
     @Override

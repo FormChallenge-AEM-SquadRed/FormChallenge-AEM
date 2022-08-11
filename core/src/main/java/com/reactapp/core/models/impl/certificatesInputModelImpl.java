@@ -53,6 +53,8 @@ public class certificatesInputModelImpl
     private String textcolor;
     @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
     private String fonts;
+    @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
+    private String types;
     @SlingObject
     private Resource resource;
 
@@ -90,6 +92,12 @@ public class certificatesInputModelImpl
     @JsonProperty("fonts")
     public String getFonts() {
         return fonts;
+    }
+
+    @Override
+    @JsonProperty("types")
+    public String getTypes() {
+        return types;
     }
 
     @Override
