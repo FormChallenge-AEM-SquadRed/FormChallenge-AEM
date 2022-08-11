@@ -1,1097 +1,1438 @@
 {
-    "project-settings": {
-        "code-owner": "React App",
-        "bundle-path": "../core/src/main/java",
-        "test-path": "../core/src/test/java",
-        "apps-path": "../ui.apps/src/main/content/jcr_root/apps",
-        "component-path": "reactapp",
-        "model-interface-pkg": "com.reactapp.core.models",
-        "model-impl-pkg": "com.reactapp.core.models.impl"
-    },
-    "name": "multifield-card",
-    "title": "Multifield Card",
-    "group": "React App - Content",
-    "type": "components",
-    "options": {
-        "js": false,
-        "jstxt": false,
-        "css": false,
-        "csstxt": false,
-        "html": false,
-        "html-content": false,
-        "slingmodel": true,
-        "testclass": false,
-        "junit-major-version": 5,
-        "content-exporter": true,
-        "model-adaptables": ["request"],
-        "generic-javadoc": false,
-        "properties-tabs": [
-            {
-                "id": "tab-0",
-                "label": "Card",
-                "fields": ["cardColor"]
-            },
-            {
-                "id": "tab-1",
-                "label": "Tab Basic",
-                "fields": [
-                    "basicTitle",
-                    "basicInput",
-                    "basicCheckbox",
-                    "basicButton"
-                ]
-            },
-            {
-                "id": "tab-2",
-                "label": "Tab Social",
-                "fields": ["socialTitle", "socialInput", "socialButton"]
-            },
-            {
-                "id": "tab-3",
-                "label": "Tab Certificates",
-                "fields": [
-                    "certificatesTitle",
-                    "certificatesInput",
-                    "certificatesMore",
-                    "certificatesFinish"
-                ]
-            },
-            {
-                "id": "tab-4",
-                "label": "Tab Success",
-                "fields": ["successTitle", "successText", "successButton"]
-            }
-        ],
-        "properties": [
-            {
-                "field": "cardColor",
-                "label": "Escolha uma cor para o card:",
-                "type": "textfield",
-                "json-expose": true,
-                "json-property": "cardColor"
-            },
-            {
-                "field": "basicTitle",
-                "type": "multifield",
-                "label": "Title",
-                "model-name": "basicTitleModel",
-                "use-existing-model": false,
-                "json-expose": true,
-                "items": [
-                    {
-                        "field": "titletext",
-                        "type": "textfield",
-                        "label": "Digite o texto do titulo:",
-                        "json-expose": true,
-                        "json-property": "titletext"
-                    },
-                    {
-                        "field": "titlecolor",
-                        "type": "textfield",
-                        "label": "Escolha a cor do titulo:",
-                        "json-expose": true,
-                        "json-property": "titlecolor"
-                    },
-                    {
-                        "field": "fonts",
-                        "type": "select",
-                        "label": "Fonte para o texto",
-                        "json-expose": true,
-                        "json-property": "fonts",
-                        "attributes": {
-                            "defaultValue": "fonts",
-                            "value": false
-                        },
-                        "items": [
-                            {
-                                "field": "nunito",
-                                "attributes": {
-                                    "text": "Nunito",
-                                    "value": "nunito"
-                                }
-                            },
-                            {
-                                "field": "inter",
-                                "attributes": {
-                                    "selected": "true",
-                                    "text": "Inter",
-                                    "value": "inter"
-                                }
-                            },
-                            {
-                                "field": "montserrat",
-                                "attributes": {
-                                    "text": "Montserrat",
-                                    "value": "montserrat"
-                                }
-                            },
-                            {
-                                "field": "roboto",
-                                "attributes": {
-                                    "text": "Roboto",
-                                    "value": "roboto"
-                                }
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "field": "basicInput",
-                "type": "multifield",
-                "label": "Input",
-                "model-name": "basicInputModel",
-                "use-existing-model": false,
-                "json-expose": true,
-                "items": [
-                    {
-                        "field": "labeltext",
-                        "type": "textfield",
-                        "label": "Digite o texto da label:",
-                        "json-expose": true,
-                        "json-property": "labeltext"
-                    },
-                    {
-                        "field": "labelcolor",
-                        "type": "textfield",
-                        "label": "Escolha a cor da label:",
-                        "json-expose": true,
-                        "json-property": "labelcolor"
-                    },
-                    {
-                        "field": "placeholdertext",
-                        "type": "textfield",
-                        "label": "Digite o texto do placeholder:",
-                        "json-expose": true,
-                        "json-property": "placeholdertext"
-                    },
-                    {
-                        "field": "placeholdercolor",
-                        "type": "textfield",
-                        "label": "Escolha a cor do placeholder:",
-                        "json-expose": true,
-                        "json-property": "placeholdercolor"
-                    },
-                    {
-                        "field": "textcolor",
-                        "type": "textfield",
-                        "label": "Escolha a cor do texto do input:",
-                        "json-expose": true,
-                        "json-property": "textcolor"
-                    },
-                    {
-                        "field": "fonts",
-                        "type": "select",
-                        "label": "Fonte para o texto",
-                        "json-expose": true,
-                        "json-property": "fonts",
-                        "attributes": {
-                            "defaultValue": "fonts",
-                            "value": false
-                        },
-                        "items": [
-                            {
-                                "field": "nunito",
-                                "attributes": {
-                                    "text": "Nunito",
-                                    "value": "nunito"
-                                }
-                            },
-                            {
-                                "field": "inter",
-                                "attributes": {
-                                    "selected": "true",
-                                    "text": "Inter",
-                                    "value": "inter"
-                                }
-                            },
-                            {
-                                "field": "montserrat",
-                                "attributes": {
-                                    "text": "Montserrat",
-                                    "value": "montserrat"
-                                }
-                            },
-                            {
-                                "field": "roboto",
-                                "attributes": {
-                                    "text": "Roboto",
-                                    "value": "roboto"
-                                }
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "field": "basicCheckbox",
-                "type": "multifield",
-                "label": "Checkbox",
-                "model-name": "basicCheckboxModel",
-                "use-existing-model": false,
-                "json-expose": true,
-                "items": [
-                    {
-                        "field": "checkboxtext",
-                        "type": "textfield",
-                        "label": "Digite o texto do checkbox:",
-                        "json-expose": true,
-                        "json-property": "checkboxtext"
-                    },
-                    {
-                        "field": "checkboxcolor",
-                        "type": "textfield",
-                        "label": "Escolha a cor do checkbox:",
-                        "json-expose": true,
-                        "json-property": "checkboxcolor"
-                    },
-                    {
-                        "field": "fonts",
-                        "type": "select",
-                        "label": "Fonte para o texto",
-                        "json-expose": true,
-                        "json-property": "fonts",
-                        "attributes": {
-                            "defaultValue": "fonts",
-                            "value": false
-                        },
-                        "items": [
-                            {
-                                "field": "nunito",
-                                "attributes": {
-                                    "text": "Nunito",
-                                    "value": "nunito"
-                                }
-                            },
-                            {
-                                "field": "inter",
-                                "attributes": {
-                                    "selected": "true",
-                                    "text": "Inter",
-                                    "value": "inter"
-                                }
-                            },
-                            {
-                                "field": "montserrat",
-                                "attributes": {
-                                    "text": "Montserrat",
-                                    "value": "montserrat"
-                                }
-                            },
-                            {
-                                "field": "roboto",
-                                "attributes": {
-                                    "text": "Roboto",
-                                    "value": "roboto"
-                                }
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "field": "basicButton",
-                "type": "multifield",
-                "label": "Button",
-                "model-name": "basicButtonModel",
-                "use-existing-model": false,
-                "json-expose": true,
-                "items": [
-                    {
-                        "field": "buttonlabel",
-                        "type": "textfield",
-                        "label": "Digite a label do botão:",
-                        "json-expose": true,
-                        "json-property": "buttonlabel"
-                    },
-                    {
-                        "field": "buttonlabelcolor",
-                        "type": "textfield",
-                        "label": "Escolha a cor da label do botão:",
-                        "json-expose": true,
-                        "json-property": "buttonlabelcolor"
-                    },
-                    {
-                        "field": "buttonbckgcolor",
-                        "type": "textfield",
-                        "label": "Escolha a cor do background do botão:",
-                        "json-expose": true,
-                        "json-property": "buttonbckgcolor"
-                    },
-                    {
-                        "field": "fonts",
-                        "type": "select",
-                        "label": "Fonte para o texto",
-                        "json-expose": true,
-                        "json-property": "fonts",
-                        "attributes": {
-                            "defaultValue": "fonts",
-                            "value": false
-                        },
-                        "items": [
-                            {
-                                "field": "nunito",
-                                "attributes": {
-                                    "text": "Nunito",
-                                    "value": "nunito"
-                                }
-                            },
-                            {
-                                "field": "inter",
-                                "attributes": {
-                                    "selected": "true",
-                                    "text": "Inter",
-                                    "value": "inter"
-                                }
-                            },
-                            {
-                                "field": "montserrat",
-                                "attributes": {
-                                    "text": "Montserrat",
-                                    "value": "montserrat"
-                                }
-                            },
-                            {
-                                "field": "roboto",
-                                "attributes": {
-                                    "text": "Roboto",
-                                    "value": "roboto"
-                                }
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "field": "socialTitle",
-                "type": "multifield",
-                "label": "Title",
-                "model-name": "socialTitleModel",
-                "use-existing-model": false,
-                "json-expose": true,
-                "items": [
-                    {
-                        "field": "titletext",
-                        "type": "textfield",
-                        "label": "Digite o texto do titulo:",
-                        "json-expose": true,
-                        "json-property": "titletext"
-                    },
-                    {
-                        "field": "titlecolor",
-                        "type": "textfield",
-                        "label": "Escolha a cor do titulo:",
-                        "json-expose": true,
-                        "json-property": "titlecolor"
-                    },
-                    {
-                        "field": "fonts",
-                        "type": "select",
-                        "label": "Fonte para o texto",
-                        "json-expose": true,
-                        "json-property": "fonts",
-                        "attributes": {
-                            "defaultValue": "fonts",
-                            "value": false
-                        },
-                        "items": [
-                            {
-                                "field": "nunito",
-                                "attributes": {
-                                    "text": "Nunito",
-                                    "value": "nunito"
-                                }
-                            },
-                            {
-                                "field": "inter",
-                                "attributes": {
-                                    "selected": "true",
-                                    "text": "Inter",
-                                    "value": "inter"
-                                }
-                            },
-                            {
-                                "field": "montserrat",
-                                "attributes": {
-                                    "text": "Montserrat",
-                                    "value": "montserrat"
-                                }
-                            },
-                            {
-                                "field": "roboto",
-                                "attributes": {
-                                    "text": "Roboto",
-                                    "value": "roboto"
-                                }
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "field": "socialInput",
-                "type": "multifield",
-                "label": "Input",
-                "model-name": "socialInputModel",
-                "use-existing-model": false,
-                "json-expose": true,
-                "items": [
-                    {
-                        "field": "labeltext",
-                        "type": "textfield",
-                        "label": "Digite o texto da label:",
-                        "json-expose": true,
-                        "json-property": "labeltext"
-                    },
-                    {
-                        "field": "labelcolor",
-                        "type": "textfield",
-                        "label": "Escolha a cor da label:",
-                        "json-expose": true,
-                        "json-property": "labelcolor"
-                    },
-                    {
-                        "field": "placeholdertext",
-                        "type": "textfield",
-                        "label": "Digite o texto do placeholder:",
-                        "json-expose": true,
-                        "json-property": "placeholdertext"
-                    },
-                    {
-                        "field": "placeholdercolor",
-                        "type": "textfield",
-                        "label": "Escolha a cor do placeholder:",
-                        "json-expose": true,
-                        "json-property": "placeholdercolor"
-                    },
-                    {
-                        "field": "textcolor",
-                        "type": "textfield",
-                        "label": "Escolha a cor do texto do input:",
-                        "json-expose": true,
-                        "json-property": "textcolor"
-                    },
-                    {
-                        "field": "fonts",
-                        "type": "select",
-                        "label": "Fonte para o texto",
-                        "json-expose": true,
-                        "json-property": "fonts",
-                        "attributes": {
-                            "defaultValue": "fonts",
-                            "value": false
-                        },
-                        "items": [
-                            {
-                                "field": "nunito",
-                                "attributes": {
-                                    "text": "Nunito",
-                                    "value": "nunito"
-                                }
-                            },
-                            {
-                                "field": "inter",
-                                "attributes": {
-                                    "selected": "true",
-                                    "text": "Inter",
-                                    "value": "inter"
-                                }
-                            },
-                            {
-                                "field": "montserrat",
-                                "attributes": {
-                                    "text": "Montserrat",
-                                    "value": "montserrat"
-                                }
-                            },
-                            {
-                                "field": "roboto",
-                                "attributes": {
-                                    "text": "Roboto",
-                                    "value": "roboto"
-                                }
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "field": "socialButton",
-                "type": "multifield",
-                "label": "Button",
-                "model-name": "socialButtonModel",
-                "use-existing-model": false,
-                "json-expose": true,
-                "items": [
-                    {
-                        "field": "buttonlabel",
-                        "type": "textfield",
-                        "label": "Digite a label do botão:",
-                        "json-expose": true,
-                        "json-property": "buttonlabel"
-                    },
-                    {
-                        "field": "buttonlabelcolor",
-                        "type": "textfield",
-                        "label": "Escolha a cor da label do botão: ",
-                        "json-expose": true,
-                        "json-property": "buttonlabelcolor"
-                    },
-                    {
-                        "field": "buttonbckgcolor",
-                        "type": "textfield",
-                        "label": "Escolha o background do botão:",
-                        "json-expose": true,
-                        "json-property": "buttonbckgcolor"
-                    },
-                    {
-                        "field": "fonts",
-                        "type": "select",
-                        "label": "Fonte para o texto",
-                        "json-expose": true,
-                        "json-property": "fonts",
-                        "attributes": {
-                            "defaultValue": "fonts",
-                            "value": false
-                        },
-                        "items": [
-                            {
-                                "field": "nunito",
-                                "attributes": {
-                                    "text": "Nunito",
-                                    "value": "nunito"
-                                }
-                            },
-                            {
-                                "field": "inter",
-                                "attributes": {
-                                    "selected": "true",
-                                    "text": "Inter",
-                                    "value": "inter"
-                                }
-                            },
-                            {
-                                "field": "montserrat",
-                                "attributes": {
-                                    "text": "Montserrat",
-                                    "value": "montserrat"
-                                }
-                            },
-                            {
-                                "field": "roboto",
-                                "attributes": {
-                                    "text": "Roboto",
-                                    "value": "roboto"
-                                }
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "field": "certificatesTitle",
-                "type": "multifield",
-                "label": "Title",
-                "model-name": "certificatesTitleModel",
-                "use-existing-model": false,
-                "json-expose": true,
-                "items": [
-                    {
-                        "field": "certificatesTitleText",
-                        "type": "textfield",
-                        "label": "Digite o texto do titulo:",
-                        "json-expose": true,
-                        "json-property": "titletext"
-                    },
-                    {
-                        "field": "certificatesTitleColor",
-                        "type": "textfield",
-                        "label": "Escolha a cor do titulo:",
-                        "json-expose": true,
-                        "json-property": "certificatesTitleColor"
-                    },
-                    {
-                        "field": "fonts",
-                        "type": "select",
-                        "label": "Fonte para o texto",
-                        "json-expose": true,
-                        "json-property": "fonts",
-                        "attributes": {
-                            "defaultValue": "fonts",
-                            "value": false
-                        },
-                        "items": [
-                            {
-                                "field": "nunito",
-                                "attributes": {
-                                    "text": "Nunito",
-                                    "value": "nunito"
-                                }
-                            },
-                            {
-                                "field": "inter",
-                                "attributes": {
-                                    "selected": "true",
-                                    "text": "Inter",
-                                    "value": "inter"
-                                }
-                            },
-                            {
-                                "field": "montserrat",
-                                "attributes": {
-                                    "text": "Montserrat",
-                                    "value": "montserrat"
-                                }
-                            },
-                            {
-                                "field": "roboto",
-                                "attributes": {
-                                    "text": "Roboto",
-                                    "value": "roboto"
-                                }
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "field": "certificatesInput",
-                "type": "multifield",
-                "label": "Input",
-                "model-name": "certificatesInputModel",
-                "use-existing-model": false,
-                "json-expose": true,
-                "items": [
-                    {
-                        "field": "labeltext",
-                        "type": "textfield",
-                        "label": "Digite o texto da label:",
-                        "json-expose": true,
-                        "json-property": "labeltext"
-                    },
-                    {
-                        "field": "labelcolor",
-                        "type": "textfield",
-                        "label": "Escolha a cor da label:",
-                        "json-expose": true,
-                        "json-property": "labelcolor"
-                    },
-                    {
-                        "field": "placeholdertext",
-                        "type": "textfield",
-                        "label": "Digite o texto do placeholder:",
-                        "json-expose": true,
-                        "json-property": "placeholdertext"
-                    },
-                    {
-                        "field": "placeholdercolor",
-                        "type": "textfield",
-                        "label": "Escolha a cor do placeholder:",
-                        "json-expose": true,
-                        "json-property": "placeholdercolor"
-                    },
-                    {
-                        "field": "textcolor",
-                        "type": "textfield",
-                        "label": "Escolha a cor do texto do input:",
-                        "json-expose": true,
-                        "json-property": "textcolor"
-                    },
-                    {
-                        "field": "fonts",
-                        "type": "select",
-                        "label": "Fonte para o texto",
-                        "json-expose": true,
-                        "json-property": "fonts",
-                        "attributes": {
-                            "defaultValue": "fonts",
-                            "value": false
-                        },
-                        "items": [
-                            {
-                                "field": "nunito",
-                                "attributes": {
-                                    "text": "Nunito",
-                                    "value": "nunito"
-                                }
-                            },
-                            {
-                                "field": "inter",
-                                "attributes": {
-                                    "selected": "true",
-                                    "text": "Inter",
-                                    "value": "inter"
-                                }
-                            },
-                            {
-                                "field": "montserrat",
-                                "attributes": {
-                                    "text": "Montserrat",
-                                    "value": "montserrat"
-                                }
-                            },
-                            {
-                                "field": "roboto",
-                                "attributes": {
-                                    "text": "Roboto",
-                                    "value": "roboto"
-                                }
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "field": "certificatesMore",
-                "type": "multifield",
-                "label": "Button More",
-                "model-name": "certificatesMoreModel",
-                "use-existing-model": false,
-                "json-expose": true,
-                "items": [
-                    {
-                        "field": "buttonlabel",
-                        "type": "textfield",
-                        "label": "Digite a label do botão:",
-                        "json-expose": true,
-                        "json-property": "buttonlabel"
-                    },
-                    {
-                        "field": "buttonlabelcolor",
-                        "type": "textfield",
-                        "label": "Escolha a cor da label do botão:",
-                        "json-expose": true,
-                        "json-property": "buttonlabelcolor"
-                    },
-                    {
-                        "field": "buttonbckgcolor",
-                        "type": "textfield",
-                        "label": "Escolha o background do botão:",
-                        "json-expose": true,
-                        "json-property": "buttonbckgcolor"
-                    },
-                    {
-                        "field": "fonts",
-                        "type": "select",
-                        "label": "Fonte para o texto",
-                        "json-expose": true,
-                        "json-property": "fonts",
-                        "attributes": {
-                            "defaultValue": "fonts",
-                            "value": false
-                        },
-                        "items": [
-                            {
-                                "field": "nunito",
-                                "attributes": {
-                                    "text": "Nunito",
-                                    "value": "nunito"
-                                }
-                            },
-                            {
-                                "field": "inter",
-                                "attributes": {
-                                    "selected": "true",
-                                    "text": "Inter",
-                                    "value": "inter"
-                                }
-                            },
-                            {
-                                "field": "montserrat",
-                                "attributes": {
-                                    "text": "Montserrat",
-                                    "value": "montserrat"
-                                }
-                            },
-                            {
-                                "field": "roboto",
-                                "attributes": {
-                                    "text": "Roboto",
-                                    "value": "roboto"
-                                }
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "field": "certificatesFinish",
-                "type": "multifield",
-                "label": "Button Finish",
-                "model-name": "certificatesFinishModel",
-                "use-existing-model": false,
-                "json-expose": true,
-                "items": [
-                    {
-                        "field": "buttonlabel",
-                        "type": "textfield",
-                        "label": "Digite a label do botão:",
-                        "json-expose": true,
-                        "json-property": "buttonlabel"
-                    },
-                    {
-                        "field": "buttonlabelcolor",
-                        "type": "textfield",
-                        "label": "Escolha a cor da label do botão: ",
-                        "json-expose": true,
-                        "json-property": "buttonlabelcolor"
-                    },
-                    {
-                        "field": "buttonbckgcolor",
-                        "type": "textfield",
-                        "label": "Escolha o background do botão:",
-                        "json-expose": true,
-                        "json-property": "buttonbckgcolor"
-                    },
-                    {
-                        "field": "fonts",
-                        "type": "select",
-                        "label": "Fonte para o texto",
-                        "json-expose": true,
-                        "json-property": "fonts",
-                        "attributes": {
-                            "defaultValue": "fonts",
-                            "value": false
-                        },
-                        "items": [
-                            {
-                                "field": "nunito",
-                                "attributes": {
-                                    "text": "Nunito",
-                                    "value": "nunito"
-                                }
-                            },
-                            {
-                                "field": "inter",
-                                "attributes": {
-                                    "selected": "true",
-                                    "text": "Inter",
-                                    "value": "inter"
-                                }
-                            },
-                            {
-                                "field": "montserrat",
-                                "attributes": {
-                                    "text": "Montserrat",
-                                    "value": "montserrat"
-                                }
-                            },
-                            {
-                                "field": "roboto",
-                                "attributes": {
-                                    "text": "Roboto",
-                                    "value": "roboto"
-                                }
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "field": "successTitle",
-                "type": "multifield",
-                "label": "Title",
-                "model-name": "successTitleModel",
-                "use-existing-model": false,
-                "json-expose": true,
-                "items": [
-                    {
-                        "field": "titletext",
-                        "type": "textfield",
-                        "label": "Digite o texto do titulo:",
-                        "json-expose": true,
-                        "json-property": "titletext"
-                    },
-                    {
-                        "field": "titlecolor",
-                        "type": "textfield",
-                        "label": "Escolha a cor do titulo:",
-                        "json-expose": true,
-                        "json-property": "titlecolor"
-                    },
-                    {
-                        "field": "fonts",
-                        "type": "select",
-                        "label": "Fonte para o texto",
-                        "json-expose": true,
-                        "json-property": "fonts",
-                        "attributes": {
-                            "defaultValue": "fonts",
-                            "value": false
-                        },
-                        "items": [
-                            {
-                                "field": "nunito",
-                                "attributes": {
-                                    "text": "Nunito",
-                                    "value": "nunito"
-                                }
-                            },
-                            {
-                                "field": "inter",
-                                "attributes": {
-                                    "selected": "true",
-                                    "text": "Inter",
-                                    "value": "inter"
-                                }
-                            },
-                            {
-                                "field": "montserrat",
-                                "attributes": {
-                                    "text": "Montserrat",
-                                    "value": "montserrat"
-                                }
-                            },
-                            {
-                                "field": "roboto",
-                                "attributes": {
-                                    "text": "Roboto",
-                                    "value": "roboto"
-                                }
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "field": "successText",
-                "type": "multifield",
-                "label": "Text",
-                "model-name": "successTextModel",
-                "use-existing-model": false,
-                "json-expose": true,
-                "items": [
-                    {
-                        "field": "resulttext",
-                        "type": "textfield",
-                        "label": "Digite o texto do titulo:",
-                        "json-expose": true,
-                        "json-property": "resulttext"
-                    },
-                    {
-                        "field": "resultcolor",
-                        "type": "textfield",
-                        "label": "Escolha a cor do titulo:",
-                        "json-expose": true,
-                        "json-property": "resultcolor"
-                    },
-                    {
-                        "field": "fonts",
-                        "type": "select",
-                        "label": "Fonte para o texto:",
-                        "json-expose": true,
-                        "json-property": "fonts",
-                        "attributes": {
-                            "defaultValue": "fonts",
-                            "value": false
-                        },
-                        "items": [
-                            {
-                                "field": "nunito",
-                                "attributes": {
-                                    "text": "Nunito",
-                                    "value": "nunito"
-                                }
-                            },
-                            {
-                                "field": "inter",
-                                "attributes": {
-                                    "selected": "true",
-                                    "text": "Inter",
-                                    "value": "inter"
-                                }
-                            },
-                            {
-                                "field": "montserrat",
-                                "attributes": {
-                                    "text": "Montserrat",
-                                    "value": "montserrat"
-                                }
-                            },
-                            {
-                                "field": "roboto",
-                                "attributes": {
-                                    "text": "Roboto",
-                                    "value": "roboto"
-                                }
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "field": "successButton",
-                "type": "multifield",
-                "label": "Button",
-                "model-name": "successButtonModel",
-                "use-existing-model": false,
-                "json-expose": true,
-                "items": [
-                    {
-                        "field": "resulttext",
-                        "type": "textfield",
-                        "label": "Digite o texto do botão:",
-                        "json-expose": true,
-                        "json-property": "resulttext"
-                    },
-                    {
-                        "field": "resultcolor",
-                        "type": "textfield",
-                        "label": "Escolha a cor do texto do botão:",
-                        "json-expose": true,
-                        "json-property": "resultcolor"
-                    },
-                    {
-                        "field": "buttonbckgcolor",
-                        "type": "textfield",
-                        "label": "Escolha o background do botão:",
-                        "json-expose": true,
-                        "json-property": "buttonbckgcolor"
-                    },
-                    {
-                        "field": "fonts",
-                        "type": "select",
-                        "label": "Fonte para o texto do botão:",
-                        "json-expose": true,
-                        "json-property": "fonts",
-                        "attributes": {
-                            "defaultValue": "fonts",
-                            "value": false
-                        },
-                        "items": [
-                            {
-                                "field": "nunito",
-                                "attributes": {
-                                    "text": "Nunito",
-                                    "value": "nunito"
-                                }
-                            },
-                            {
-                                "field": "inter",
-                                "attributes": {
-                                    "selected": "true",
-                                    "text": "Inter",
-                                    "value": "inter"
-                                }
-                            },
-                            {
-                                "field": "montserrat",
-                                "attributes": {
-                                    "text": "Montserrat",
-                                    "value": "montserrat"
-                                }
-                            },
-                            {
-                                "field": "roboto",
-                                "attributes": {
-                                    "text": "Roboto",
-                                    "value": "roboto"
-                                }
-                            }
-                        ]
-                    }
-                ]
-            }
+  "project-settings": {
+    "code-owner": "React App",
+    "bundle-path": "../core/src/main/java",
+    "test-path": "../core/src/test/java",
+    "apps-path": "../ui.apps/src/main/content/jcr_root/apps",
+    "component-path": "reactapp",
+    "model-interface-pkg": "com.reactapp.core.models",
+    "model-impl-pkg": "com.reactapp.core.models.impl"
+  },
+  "name": "multifield-card",
+  "title": "Multifield Card",
+  "group": "React App - Content",
+  "type": "components",
+  "options": {
+    "js": false,
+    "jstxt": false,
+    "css": false,
+    "csstxt": false,
+    "html": false,
+    "html-content": false,
+    "slingmodel": true,
+    "testclass": false,
+    "junit-major-version": 5,
+    "content-exporter": true,
+    "model-adaptables": ["request"],
+    "generic-javadoc": false,
+    "properties-tabs": [
+      {
+        "id": "tab-0",
+        "label": "Card",
+        "fields": ["cardColor"]
+      },
+      {
+        "id": "tab-1",
+        "label": "Tab Basic",
+        "fields": ["basicTitle", "basicInput", "basicCheckbox", "basicButton"]
+      },
+      {
+        "id": "tab-2",
+        "label": "Tab Social",
+        "fields": ["socialTitle", "socialInput", "socialButton"]
+      },
+      {
+        "id": "tab-3",
+        "label": "Tab Certificates",
+        "fields": [
+          "certificatesTitle",
+          "certificatesInput",
+          "certificatesMore",
+          "certificatesFinish",
+          "certificatesCertificate"
         ]
-    }
+      },
+      {
+        "id": "tab-4",
+        "label": "Tab Success",
+        "fields": ["successTitle", "successText", "successButton"]
+      }
+    ],
+    "properties": [
+      {
+        "field": "cardColor",
+        "label": "Escolha uma cor para o card:",
+        "type": "textfield",
+        "json-expose": true,
+        "json-property": "cardColor"
+      },
+      {
+        "field": "basicTitle",
+        "type": "multifield",
+        "label": "Title",
+        "model-name": "basicTitleModel",
+        "use-existing-model": false,
+        "json-expose": true,
+        "items": [
+          {
+            "field": "titletext",
+            "type": "textfield",
+            "label": "Digite o texto do titulo:",
+            "json-expose": true,
+            "json-property": "titletext"
+          },
+          {
+            "field": "titlecolor",
+            "type": "textfield",
+            "label": "Escolha a cor do titulo:",
+            "json-expose": true,
+            "json-property": "titlecolor"
+          },
+          {
+            "field": "fonts",
+            "type": "select",
+            "label": "Fonte para o texto",
+            "json-expose": true,
+            "json-property": "fonts",
+            "attributes": {
+              "defaultValue": "fonts",
+              "value": false
+            },
+            "items": [
+              {
+                "field": "nunito",
+                "attributes": {
+                  "text": "Nunito",
+                  "value": "nunito"
+                }
+              },
+              {
+                "field": "inter",
+                "attributes": {
+                  "selected": "true",
+                  "text": "Inter",
+                  "value": "inter"
+                }
+              },
+              {
+                "field": "montserrat",
+                "attributes": {
+                  "text": "Montserrat",
+                  "value": "montserrat"
+                }
+              },
+              {
+                "field": "roboto",
+                "attributes": {
+                  "text": "Roboto",
+                  "value": "roboto"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "field": "basicInput",
+        "type": "multifield",
+        "label": "Input",
+        "model-name": "basicInputModel",
+        "use-existing-model": false,
+        "json-expose": true,
+        "items": [
+          {
+            "field": "labeltext",
+            "type": "textfield",
+            "label": "Digite o texto da label:",
+            "json-expose": true,
+            "json-property": "labeltext"
+          },
+          {
+            "field": "labelcolor",
+            "type": "textfield",
+            "label": "Escolha a cor da label:",
+            "json-expose": true,
+            "json-property": "labelcolor"
+          },
+          {
+            "field": "placeholdertext",
+            "type": "textfield",
+            "label": "Digite o texto do placeholder:",
+            "json-expose": true,
+            "json-property": "placeholdertext"
+          },
+          {
+            "field": "placeholdercolor",
+            "type": "textfield",
+            "label": "Escolha a cor do placeholder:",
+            "json-expose": true,
+            "json-property": "placeholdercolor"
+          },
+          {
+            "field": "textcolor",
+            "type": "textfield",
+            "label": "Escolha a cor do texto do input:",
+            "json-expose": true,
+            "json-property": "textcolor"
+          },
+          {
+            "field": "fonts",
+            "type": "select",
+            "label": "Fonte para o texto",
+            "json-expose": true,
+            "json-property": "fonts",
+            "attributes": {
+              "defaultValue": "fonts",
+              "value": false
+            },
+            "items": [
+              {
+                "field": "nunito",
+                "attributes": {
+                  "text": "Nunito",
+                  "value": "nunito"
+                }
+              },
+              {
+                "field": "inter",
+                "attributes": {
+                  "selected": "true",
+                  "text": "Inter",
+                  "value": "inter"
+                }
+              },
+              {
+                "field": "montserrat",
+                "attributes": {
+                  "text": "Montserrat",
+                  "value": "montserrat"
+                }
+              },
+              {
+                "field": "roboto",
+                "attributes": {
+                  "text": "Roboto",
+                  "value": "roboto"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "field": "basicCheckbox",
+        "type": "multifield",
+        "label": "Checkbox",
+        "model-name": "basicCheckboxModel",
+        "use-existing-model": false,
+        "json-expose": true,
+        "items": [
+          {
+            "field": "checkboxtext",
+            "type": "textfield",
+            "label": "Digite o texto do checkbox:",
+            "json-expose": true,
+            "json-property": "checkboxtext"
+          },
+          {
+            "field": "checkboxcolor",
+            "type": "textfield",
+            "label": "Escolha a cor do checkbox:",
+            "json-expose": true,
+            "json-property": "checkboxcolor"
+          },
+          {
+            "field": "fonts",
+            "type": "select",
+            "label": "Fonte para o texto",
+            "json-expose": true,
+            "json-property": "fonts",
+            "attributes": {
+              "defaultValue": "fonts",
+              "value": false
+            },
+            "items": [
+              {
+                "field": "nunito",
+                "attributes": {
+                  "text": "Nunito",
+                  "value": "nunito"
+                }
+              },
+              {
+                "field": "inter",
+                "attributes": {
+                  "selected": "true",
+                  "text": "Inter",
+                  "value": "inter"
+                }
+              },
+              {
+                "field": "montserrat",
+                "attributes": {
+                  "text": "Montserrat",
+                  "value": "montserrat"
+                }
+              },
+              {
+                "field": "roboto",
+                "attributes": {
+                  "text": "Roboto",
+                  "value": "roboto"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "field": "basicButton",
+        "type": "multifield",
+        "label": "Button",
+        "model-name": "basicButtonModel",
+        "use-existing-model": false,
+        "json-expose": true,
+        "items": [
+          {
+            "field": "buttonlabel",
+            "type": "textfield",
+            "label": "Digite a label do botão:",
+            "json-expose": true,
+            "json-property": "buttonlabel"
+          },
+          {
+            "field": "buttonlabelcolor",
+            "type": "textfield",
+            "label": "Escolha a cor da label do botão:",
+            "json-expose": true,
+            "json-property": "buttonlabelcolor"
+          },
+          {
+            "field": "buttonbckgcolor",
+            "type": "textfield",
+            "label": "Escolha a cor do background do botão:",
+            "json-expose": true,
+            "json-property": "buttonbckgcolor"
+          },
+          {
+            "field": "fonts",
+            "type": "select",
+            "label": "Fonte para o texto",
+            "json-expose": true,
+            "json-property": "fonts",
+            "attributes": {
+              "defaultValue": "fonts",
+              "value": false
+            },
+            "items": [
+              {
+                "field": "nunito",
+                "attributes": {
+                  "text": "Nunito",
+                  "value": "nunito"
+                }
+              },
+              {
+                "field": "inter",
+                "attributes": {
+                  "selected": "true",
+                  "text": "Inter",
+                  "value": "inter"
+                }
+              },
+              {
+                "field": "montserrat",
+                "attributes": {
+                  "text": "Montserrat",
+                  "value": "montserrat"
+                }
+              },
+              {
+                "field": "roboto",
+                "attributes": {
+                  "text": "Roboto",
+                  "value": "roboto"
+                }
+              }
+            ]
+          },
+          {
+            "field": "buttons",
+            "type": "select",
+            "label": "Escolha um tipo de botão:",
+            "json-expose": true,
+            "json-property": "buttons",
+            "items": [
+              {
+                "field": "next",
+                "attributes": {
+                  "selected": "true",
+                  "text": "Botão Next",
+                  "value": "next"
+                }
+              },
+              {
+                "field": "more",
+                "attributes": {
+                  "text": "Botão More",
+                  "value": "more"
+                }
+              },
+              {
+                "field": "finish",
+                "attributes": {
+                  "text": "Botão Finish",
+                  "value": "finish"
+                }
+              },
+              {
+                "field": "return",
+                "attributes": {
+                  "text": "Botão Return",
+                  "value": "return"
+                }
+              },
+              {
+                "field": "certificates",
+                "attributes": {
+                  "text": "Botão Certificates",
+                  "value": "certificates"
+                }
+              }
+            ]
+          }
+        ]
+      },
+
+      {
+        "field": "socialTitle",
+        "type": "multifield",
+        "label": "Title",
+        "model-name": "socialTitleModel",
+        "use-existing-model": false,
+        "json-expose": true,
+        "items": [
+          {
+            "field": "titletext",
+            "type": "textfield",
+            "label": "Digite o texto do titulo:",
+            "json-expose": true,
+            "json-property": "titletext"
+          },
+          {
+            "field": "titlecolor",
+            "type": "textfield",
+            "label": "Escolha a cor do titulo:",
+            "json-expose": true,
+            "json-property": "titlecolor"
+          },
+          {
+            "field": "fonts",
+            "type": "select",
+            "label": "Fonte para o texto",
+            "json-expose": true,
+            "json-property": "fonts",
+            "attributes": {
+              "defaultValue": "fonts",
+              "value": false
+            },
+            "items": [
+              {
+                "field": "nunito",
+                "attributes": {
+                  "text": "Nunito",
+                  "value": "nunito"
+                }
+              },
+              {
+                "field": "inter",
+                "attributes": {
+                  "selected": "true",
+                  "text": "Inter",
+                  "value": "inter"
+                }
+              },
+              {
+                "field": "montserrat",
+                "attributes": {
+                  "text": "Montserrat",
+                  "value": "montserrat"
+                }
+              },
+              {
+                "field": "roboto",
+                "attributes": {
+                  "text": "Roboto",
+                  "value": "roboto"
+                }
+              }
+            ]
+          }
+          
+        ]
+      },
+      {
+        "field": "socialInput",
+        "type": "multifield",
+        "label": "Input",
+        "model-name": "socialInputModel",
+        "use-existing-model": false,
+        "json-expose": true,
+        "items": [
+          {
+            "field": "labeltext",
+            "type": "textfield",
+            "label": "Digite o texto da label:",
+            "json-expose": true,
+            "json-property": "labeltext"
+          },
+          {
+            "field": "labelcolor",
+            "type": "textfield",
+            "label": "Escolha a cor da label:",
+            "json-expose": true,
+            "json-property": "labelcolor"
+          },
+          {
+            "field": "placeholdertext",
+            "type": "textfield",
+            "label": "Digite o texto do placeholder:",
+            "json-expose": true,
+            "json-property": "placeholdertext"
+          },
+          {
+            "field": "placeholdercolor",
+            "type": "textfield",
+            "label": "Escolha a cor do placeholder:",
+            "json-expose": true,
+            "json-property": "placeholdercolor"
+          },
+          {
+            "field": "textcolor",
+            "type": "textfield",
+            "label": "Escolha a cor do texto do input:",
+            "json-expose": true,
+            "json-property": "textcolor"
+          },
+          {
+            "field": "fonts",
+            "type": "select",
+            "label": "Fonte para o texto",
+            "json-expose": true,
+            "json-property": "fonts",
+            "attributes": {
+              "defaultValue": "fonts",
+              "value": false
+            },
+            "items": [
+              {
+                "field": "nunito",
+                "attributes": {
+                  "text": "Nunito",
+                  "value": "nunito"
+                }
+              },
+              {
+                "field": "inter",
+                "attributes": {
+                  "selected": "true",
+                  "text": "Inter",
+                  "value": "inter"
+                }
+              },
+              {
+                "field": "montserrat",
+                "attributes": {
+                  "text": "Montserrat",
+                  "value": "montserrat"
+                }
+              },
+              {
+                "field": "roboto",
+                "attributes": {
+                  "text": "Roboto",
+                  "value": "roboto"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "field": "socialButton",
+        "type": "multifield",
+        "label": "Button",
+        "model-name": "socialButtonModel",
+        "use-existing-model": false,
+        "json-expose": true,
+        "items": [
+          {
+            "field": "buttonlabel",
+            "type": "textfield",
+            "label": "Digite a label do botão:",
+            "json-expose": true,
+            "json-property": "buttonlabel"
+          },
+          {
+            "field": "buttonlabelcolor",
+            "type": "textfield",
+            "label": "Escolha a cor da label do botão: ",
+            "json-expose": true,
+            "json-property": "buttonlabelcolor"
+          },
+          {
+            "field": "buttonbckgcolor",
+            "type": "textfield",
+            "label": "Escolha o background do botão:",
+            "json-expose": true,
+            "json-property": "buttonbckgcolor"
+          },
+          {
+            "field": "fonts",
+            "type": "select",
+            "label": "Fonte para o texto",
+            "json-expose": true,
+            "json-property": "fonts",
+            "attributes": {
+              "defaultValue": "fonts",
+              "value": false
+            },
+            "items": [
+              {
+                "field": "nunito",
+                "attributes": {
+                  "text": "Nunito",
+                  "value": "nunito"
+                }
+              },
+              {
+                "field": "inter",
+                "attributes": {
+                  "selected": "true",
+                  "text": "Inter",
+                  "value": "inter"
+                }
+              },
+              {
+                "field": "montserrat",
+                "attributes": {
+                  "text": "Montserrat",
+                  "value": "montserrat"
+                }
+              },
+              {
+                "field": "roboto",
+                "attributes": {
+                  "text": "Roboto",
+                  "value": "roboto"
+                }
+              }
+            ]
+          },
+          {
+            "field": "buttons",
+            "type": "select",
+            "label": "Escolha um tipo de botão",
+            "json-expose": true,
+            "json-property": "buttons",
+            "items": [
+              {
+                "field": "next",
+                "attributes": {
+                  "selected": "true",
+                  "text": "Botão Next",
+                  "value": "next"
+                }
+              },
+              {
+                "field": "more",
+                "attributes": {
+                  "text": "Botão More",
+                  "value": "more"
+                }
+              },
+              {
+                "field": "finish",
+                "attributes": {
+                  "text": "Botão Finish",
+                  "value": "finish"
+                }
+              },
+              {
+                "field": "return",
+                "attributes": {
+                  "text": "Botão Return",
+                  "value": "return"
+                }
+              },
+              {
+                "field": "certificates",
+                "attributes": {
+                  "text": "Botão Certificates",
+                  "value": "certificates"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "field": "certificatesTitle",
+        "type": "multifield",
+        "label": "Title",
+        "model-name": "certificatesTitleModel",
+        "use-existing-model": false,
+        "json-expose": true,
+        "items": [
+          {
+            "field": "certificatesTitleText",
+            "type": "textfield",
+            "label": "Digite o texto do titulo:",
+            "json-expose": true,
+            "json-property": "titletext"
+          },
+          {
+            "field": "certificatesTitleColor",
+            "type": "textfield",
+            "label": "Escolha a cor do titulo:",
+            "json-expose": true,
+            "json-property": "certificatesTitleColor"
+          },
+          {
+            "field": "fonts",
+            "type": "select",
+            "label": "Fonte para o texto",
+            "json-expose": true,
+            "json-property": "fonts",
+            "attributes": {
+              "defaultValue": "fonts",
+              "value": false
+            },
+            "items": [
+              {
+                "field": "nunito",
+                "attributes": {
+                  "text": "Nunito",
+                  "value": "nunito"
+                }
+              },
+              {
+                "field": "inter",
+                "attributes": {
+                  "selected": "true",
+                  "text": "Inter",
+                  "value": "inter"
+                }
+              },
+              {
+                "field": "montserrat",
+                "attributes": {
+                  "text": "Montserrat",
+                  "value": "montserrat"
+                }
+              },
+              {
+                "field": "roboto",
+                "attributes": {
+                  "text": "Roboto",
+                  "value": "roboto"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "field": "certificatesInput",
+        "type": "multifield",
+        "label": "Input",
+        "model-name": "certificatesInputModel",
+        "use-existing-model": false,
+        "json-expose": true,
+        "items": [
+          {
+            "field": "labeltext",
+            "type": "textfield",
+            "label": "Digite o texto da label:",
+            "json-expose": true,
+            "json-property": "labeltext"
+          },
+          {
+            "field": "labelcolor",
+            "type": "textfield",
+            "label": "Escolha a cor da label:",
+            "json-expose": true,
+            "json-property": "labelcolor"
+          },
+          {
+            "field": "placeholdertext",
+            "type": "textfield",
+            "label": "Digite o texto do placeholder:",
+            "json-expose": true,
+            "json-property": "placeholdertext"
+          },
+          {
+            "field": "placeholdercolor",
+            "type": "textfield",
+            "label": "Escolha a cor do placeholder:",
+            "json-expose": true,
+            "json-property": "placeholdercolor"
+          },
+          {
+            "field": "textcolor",
+            "type": "textfield",
+            "label": "Escolha a cor do texto do input:",
+            "json-expose": true,
+            "json-property": "textcolor"
+          },
+          {
+            "field": "fonts",
+            "type": "select",
+            "label": "Fonte para o texto",
+            "json-expose": true,
+            "json-property": "fonts",
+            "attributes": {
+              "defaultValue": "fonts",
+              "value": false
+            },
+            "items": [
+              {
+                "field": "nunito",
+                "attributes": {
+                  "text": "Nunito",
+                  "value": "nunito"
+                }
+              },
+              {
+                "field": "inter",
+                "attributes": {
+                  "selected": "true",
+                  "text": "Inter",
+                  "value": "inter"
+                }
+              },
+              {
+                "field": "montserrat",
+                "attributes": {
+                  "text": "Montserrat",
+                  "value": "montserrat"
+                }
+              },
+              {
+                "field": "roboto",
+                "attributes": {
+                  "text": "Roboto",
+                  "value": "roboto"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "field": "certificatesCertificate",
+        "type": "multifield",
+        "label": "Button Certificates",
+        "model-name": "certificatesCertificateModel",
+        "use-existing-model": false,
+        "json-expose": true,
+        "items": [
+          {
+            "field": "buttonlabel",
+            "type": "textfield",
+            "label": "Digite a label do botão:",
+            "json-expose": true,
+            "json-property": "buttonlabel"
+          },
+          {
+            "field": "buttonlabelcolor",
+            "type": "textfield",
+            "label": "Escolha a cor da label do botão:",
+            "json-expose": true,
+            "json-property": "buttonlabelcolor"
+          },
+          {
+            "field": "buttonbckgcolor",
+            "type": "textfield",
+            "label": "Escolha o background do botão:",
+            "json-expose": true,
+            "json-property": "buttonbckgcolor"
+          },
+          {
+            "field": "fonts",
+            "type": "select",
+            "label": "Fonte para o texto",
+            "json-expose": true,
+            "json-property": "fonts",
+            "attributes": {
+              "defaultValue": "fonts",
+              "value": false
+            },
+            "items": [
+              {
+                "field": "nunito",
+                "attributes": {
+                  "text": "Nunito",
+                  "value": "nunito"
+                }
+              },
+              {
+                "field": "inter",
+                "attributes": {
+                  "selected": "true",
+                  "text": "Inter",
+                  "value": "inter"
+                }
+              },
+              {
+                "field": "montserrat",
+                "attributes": {
+                  "text": "Montserrat",
+                  "value": "montserrat"
+                }
+              },
+              {
+                "field": "roboto",
+                "attributes": {
+                  "text": "Roboto",
+                  "value": "roboto"
+                }
+              }
+            ]
+          },
+          {
+            "field": "buttons",
+            "type": "select",
+            "label": "Escolha um tipo de botão",
+            "json-expose": true,
+            "json-property": "buttons",
+            "items": [
+              {
+                "field": "next",
+                "attributes": {
+                  "selected": "true",
+                  "text": "Botão Next",
+                  "value": "next"
+                }
+              },
+              {
+                "field": "more",
+                "attributes": {
+                  "text": "Botão More",
+                  "value": "more"
+                }
+              },
+              {
+                "field": "finish",
+                "attributes": {
+                  "text": "Botão Finish",
+                  "value": "finish"
+                }
+              },
+              {
+                "field": "return",
+                "attributes": {
+                  "text": "Botão Return",
+                  "value": "return"
+                }
+              },
+              {
+                "field": "certificates",
+                "attributes": {
+                  "text": "Botão Certificates",
+                  "value": "certificates"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "field": "certificatesMore",
+        "type": "multifield",
+        "label": "Button More",
+        "model-name": "certificatesMoreModel",
+        "use-existing-model": false,
+        "json-expose": true,
+        "items": [
+          {
+            "field": "buttonlabel",
+            "type": "textfield",
+            "label": "Digite a label do botão:",
+            "json-expose": true,
+            "json-property": "buttonlabel"
+          },
+          {
+            "field": "buttonlabelcolor",
+            "type": "textfield",
+            "label": "Escolha a cor da label do botão:",
+            "json-expose": true,
+            "json-property": "buttonlabelcolor"
+          },
+          {
+            "field": "buttonbckgcolor",
+            "type": "textfield",
+            "label": "Escolha o background do botão:",
+            "json-expose": true,
+            "json-property": "buttonbckgcolor"
+          },
+          {
+            "field": "fonts",
+            "type": "select",
+            "label": "Fonte para o texto",
+            "json-expose": true,
+            "json-property": "fonts",
+            "attributes": {
+              "defaultValue": "fonts",
+              "value": false
+            },
+            "items": [
+              {
+                "field": "nunito",
+                "attributes": {
+                  "text": "Nunito",
+                  "value": "nunito"
+                }
+              },
+              {
+                "field": "inter",
+                "attributes": {
+                  "selected": "true",
+                  "text": "Inter",
+                  "value": "inter"
+                }
+              },
+              {
+                "field": "montserrat",
+                "attributes": {
+                  "text": "Montserrat",
+                  "value": "montserrat"
+                }
+              },
+              {
+                "field": "roboto",
+                "attributes": {
+                  "text": "Roboto",
+                  "value": "roboto"
+                }
+              }
+            ]
+          },
+          {
+            "field": "buttons",
+            "type": "select",
+            "label": "Escolha um tipo de botão",
+            "json-expose": true,
+            "json-property": "buttons",
+            "items": [
+              {
+                "field": "next",
+                "attributes": {
+                  "selected": "true",
+                  "text": "Botão Next",
+                  "value": "next"
+                }
+              },
+              {
+                "field": "more",
+                "attributes": {
+                  "text": "Botão More",
+                  "value": "more"
+                }
+              },
+              {
+                "field": "finish",
+                "attributes": {
+                  "text": "Botão Finish",
+                  "value": "finish"
+                }
+              },
+              {
+                "field": "return",
+                "attributes": {
+                  "text": "Botão Return",
+                  "value": "return"
+                }
+              },
+              {
+                "field": "certificates",
+                "attributes": {
+                  "text": "Botão Certificates",
+                  "value": "certificates"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "field": "certificatesFinish",
+        "type": "multifield",
+        "label": "Button Finish",
+        "model-name": "certificatesFinishModel",
+        "use-existing-model": false,
+        "json-expose": true,
+        "items": [
+          {
+            "field": "buttonlabel",
+            "type": "textfield",
+            "label": "Digite a label do botão:",
+            "json-expose": true,
+            "json-property": "buttonlabel"
+          },
+          {
+            "field": "buttonlabelcolor",
+            "type": "textfield",
+            "label": "Escolha a cor da label do botão: ",
+            "json-expose": true,
+            "json-property": "buttonlabelcolor"
+          },
+          {
+            "field": "buttonbckgcolor",
+            "type": "textfield",
+            "label": "Escolha o background do botão:",
+            "json-expose": true,
+            "json-property": "buttonbckgcolor"
+          },
+          {
+            "field": "fonts",
+            "type": "select",
+            "label": "Fonte para o texto",
+            "json-expose": true,
+            "json-property": "fonts",
+            "attributes": {
+              "defaultValue": "fonts",
+              "value": false
+            },
+            "items": [
+              {
+                "field": "nunito",
+                "attributes": {
+                  "text": "Nunito",
+                  "value": "nunito"
+                }
+              },
+              {
+                "field": "inter",
+                "attributes": {
+                  "selected": "true",
+                  "text": "Inter",
+                  "value": "inter"
+                }
+              },
+              {
+                "field": "montserrat",
+                "attributes": {
+                  "text": "Montserrat",
+                  "value": "montserrat"
+                }
+              },
+              {
+                "field": "roboto",
+                "attributes": {
+                  "text": "Roboto",
+                  "value": "roboto"
+                }
+              }
+            ]
+          },
+          {
+            "field": "buttons",
+            "type": "select",
+            "label": "Escolha um tipo de botão",
+            "json-expose": true,
+            "json-property": "buttons",
+            "items": [
+              {
+                "field": "next",
+                "attributes": {
+                  "selected": "true",
+                  "text": "Botão Next",
+                  "value": "next"
+                }
+              },
+              {
+                "field": "more",
+                "attributes": {
+                  "text": "Botão More",
+                  "value": "more"
+                }
+              },
+              {
+                "field": "finish",
+                "attributes": {
+                  "text": "Botão Finish",
+                  "value": "finish"
+                }
+              },
+              {
+                "field": "return",
+                "attributes": {
+                  "text": "Botão Return",
+                  "value": "return"
+                }
+              },
+              {
+                "field": "certificates",
+                "attributes": {
+                  "text": "Botão Certificates",
+                  "value": "certificates"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "field": "successTitle",
+        "type": "multifield",
+        "label": "Title",
+        "model-name": "successTitleModel",
+        "use-existing-model": false,
+        "json-expose": true,
+        "items": [
+          {
+            "field": "titletext",
+            "type": "textfield",
+            "label": "Digite o texto do titulo:",
+            "json-expose": true,
+            "json-property": "titletext"
+          },
+          {
+            "field": "titlecolor",
+            "type": "textfield",
+            "label": "Escolha a cor do titulo:",
+            "json-expose": true,
+            "json-property": "titlecolor"
+          },
+          {
+            "field": "fonts",
+            "type": "select",
+            "label": "Fonte para o texto",
+            "json-expose": true,
+            "json-property": "fonts",
+            "attributes": {
+              "defaultValue": "fonts",
+              "value": false
+            },
+            "items": [
+              {
+                "field": "nunito",
+                "attributes": {
+                  "text": "Nunito",
+                  "value": "nunito"
+                }
+              },
+              {
+                "field": "inter",
+                "attributes": {
+                  "selected": "true",
+                  "text": "Inter",
+                  "value": "inter"
+                }
+              },
+              {
+                "field": "montserrat",
+                "attributes": {
+                  "text": "Montserrat",
+                  "value": "montserrat"
+                }
+              },
+              {
+                "field": "roboto",
+                "attributes": {
+                  "text": "Roboto",
+                  "value": "roboto"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "field": "successText",
+        "type": "multifield",
+        "label": "Text",
+        "model-name": "successTextModel",
+        "use-existing-model": false,
+        "json-expose": true,
+        "items": [
+          {
+            "field": "resulttext",
+            "type": "textfield",
+            "label": "Digite o texto do titulo:",
+            "json-expose": true,
+            "json-property": "resulttext"
+          },
+          {
+            "field": "resultcolor",
+            "type": "textfield",
+            "label": "Escolha a cor do titulo:",
+            "json-expose": true,
+            "json-property": "resultcolor"
+          },
+          {
+            "field": "fonts",
+            "type": "select",
+            "label": "Fonte para o texto:",
+            "json-expose": true,
+            "json-property": "fonts",
+            "attributes": {
+              "defaultValue": "fonts",
+              "value": false
+            },
+            "items": [
+              {
+                "field": "nunito",
+                "attributes": {
+                  "text": "Nunito",
+                  "value": "nunito"
+                }
+              },
+              {
+                "field": "inter",
+                "attributes": {
+                  "selected": "true",
+                  "text": "Inter",
+                  "value": "inter"
+                }
+              },
+              {
+                "field": "montserrat",
+                "attributes": {
+                  "text": "Montserrat",
+                  "value": "montserrat"
+                }
+              },
+              {
+                "field": "roboto",
+                "attributes": {
+                  "text": "Roboto",
+                  "value": "roboto"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "field": "successButton",
+        "type": "multifield",
+        "label": "Button",
+        "model-name": "successButtonModel",
+        "use-existing-model": false,
+        "json-expose": true,
+        "items": [
+          {
+            "field": "resulttext",
+            "type": "textfield",
+            "label": "Digite o texto do botão:",
+            "json-expose": true,
+            "json-property": "resulttext"
+          },
+          {
+            "field": "resultcolor",
+            "type": "textfield",
+            "label": "Escolha a cor do texto do botão:",
+            "json-expose": true,
+            "json-property": "resultcolor"
+          },
+          {
+            "field": "buttonbckgcolor",
+            "type": "textfield",
+            "label": "Escolha o background do botão:",
+            "json-expose": true,
+            "json-property": "buttonbckgcolor"
+          },
+          {
+            "field": "fonts",
+            "type": "select",
+            "label": "Fonte para o texto do botão:",
+            "json-expose": true,
+            "json-property": "fonts",
+            "attributes": {
+              "defaultValue": "fonts",
+              "value": false
+            },
+            "items": [
+              {
+                "field": "nunito",
+                "attributes": {
+                  "text": "Nunito",
+                  "value": "nunito"
+                }
+              },
+              {
+                "field": "inter",
+                "attributes": {
+                  "selected": "true",
+                  "text": "Inter",
+                  "value": "inter"
+                }
+              },
+              {
+                "field": "montserrat",
+                "attributes": {
+                  "text": "Montserrat",
+                  "value": "montserrat"
+                }
+              },
+              {
+                "field": "roboto",
+                "attributes": {
+                  "text": "Roboto",
+                  "value": "roboto"
+                }
+              }
+            ]
+          },
+          {
+            "field": "buttons",
+            "type": "select",
+            "label": "Escolha um tipo de botão",
+            "json-expose": true,
+            "json-property": "buttons",
+            "items": [
+              {
+                "field": "next",
+                "attributes": {
+                  "selected": "true",
+                  "text": "Botão Next",
+                  "value": "next"
+                }
+              },
+              {
+                "field": "more",
+                "attributes": {
+                  "text": "Botão More",
+                  "value": "more"
+                }
+              },
+              {
+                "field": "finish",
+                "attributes": {
+                  "text": "Botão Finish",
+                  "value": "finish"
+                }
+              },
+              {
+                "field": "return",
+                "attributes": {
+                  "text": "Botão Return",
+                  "value": "return"
+                }
+              },
+              {
+                "field": "certificates",
+                "attributes": {
+                  "text": "Botão Certificates",
+                  "value": "certificates"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
 }
