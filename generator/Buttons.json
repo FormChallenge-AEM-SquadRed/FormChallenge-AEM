@@ -1,0 +1,97 @@
+{
+  "project-settings": {
+    "code-owner": "React App",
+    "bundle-path": "../core/src/main/java",
+    "test-path": "../core/src/test/java",
+    "apps-path": "../ui.apps/src/main/content/jcr_root/apps",
+    "component-path": "reactapp",
+    "model-interface-pkg": "com.reactapp.core.models",
+    "model-impl-pkg": "com.reactapp.core.models.impl"
+  },
+  "name": "buttons",
+  "title": "Buttons",
+  "group": "React App - Content",
+  "type": "components",
+  "options": {
+    "js": false,
+    "jstxt": false,
+    "css": false,
+    "csstxt": false,
+    "html": false,
+    "html-content": false,
+    "slingmodel": true,
+    "testclass": false,
+    "junit-major-version": 5,
+    "content-exporter": true,
+    "model-adaptables": ["request"],
+    "generic-javadoc": false,
+    "properties": [
+      {
+        "field": "buttons",
+        "type": "select",
+        "label": "Escolha um tipo de botão",
+        "json-expose": true,
+        "json-property": "buttons",
+        "items": [
+          {
+            "field": "next",
+            "attributes": {
+              "selected": "true",
+              "text": "Botão Next",
+              "value": "next"
+            }
+          },
+          {
+            "field": "more",
+            "attributes": {
+              "text": "Botão More",
+              "value": "more"
+            }
+          },
+          {
+            "field": "finish",
+            "attributes": {
+              "text": "Botão Finish",
+              "value": "finish"
+            }
+          },
+          {
+            "field": "return",
+            "attributes": {
+              "text": "Botão Return",
+              "value": "return"
+            }
+          },
+          {
+            "field": "certificates",
+            "attributes": {
+              "text": "Botão Certificates",
+              "value": "certificates"
+            }
+          }
+        ]
+      },
+      {
+        "field": "text",
+        "label": "Digite um texto aqui por favor.",
+        "type": "textfield",
+        "json-expose": true,
+        "json-property": "text"
+      },
+      {
+        "field": "colortext",
+        "label": "Cor do texto do botão",
+        "type": "textfield",
+        "json-expose": true,
+        "json-property": "colortext"
+      },
+      {
+        "field": "bgcolor",
+        "label": "Cor do background do botão",
+        "type": "textfield",
+        "json-expose": true,
+        "json-property": "bgcolor"
+      }
+    ]
+  }
+}
