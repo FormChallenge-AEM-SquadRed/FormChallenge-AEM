@@ -10,6 +10,7 @@ export const Card = styled.div`
     border-radius: 2rem;
     margin: 0px;
     padding: 5rem;
+    gap: 3rem;
 
     @media (max-width: 768px) {
         display: flex;
@@ -17,6 +18,7 @@ export const Card = styled.div`
         height: calc(100vh - 0.35rem);
         border-radius: 0px;
         padding: 1.5rem;
+        gap: 1.5rem;
     }
 `;
 export const Container = styled.div`
