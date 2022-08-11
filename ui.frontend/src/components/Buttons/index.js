@@ -119,4 +119,4 @@ const Button = ({text, buttons = "next", bgcolor, colortext, children}) => {
         );
 };
 
-export default MapTo("reactapp/components/buttons")(Button);
+export default Button;
