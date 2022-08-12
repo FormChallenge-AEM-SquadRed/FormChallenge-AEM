@@ -1,20 +1,20 @@
-/*
- * ***********************************************************************
- * React App CONFIDENTIAL
- * ___________________
- *
- * Copyright 2022 React App.
- * All Rights Reserved.
- *
- * NOTICE:  All information contained herein is, and remains the property
- * of React App and its suppliers, if any. The intellectual and
- * technical concepts contained herein are proprietary to React App
- * and its suppliers and are protected by trade secret or copyright law.
- * Dissemination of this information or reproduction of this material
- * is strictly forbidden unless prior written permission is obtained
- * from React App.
- * ***********************************************************************
- */
+/*
+ * ***********************************************************************
+ * React App CONFIDENTIAL
+ * ___________________
+ *
+ * Copyright 2022 React App.
+ * All Rights Reserved.
+ *
+ * NOTICE:  All information contained herein is, and remains the property
+ * of React App and its suppliers, if any. The intellectual and
+ * technical concepts contained herein are proprietary to React App
+ * and its suppliers and are protected by trade secret or copyright law.
+ * Dissemination of this information or reproduction of this material
+ * is strictly forbidden unless prior written permission is obtained
+ * from React App.
+ * ***********************************************************************
+ */
 
 package com.reactapp.core.models.impl;
 
@@ -66,6 +66,8 @@ public class MultifieldCardImpl
     @ChildResourceFromRequest(injectionStrategy = InjectionStrategy.OPTIONAL)
     private List<basicInputModel> basicInput;
     @ChildResourceFromRequest(injectionStrategy = InjectionStrategy.OPTIONAL)
+    private List<com.reactapp.core.models.basicBirthday> basicBirthday;
+    @ChildResourceFromRequest(injectionStrategy = InjectionStrategy.OPTIONAL)
     private List<basicCheckboxModel> basicCheckbox;
     @ChildResourceFromRequest(injectionStrategy = InjectionStrategy.OPTIONAL)
     private List<basicButtonModel> basicButton;
@@ -108,6 +110,11 @@ public class MultifieldCardImpl
     @Override
     public List<basicInputModel> getBasicInput() {
         return basicInput != null ? Collections.unmodifiableList(basicInput) : null;
+    }
+
+    @Override
+    public List<com.reactapp.core.models.basicBirthday> getBasicBirthday() {
+        return basicBirthday != null ? Collections.unmodifiableList(basicBirthday) : null;
     }
 
     @Override

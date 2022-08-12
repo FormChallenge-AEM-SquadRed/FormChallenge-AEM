@@ -24,20 +24,35 @@ import org.osgi.annotation.versioning.ConsumerType;
 
 
 /**
- * Defines the {@code basicCheckboxModel} Sling Model used for the multifield in {@code reactapp/components/multifield-card} component.
+ * Defines the {@code basicBirthday} Sling Model used for the multifield in {@code reactapp/components/multifield-card} component.
  * 
  */
 @ConsumerType
-public interface basicCheckboxModel
+public interface basicBirthday
     extends ComponentExporter
 {
 
 
-    @JsonProperty("checkboxtext")
-    String getCheckboxtext();
+    @JsonProperty("labeltitle")
+    String getLabeltitle();
 
-    @JsonProperty("checkboxcolor")
-    String getCheckboxcolor();
+    @JsonProperty("labeltitle")
+    String getColortitle();
+
+    @JsonProperty("labelday")
+    String getLabelday();
+
+    @JsonProperty("labelmonth")
+    String getLabelmonth();
+
+    @JsonProperty("labelyear")
+    String getLabelyear();
+
+    @JsonProperty("labelage")
+    String getLabelage();
+
+    @JsonProperty("labeltitle")
+    String getColorinput();
 
     @JsonProperty("fonts")
     String getFonts();
