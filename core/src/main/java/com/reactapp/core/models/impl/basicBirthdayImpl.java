@@ -21,7 +21,7 @@ package com.reactapp.core.models.impl;
 import com.adobe.cq.export.json.ComponentExporter;
 import com.adobe.cq.export.json.ExporterConstants;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.reactapp.core.models.socialInputModel;
+import com.reactapp.core.models.basicBirthday;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.Exporter;
@@ -33,71 +33,79 @@ import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
 @Model(adaptables = {
     SlingHttpServletRequest.class
 }, adapters = {
-    socialInputModel.class,
+    basicBirthday.class,
     ComponentExporter.class
 })
 @Exporter(name = ExporterConstants.SLING_MODEL_EXPORTER_NAME, extensions = ExporterConstants.SLING_MODEL_EXTENSION)
-public class socialInputModelImpl
-    implements socialInputModel
+public class basicBirthdayImpl
+    implements basicBirthday
 {
 
     @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
-    private String labeltext;
+    private String labeltitle;
     @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
-    private String labelcolor;
+    private String colortitle;
     @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
-    private String placeholdertext;
+    private String labelday;
     @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
-    private String placeholdercolor;
+    private String labelmonth;
     @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
-    private String textcolor;
+    private String labelyear;
+    @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
+    private String labelage;
+    @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
+    private String colorinput;
     @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
     private String fonts;
-    @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
-    private String types;
     @SlingObject
     private Resource resource;
 
     @Override
-    @JsonProperty("labeltext")
-    public String getLabeltext() {
-        return labeltext;
+    @JsonProperty("labeltitle")
+    public String getLabeltitle() {
+        return labeltitle;
     }
 
     @Override
-    @JsonProperty("labelcolor")
-    public String getLabelcolor() {
-        return labelcolor;
+    @JsonProperty("labeltitle")
+    public String getColortitle() {
+        return colortitle;
     }
 
     @Override
-    @JsonProperty("placeholdertext")
-    public String getPlaceholdertext() {
-        return placeholdertext;
+    @JsonProperty("labelday")
+    public String getLabelday() {
+        return labelday;
     }
 
     @Override
-    @JsonProperty("placeholdercolor")
-    public String getPlaceholdercolor() {
-        return placeholdercolor;
+    @JsonProperty("labelmonth")
+    public String getLabelmonth() {
+        return labelmonth;
     }
 
     @Override
-    @JsonProperty("textcolor")
-    public String getTextcolor() {
-        return textcolor;
+    @JsonProperty("labelyear")
+    public String getLabelyear() {
+        return labelyear;
+    }
+
+    @Override
+    @JsonProperty("labelage")
+    public String getLabelage() {
+        return labelage;
+    }
+
+    @Override
+    @JsonProperty("labeltitle")
+    public String getColorinput() {
+        return colorinput;
     }
 
     @Override
     @JsonProperty("fonts")
     public String getFonts() {
         return fonts;
-    }
-
-    @Override
-    @JsonProperty("types")
-    public String getTypes() {
-        return types;
     }
 
     @Override
