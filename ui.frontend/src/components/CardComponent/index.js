@@ -12,20 +12,15 @@ const CardComponent = ({
     basicTitle,
     socialTitle,
     certificatesTitle,
-    basicButton
+    basicButton,
+    basicInput
 }) => {
     const [selectedTab, setSelectedTab] = useContext(TabsContext);
 
     return (
         <Container>
             <Card cardColor={cardColor}>
-                {selectedTab === 0 &&
-                    basicTitle &&
-                    basicTitle.map((item, index) => (
-                        <Title key={index} color={item.titlecolor}>
-                            {item.titletext}
-                        </Title>
-                    ))}
+            
                 {selectedTab === 1 &&
                     socialTitle &&
                     socialTitle.map((item, index) => (
@@ -40,8 +35,8 @@ const CardComponent = ({
                             {item.titletext}
                         </Title>
                     ))}
-                <Tabs />
-                {selectedTab === 0 && <FormBasic basicButton={basicButton}/>}
+                {selectedTab === 0 && <FormBasic basicButton={basicButton} basicTitle={basicTitle} basicInput={basicInput}/>}
+               
             </Card>
         </Container>
     );

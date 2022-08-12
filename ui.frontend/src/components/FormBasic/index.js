@@ -1,9 +1,45 @@
-import React from "react";
+import React, { useContext } from "react";
 import Button from "../Buttons";
+import { TabsContext } from "../../contexts/TabsProvider";
+import Title from "../Title";
+import Tabs from "../Tabs";
+import Input from "../Input";
+import { useForm } from "react-hook-form";
 
-const FormBasic = ({ basicButton }) => {
+
+const FormBasic = ({ basicButton, basicTitle, basicInput }) => {
+  const [selectedTab, setSelectedTab] = useContext(TabsContext);
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+    setValue,
+    getValues,
+  } = useForm();
+
   return (
     <>
+      {selectedTab === 0 &&
+        basicTitle &&
+        basicTitle.map((item, index) => (
+          <Title key={index} color={item.titlecolor}>
+            {item.titletext}
+          </Title>
+        ))}
+      <Tabs />
+      {basicInput &&
+        basicInput.map((item, index) => (
+          <Input
+            key={index}
+            type={item.types}
+            placeholder={item.placeholdertext}
+            {...{ register: register(`${index}`) }}
+          >
+            {item.labeltext}
+          </Input>
+        ))}
+
       {basicButton &&
         basicButton.map((item, index) => (
           <Button
