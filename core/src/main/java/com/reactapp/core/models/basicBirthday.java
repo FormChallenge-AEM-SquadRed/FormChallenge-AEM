@@ -19,17 +19,42 @@
 package com.reactapp.core.models;
 
 import com.adobe.cq.export.json.ComponentExporter;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.osgi.annotation.versioning.ConsumerType;
 
 
 /**
- * Defines the {@code Birthday} Sling Model used for the {@code reactapp/components/birthday} component.
+ * Defines the {@code basicBirthday} Sling Model used for the multifield in {@code reactapp/components/multifield-card} component.
  * 
  */
 @ConsumerType
-public interface Birthday
+public interface basicBirthday
     extends ComponentExporter
 {
 
+
+    @JsonProperty("labeltitle")
+    String getLabeltitle();
+
+    @JsonProperty("labeltitle")
+    String getColortitle();
+
+    @JsonProperty("labelday")
+    String getLabelday();
+
+    @JsonProperty("labelmonth")
+    String getLabelmonth();
+
+    @JsonProperty("labelyear")
+    String getLabelyear();
+
+    @JsonProperty("labelage")
+    String getLabelage();
+
+    @JsonProperty("labeltitle")
+    String getColorinput();
+
+    @JsonProperty("fonts")
+    String getFonts();
 
 }
