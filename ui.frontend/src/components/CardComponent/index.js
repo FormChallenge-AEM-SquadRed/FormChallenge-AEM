@@ -5,12 +5,14 @@ import {Card, Container} from "./style";
 import Tabs from "../Tabs";
 import Title from "../Title";
 import {TabsContext} from "../../contexts/TabsProvider";
+import FormBasic from "../FormBasic";
 
 const CardComponent = ({
     cardColor,
     basicTitle,
     socialTitle,
     certificatesTitle,
+    basicButton
 }) => {
     const [selectedTab, setSelectedTab] = useContext(TabsContext);
 
@@ -39,6 +41,7 @@ const CardComponent = ({
                         </Title>
                     ))}
                 <Tabs />
+                {selectedTab === 0 && <FormBasic basicButton={basicButton}/>}
             </Card>
         </Container>
     );

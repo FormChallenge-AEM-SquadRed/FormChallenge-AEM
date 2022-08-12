@@ -1,5 +1,4 @@
 import React from "react";
-import {MapTo} from "@adobe/aem-react-editable-components";
 import {
     ButtonNextStyled,
     ButtonMoreStyled,
