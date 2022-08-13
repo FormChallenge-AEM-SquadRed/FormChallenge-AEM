@@ -20,7 +20,7 @@ export const CustomCheckbox = styled.label`
   position: relative;
 
   input:checked + ${Checkmark} {
-    background-color: ${({ checkboxcolor }) => checkboxcolor || "#074ee8"};
+    background-color: #074ee8;
     border-color: #074ee8;
     background-size: 60%;
   }
@@ -34,6 +34,8 @@ export const Terms = styled.span`
   margin-left: 0.8rem;
   display: inline-block;
   font-family: ${({ fonts }) => fonts || "Nunito"};
+  color: ${({ checkboxcolor }) => checkboxcolor || "#074ee8"};
+    border-color: #074ee8;
   @media (max-width: 300px) {
     font-size: 1.4rem;
   }

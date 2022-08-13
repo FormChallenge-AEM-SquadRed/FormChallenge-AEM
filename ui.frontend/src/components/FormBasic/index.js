@@ -50,6 +50,7 @@ const FormBasic = ({ basicButton, basicTitle, basicInput, basicCheckbox }) => {
             {...{ register: register(`${index}`) }}
           />
         ))}
+        
       {basicButton &&
         basicButton.map((item, index) => (
           <Button
