@@ -13,7 +13,8 @@ const CardComponent = ({
     socialTitle,
     certificatesTitle,
     basicButton,
-    basicInput
+    basicInput,
+    basicCheckbox
 }) => {
     const [selectedTab, setSelectedTab] = useContext(TabsContext);
 
@@ -35,7 +36,7 @@ const CardComponent = ({
                             {item.titletext}
                         </Title>
                     ))}
-                {selectedTab === 0 && <FormBasic basicButton={basicButton} basicTitle={basicTitle} basicInput={basicInput}/>}
+                {selectedTab === 0 && <FormBasic basicButton={basicButton} basicTitle={basicTitle} basicInput={basicInput} basicCheckbox={basicCheckbox}/>}
                
             </Card>
         </Container>

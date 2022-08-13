@@ -4,7 +4,7 @@ import {
     HiddenCheckbox,
     Checkmark,
     Terms,
-} from './checkboxStyled';
+} from './style.js';
 
 const Checkbox = ({ checkboxtext, checkboxcolor, fonts, onChange, register}) => {
     return (

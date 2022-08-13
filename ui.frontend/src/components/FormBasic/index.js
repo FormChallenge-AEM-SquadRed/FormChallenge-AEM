@@ -4,10 +4,10 @@ import { TabsContext } from "../../contexts/TabsProvider";
 import Title from "../Title";
 import Tabs from "../Tabs";
 import Input from "../Input";
+import Checkbox from "../Checkbox";
 import { useForm } from "react-hook-form";
 
-
-const FormBasic = ({ basicButton, basicTitle, basicInput }) => {
+const FormBasic = ({ basicButton, basicTitle, basicInput, basicCheckbox }) => {
   const [selectedTab, setSelectedTab] = useContext(TabsContext);
   const {
     register,
@@ -40,6 +40,15 @@ const FormBasic = ({ basicButton, basicTitle, basicInput }) => {
           </Input>
         ))}
 
+      {basicCheckbox &&
+        basicCheckbox.map((item, index) => (
+          <Checkbox
+            key={index}
+            checkboxtext={item.checkboxtext}
+            checkboxcolor={item.checkboxcolor}
+            fonts={item.fonts}
+          />
+        ))}
       {basicButton &&
         basicButton.map((item, index) => (
           <Button
