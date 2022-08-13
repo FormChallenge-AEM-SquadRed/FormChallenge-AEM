@@ -7,17 +7,12 @@ import {
 } from './style.js';
 
 const Checkbox = ({ checkboxtext, checkboxcolor, fonts, onChange, register}) => {
+    console.log("checkbox")
     return (
-        <CustomCheckbox>
-            <HiddenCheckbox
-                checkboxtext={checkboxtext}
-                chekboxcolor={checkboxcolor}
-                fonts={fonts}
-                onChange={onChange}
-                {...register}
-            />
-            <Checkmark />
-            <Terms>I accept the terms and privacy</Terms>
+        <CustomCheckbox onChange={onChange} {...register}>
+            <HiddenCheckbox/>
+            <Checkmark chekboxcolor={checkboxcolor} />
+            <Terms   fonts={fonts} >{checkboxtext ? checkboxtext : "I accept the terms and privacy"}</Terms>
         </CustomCheckbox>
     );
 };

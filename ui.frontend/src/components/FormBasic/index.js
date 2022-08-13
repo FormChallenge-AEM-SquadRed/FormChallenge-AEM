@@ -47,6 +47,7 @@ const FormBasic = ({ basicButton, basicTitle, basicInput, basicCheckbox }) => {
             checkboxtext={item.checkboxtext}
             checkboxcolor={item.checkboxcolor}
             fonts={item.fonts}
+            {...{ register: register(`${index}`) }}
           />
         ))}
       {basicButton &&
