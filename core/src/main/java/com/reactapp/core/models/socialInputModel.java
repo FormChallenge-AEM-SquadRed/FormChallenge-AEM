@@ -54,4 +54,7 @@ public interface socialInputModel
     @JsonProperty("types")
     String getTypes();
 
+    @JsonProperty("required")
+    Boolean getRequired();
+
 }
