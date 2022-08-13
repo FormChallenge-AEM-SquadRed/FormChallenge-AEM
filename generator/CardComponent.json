@@ -29,7 +29,9 @@
             {
                 "id": "tab-0",
                 "label": "Card",
-                "fields": ["cardColor"]
+                "fields": [
+                    "cardColor"
+                ]
             },
             {
                 "id": "tab-1",
@@ -45,7 +47,11 @@
             {
                 "id": "tab-2",
                 "label": "Tab Social",
-                "fields": ["socialTitle", "socialInput", "socialButton"]
+                "fields": [
+                    "socialTitle",
+                     "socialInput",
+                      "socialButton"
+                    ]
             },
             {
                 "id": "tab-3",
@@ -61,7 +67,11 @@
             {
                 "id": "tab-4",
                 "label": "Tab Success",
-                "fields": ["successTitle", "successText", "successButton"]
+                "fields": [
+                    "successTitle", 
+                    "successText", 
+                    "successButton"
+                ]
             }
         ],
         "properties": [
@@ -278,6 +288,17 @@
                                 }
                             }
                         ]
+                    },
+                    {
+                        "field": "required",
+                        "type": "checkbox",
+                        "json-expose": true,
+                        "json-property": "required",
+                        "attributes": {
+                            "value": "{Boolean}true",
+                            "uncheckedValue": "{Boolean}false",
+                            "text": "Required?"
+                        }
                     }
                 ]
             },
@@ -773,6 +794,17 @@
                                 }
                             }
                         ]
+                    },
+                    {
+                        "field": "required",
+                        "type": "checkbox",
+                        "json-expose": true,
+                        "json-property": "required",
+                        "attributes": {
+                            "value": "{Boolean}true",
+                            "uncheckedValue": "{Boolean}false",
+                            "text": "Required?"
+                        }
                     }
                 ]
             },
@@ -1100,6 +1132,17 @@
                                 }
                             }
                         ]
+                    },
+                    {
+                        "field": "required",
+                        "type": "checkbox",
+                        "json-expose": true,
+                        "json-property": "required",
+                        "attributes": {
+                            "value": "{Boolean}true",
+                            "uncheckedValue": "{Boolean}false",
+                            "text": "Required?"
+                        }
                     }
                 ]
             },
