@@ -54,4 +54,7 @@ public interface basicInputModel
     @JsonProperty("types")
     String getTypes();
 
+    @JsonProperty("required")
+    Boolean getRequired();
+
 }
