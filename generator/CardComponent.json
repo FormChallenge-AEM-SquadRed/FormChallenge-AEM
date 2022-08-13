@@ -278,6 +278,17 @@
                                 }
                             }
                         ]
+                    },
+                    {
+                        "field": "required",
+                        "type": "checkbox",
+                        "json-expose": true,
+                        "json-property": "required",
+                        "attributes": {
+                            "value": "{Boolean}true",
+                            "uncheckedValue": "{Boolean}false",
+                            "text": "Required?"
+                        }
                     }
                 ]
             },
@@ -773,6 +784,17 @@
                                 }
                             }
                         ]
+                    },
+                    {
+                        "field": "required",
+                        "type": "checkbox",
+                        "json-expose": true,
+                        "json-property": "required",
+                        "attributes": {
+                            "value": "{Boolean}true",
+                            "uncheckedValue": "{Boolean}false",
+                            "text": "Required?"
+                        }
                     }
                 ]
             },
@@ -1100,6 +1122,17 @@
                                 }
                             }
                         ]
+                    },
+                    {
+                        "field": "required",
+                        "type": "checkbox",
+                        "json-expose": true,
+                        "json-property": "required",
+                        "attributes": {
+                            "value": "{Boolean}true",
+                            "uncheckedValue": "{Boolean}false",
+                            "text": "Required?"
+                        }
                     }
                 ]
             },
