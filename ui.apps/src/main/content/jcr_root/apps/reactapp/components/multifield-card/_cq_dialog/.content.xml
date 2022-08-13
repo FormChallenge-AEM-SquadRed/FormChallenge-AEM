@@ -178,6 +178,12 @@
 															value="password"/>
 													</items>
 												</types>
+												<required jcr:primaryType="nt:unstructured"
+													name="./required"
+													sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+													text="Required?"
+													uncheckedValue="{Boolean}false"
+													value="{Boolean}true"/>
 											</items>
 										</field>
 									</basicInput>
@@ -489,6 +495,12 @@
 															value="password"/>
 													</items>
 												</types>
+												<required jcr:primaryType="nt:unstructured"
+													name="./required"
+													sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+													text="Required?"
+													uncheckedValue="{Boolean}false"
+													value="{Boolean}true"/>
 											</items>
 										</field>
 									</socialInput>
@@ -696,6 +708,12 @@
 															value="password"/>
 													</items>
 												</types>
+												<required jcr:primaryType="nt:unstructured"
+													name="./required"
+													sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+													text="Required?"
+													uncheckedValue="{Boolean}false"
+													value="{Boolean}true"/>
 											</items>
 										</field>
 									</certificatesInput>
