@@ -29,5 +29,8 @@ export const ContainerForm = styled.form`
     height: 100%;  
     flex-direction: column;
     justify-content: space-between;
+    @media (max-width: 768px) {
+        justify-content: flex-start;
+    }
 `;
 
