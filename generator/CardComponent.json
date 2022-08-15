@@ -37,6 +37,7 @@
                 "fields": [
                     "basicTitle",
                     "basicInput",
+                    "basicBirthday",
                     "basicCheckbox",
                     "basicButton"
                 ]
@@ -51,8 +52,8 @@
                 "label": "Tab Certificates",
                 "fields": [
                     "certificatesTitle",
+                    "certificatesBlock",
                     "certificatesInput",
-                    "certificatesMore",
                     "certificatesFinish"
                 ]
             },
@@ -220,6 +221,185 @@
                                 }
                             }
                         ]
+                    },
+                    {
+                        "field": "types",
+                        "type": "select",
+                        "label": "Selecione o tipo do input:",
+                        "json-expose": true,
+                        "json-property": "types",
+                        "attributes": {
+                            "defaultValue": "types",
+                            "value": false
+                        },
+                        "items": [
+                            {
+                                "field": "text",
+                                "attributes": {
+                                    "selected": "true",
+                                    "text": "Text",
+                                    "value": "text"
+                                }
+                            },
+                            {
+                                "field": "email",
+                                "attributes": {
+                                    "text": "Email",
+                                    "value": "email"
+                                }
+                            },
+                            {
+                                "field": "tel",
+                                "attributes": {
+                                    "text": "Tel",
+                                    "value": "tel"
+                                }
+                            },
+                            {
+                                "field": "password",
+                                "attributes": {
+                                    "text": "Password",
+                                    "value": "password"
+                                }
+                            },
+                            {
+                                "field": "number",
+                                "attributes": {
+                                    "text": "Number",
+                                    "value": "number"
+                                }
+                            },
+                            {
+                                "field": "date",
+                                "attributes": {
+                                    "text": "Date",
+                                    "value": "date"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "field": "required",
+                        "type": "checkbox",
+                        "json-expose": true,
+                        "json-property": "required",
+                        "attributes": {
+                            "value": "{Boolean}true",
+                            "uncheckedValue": "{Boolean}false",
+                            "text": "Required?"
+                        }
+                    }
+                ]
+            },
+            {
+                "field": "basicBirthday",
+                "type": "multifield",
+                "label": "Birthday",
+                "model-name": "basicBirthday",
+                "use-existing-model": false,
+                "json-expose": true,
+                "items": [
+                    {
+                        "field": "labeltitle",
+                        "type": "textfield",
+                        "label": "Digite a label para o título:",
+                        "json-expose": true,
+                        "json-property": "labeltitle"
+                    },
+                    {
+                        "field": "colortitle",
+                        "type": "textfield",
+                        "label": "Digite a cor para o título:",
+                        "json-expose": true,
+                        "json-property": "labeltitle"
+                    },
+                    {
+                        "field": "labelday",
+                        "type": "textfield",
+                        "label": "Digite a label para o dia:",
+                        "json-expose": true,
+                        "json-property": "labelday"
+                    },
+                    {
+                        "field": "labelmonth",
+                        "type": "textfield",
+                        "label": "Digite a label para o mês:",
+                        "json-expose": true,
+                        "json-property": "labelmonth"
+                    },
+                    {
+                        "field": "labelyear",
+                        "type": "textfield",
+                        "label": "Digite a label para o ano:",
+                        "json-expose": true,
+                        "json-property": "labelyear"
+                    },
+                    {
+                        "field": "labelage",
+                        "type": "textfield",
+                        "label": "Digite a label para a idade:",
+                        "json-expose": true,
+                        "json-property": "labelage"
+                    },
+                    {
+                        "field": "colorinput",
+                        "type": "textfield",
+                        "label": "Digite a cor para os inputs:",
+                        "json-expose": true,
+                        "json-property": "labeltitle"
+                    },
+                    {
+                        "field": "fonts",
+                        "type": "select",
+                        "label": "Fonte para as labels:",
+                        "json-expose": true,
+                        "json-property": "fonts",
+                        "attributes": {
+                            "defaultValue": "fonts",
+                            "value": false
+                        },
+                        "items": [
+                            {
+                                "field": "nunito",
+                                "attributes": {
+                                    "text": "Nunito",
+                                    "value": "nunito"
+                                }
+                            },
+                            {
+                                "field": "inter",
+                                "attributes": {
+                                    "selected": "true",
+                                    "text": "Inter",
+                                    "value": "inter"
+                                }
+                            },
+                            {
+                                "field": "montserrat",
+                                "attributes": {
+                                    "text": "Montserrat",
+                                    "value": "montserrat"
+                                }
+                            },
+                            {
+                                "field": "roboto",
+                                "attributes": {
+                                    "text": "Roboto",
+                                    "value": "roboto"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "field": "required",
+                        "type": "checkbox",
+                        "json-expose": true,
+                        "json-property": "required",
+                        "attributes": {
+                            "value": "{Boolean}true",
+                            "uncheckedValue": "{Boolean}false",
+                            "text": "Required?"
+                        }
                     }
                 ]
             },
@@ -359,9 +539,55 @@
                                 }
                             }
                         ]
+                    },
+                    {
+                        "field": "buttons",
+                        "type": "select",
+                        "label": "Escolha um tipo de botão:",
+                        "json-expose": true,
+                        "json-property": "buttons",
+                        "items": [
+                            {
+                                "field": "next",
+                                "attributes": {
+                                    "selected": "true",
+                                    "text": "Botão Next",
+                                    "value": "next"
+                                }
+                            },
+                            {
+                                "field": "more",
+                                "attributes": {
+                                    "text": "Botão More",
+                                    "value": "more"
+                                }
+                            },
+                            {
+                                "field": "finish",
+                                "attributes": {
+                                    "text": "Botão Finish",
+                                    "value": "finish"
+                                }
+                            },
+                            {
+                                "field": "return",
+                                "attributes": {
+                                    "text": "Botão Return",
+                                    "value": "return"
+                                }
+                            },
+                            {
+                                "field": "certificates",
+                                "attributes": {
+                                    "text": "Botão Certificates",
+                                    "value": "certificates"
+                                }
+                            }
+                        ]
                     }
                 ]
             },
+
             {
                 "field": "socialTitle",
                 "type": "multifield",
@@ -512,6 +738,73 @@
                                 }
                             }
                         ]
+                    },
+                    {
+                        "field": "types",
+                        "type": "select",
+                        "label": "Selecione o tipo do input:",
+                        "json-expose": true,
+                        "json-property": "types",
+                        "attributes": {
+                            "defaultValue": "types",
+                            "value": false
+                        },
+                        "items": [
+                            {
+                                "field": "text",
+                                "attributes": {
+                                    "selected": "true",
+                                    "text": "Text",
+                                    "value": "text"
+                                }
+                            },
+                            {
+                                "field": "email",
+                                "attributes": {
+                                    "text": "Email",
+                                    "value": "email"
+                                }
+                            },
+                            {
+                                "field": "tel",
+                                "attributes": {
+                                    "text": "Tel",
+                                    "value": "tel"
+                                }
+                            },
+                            {
+                                "field": "password",
+                                "attributes": {
+                                    "text": "Password",
+                                    "value": "password"
+                                }
+                            },
+                            {
+                                "field": "number",
+                                "attributes": {
+                                    "text": "Number",
+                                    "value": "number"
+                                }
+                            },
+                            {
+                                "field": "date",
+                                "attributes": {
+                                    "text": "Date",
+                                    "value": "date"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "field": "required",
+                        "type": "checkbox",
+                        "json-expose": true,
+                        "json-property": "required",
+                        "attributes": {
+                            "value": "{Boolean}true",
+                            "uncheckedValue": "{Boolean}false",
+                            "text": "Required?"
+                        }
                     }
                 ]
             },
@@ -585,6 +878,51 @@
                                 }
                             }
                         ]
+                    },
+                    {
+                        "field": "buttons",
+                        "type": "select",
+                        "label": "Escolha um tipo de botão",
+                        "json-expose": true,
+                        "json-property": "buttons",
+                        "items": [
+                            {
+                                "field": "next",
+                                "attributes": {
+                                    "selected": "true",
+                                    "text": "Botão Next",
+                                    "value": "next"
+                                }
+                            },
+                            {
+                                "field": "more",
+                                "attributes": {
+                                    "text": "Botão More",
+                                    "value": "more"
+                                }
+                            },
+                            {
+                                "field": "finish",
+                                "attributes": {
+                                    "text": "Botão Finish",
+                                    "value": "finish"
+                                }
+                            },
+                            {
+                                "field": "return",
+                                "attributes": {
+                                    "text": "Botão Return",
+                                    "value": "return"
+                                }
+                            },
+                            {
+                                "field": "certificates",
+                                "attributes": {
+                                    "text": "Botão Certificates",
+                                    "value": "certificates"
+                                }
+                            }
+                        ]
                     }
                 ]
             },
@@ -609,6 +947,121 @@
                         "label": "Escolha a cor do titulo:",
                         "json-expose": true,
                         "json-property": "certificatesTitleColor"
+                    },
+                    {
+                        "field": "fonts",
+                        "type": "select",
+                        "label": "Fonte para o texto",
+                        "json-expose": true,
+                        "json-property": "fonts",
+                        "attributes": {
+                            "defaultValue": "fonts",
+                            "value": false
+                        },
+                        "items": [
+                            {
+                                "field": "nunito",
+                                "attributes": {
+                                    "text": "Nunito",
+                                    "value": "nunito"
+                                }
+                            },
+                            {
+                                "field": "inter",
+                                "attributes": {
+                                    "selected": "true",
+                                    "text": "Inter",
+                                    "value": "inter"
+                                }
+                            },
+                            {
+                                "field": "montserrat",
+                                "attributes": {
+                                    "text": "Montserrat",
+                                    "value": "montserrat"
+                                }
+                            },
+                            {
+                                "field": "roboto",
+                                "attributes": {
+                                    "text": "Roboto",
+                                    "value": "roboto"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "field": "certificatesBlock",
+                "type": "multifield",
+                "label": "Certificates Block",
+                "model-name": "certificatesBlock",
+                "use-existing-model": false,
+                "json-expose": true,
+                "items": [
+                    {
+                        "field": "labeltext",
+                        "type": "textfield",
+                        "label": "Digite o texto da label:",
+                        "json-expose": true,
+                        "json-property": "labeltext"
+                    },
+                    {
+                        "field": "labelcolor",
+                        "type": "textfield",
+                        "label": "Escolha a cor da label:",
+                        "json-expose": true,
+                        "json-property": "labelcolor"
+                    },
+                    {
+                        "field": "placeholdertext",
+                        "type": "textfield",
+                        "label": "Digite o texto do placeholder:",
+                        "json-expose": true,
+                        "json-property": "placeholdertext"
+                    },
+                    {
+                        "field": "placeholdercolor",
+                        "type": "textfield",
+                        "label": "Escolha a cor do placeholder:",
+                        "json-expose": true,
+                        "json-property": "placeholdercolor"
+                    },
+                    {
+                        "field": "textcolor",
+                        "type": "textfield",
+                        "label": "Escolha a cor do texto do input:",
+                        "json-expose": true,
+                        "json-property": "textcolor"
+                    },
+                    {
+                        "field": "btncertificateslabel",
+                        "type": "textfield",
+                        "label": "Digite a label do botão esquerdo:",
+                        "json-expose": true,
+                        "json-property": "btncertificateslabel"
+                    },
+                    {
+                        "field": "btnmorelabel",
+                        "type": "textfield",
+                        "label": "Digite a label do botão direito:",
+                        "json-expose": true,
+                        "json-property": "btnmorelabel"
+                    },
+                    {
+                        "field": "btnlabelcolor",
+                        "type": "textfield",
+                        "label": "Escolha a cor da label dos botões:",
+                        "json-expose": true,
+                        "json-property": "btnlabelcolor"
+                    },
+                    {
+                        "field": "btnbckgcolor",
+                        "type": "textfield",
+                        "label": "Escolha o background dos botões:",
+                        "json-expose": true,
+                        "json-property": "btnbckgcolor"
                     },
                     {
                         "field": "fonts",
@@ -738,79 +1191,73 @@
                                 }
                             }
                         ]
-                    }
-                ]
-            },
-            {
-                "field": "certificatesMore",
-                "type": "multifield",
-                "label": "Button More",
-                "model-name": "certificatesMoreModel",
-                "use-existing-model": false,
-                "json-expose": true,
-                "items": [
-                    {
-                        "field": "buttonlabel",
-                        "type": "textfield",
-                        "label": "Digite a label do botão:",
-                        "json-expose": true,
-                        "json-property": "buttonlabel"
                     },
                     {
-                        "field": "buttonlabelcolor",
-                        "type": "textfield",
-                        "label": "Escolha a cor da label do botão:",
-                        "json-expose": true,
-                        "json-property": "buttonlabelcolor"
-                    },
-                    {
-                        "field": "buttonbckgcolor",
-                        "type": "textfield",
-                        "label": "Escolha o background do botão:",
-                        "json-expose": true,
-                        "json-property": "buttonbckgcolor"
-                    },
-                    {
-                        "field": "fonts",
+                        "field": "types",
                         "type": "select",
-                        "label": "Fonte para o texto",
+                        "label": "Selecione o tipo do input:",
                         "json-expose": true,
-                        "json-property": "fonts",
+                        "json-property": "types",
                         "attributes": {
-                            "defaultValue": "fonts",
+                            "defaultValue": "types",
                             "value": false
                         },
                         "items": [
                             {
-                                "field": "nunito",
-                                "attributes": {
-                                    "text": "Nunito",
-                                    "value": "nunito"
-                                }
-                            },
-                            {
-                                "field": "inter",
+                                "field": "text",
                                 "attributes": {
                                     "selected": "true",
-                                    "text": "Inter",
-                                    "value": "inter"
+                                    "text": "Text",
+                                    "value": "text"
                                 }
                             },
                             {
-                                "field": "montserrat",
+                                "field": "email",
                                 "attributes": {
-                                    "text": "Montserrat",
-                                    "value": "montserrat"
+                                    "text": "Email",
+                                    "value": "email"
                                 }
                             },
                             {
-                                "field": "roboto",
+                                "field": "tel",
                                 "attributes": {
-                                    "text": "Roboto",
-                                    "value": "roboto"
+                                    "text": "Tel",
+                                    "value": "tel"
+                                }
+                            },
+                            {
+                                "field": "password",
+                                "attributes": {
+                                    "text": "Password",
+                                    "value": "password"
+                                }
+                            },
+                            {
+                                "field": "number",
+                                "attributes": {
+                                    "text": "Number",
+                                    "value": "number"
+                                }
+                            },
+                            {
+                                "field": "date",
+                                "attributes": {
+                                    "text": "Date",
+                                    "value": "date"
                                 }
                             }
                         ]
+                    },
+                    {
+                        "field": "required",
+                        "type": "checkbox",
+                        "json-expose": true,
+                        "json-property": "required",
+                        "attributes": {
+                            "value": "{Boolean}true",
+                            "uncheckedValue": "{Boolean}false",
+                            "text": "Required?"
+                        }
                     }
                 ]
             },
@@ -881,6 +1328,51 @@
                                 "attributes": {
                                     "text": "Roboto",
                                     "value": "roboto"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "field": "buttons",
+                        "type": "select",
+                        "label": "Escolha um tipo de botão",
+                        "json-expose": true,
+                        "json-property": "buttons",
+                        "items": [
+                            {
+                                "field": "next",
+                                "attributes": {
+                                    "selected": "true",
+                                    "text": "Botão Next",
+                                    "value": "next"
+                                }
+                            },
+                            {
+                                "field": "more",
+                                "attributes": {
+                                    "text": "Botão More",
+                                    "value": "more"
+                                }
+                            },
+                            {
+                                "field": "finish",
+                                "attributes": {
+                                    "text": "Botão Finish",
+                                    "value": "finish"
+                                }
+                            },
+                            {
+                                "field": "return",
+                                "attributes": {
+                                    "text": "Botão Return",
+                                    "value": "return"
+                                }
+                            },
+                            {
+                                "field": "certificates",
+                                "attributes": {
+                                    "text": "Botão Certificates",
+                                    "value": "certificates"
                                 }
                             }
                         ]
@@ -1086,6 +1578,51 @@
                                 "attributes": {
                                     "text": "Roboto",
                                     "value": "roboto"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "field": "buttons",
+                        "type": "select",
+                        "label": "Escolha um tipo de botão",
+                        "json-expose": true,
+                        "json-property": "buttons",
+                        "items": [
+                            {
+                                "field": "next",
+                                "attributes": {
+                                    "selected": "true",
+                                    "text": "Botão Next",
+                                    "value": "next"
+                                }
+                            },
+                            {
+                                "field": "more",
+                                "attributes": {
+                                    "text": "Botão More",
+                                    "value": "more"
+                                }
+                            },
+                            {
+                                "field": "finish",
+                                "attributes": {
+                                    "text": "Botão Finish",
+                                    "value": "finish"
+                                }
+                            },
+                            {
+                                "field": "return",
+                                "attributes": {
+                                    "text": "Botão Return",
+                                    "value": "return"
+                                }
+                            },
+                            {
+                                "field": "certificates",
+                                "attributes": {
+                                    "text": "Botão Certificates",
+                                    "value": "certificates"
                                 }
                             }
                         ]

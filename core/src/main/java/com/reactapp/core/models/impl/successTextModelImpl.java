@@ -20,26 +20,53 @@ package com.reactapp.core.models.impl;
 
 import com.adobe.cq.export.json.ComponentExporter;
 import com.adobe.cq.export.json.ExporterConstants;
-import com.reactapp.core.models.Birthday;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.reactapp.core.models.successTextModel;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.Exporter;
 import org.apache.sling.models.annotations.Model;
+import org.apache.sling.models.annotations.injectorspecific.InjectionStrategy;
 import org.apache.sling.models.annotations.injectorspecific.SlingObject;
+import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
 
 @Model(adaptables = {
     SlingHttpServletRequest.class
 }, adapters = {
-    Birthday.class,
+    successTextModel.class,
     ComponentExporter.class
-}, resourceType = "reactapp/components/birthday")
+})
 @Exporter(name = ExporterConstants.SLING_MODEL_EXPORTER_NAME, extensions = ExporterConstants.SLING_MODEL_EXTENSION)
-public class BirthdayImpl
-    implements Birthday
+public class successTextModelImpl
+    implements successTextModel
 {
 
+    @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
+    private String resulttext;
+    @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
+    private String resultcolor;
+    @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
+    private String fonts;
     @SlingObject
     private Resource resource;
+
+    @Override
+    @JsonProperty("resulttext")
+    public String getResulttext() {
+        return resulttext;
+    }
+
+    @Override
+    @JsonProperty("resultcolor")
+    public String getResultcolor() {
+        return resultcolor;
+    }
+
+    @Override
+    @JsonProperty("fonts")
+    public String getFonts() {
+        return fonts;
+    }
 
     @Override
     public String getExportedType() {

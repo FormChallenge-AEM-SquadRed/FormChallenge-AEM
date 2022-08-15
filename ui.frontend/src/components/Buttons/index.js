@@ -25,6 +25,7 @@ const Button = ({
     children,
     onClick,
 }) => {
+
     if (buttons === "next")
         return (
             <ButtonNextStyled
@@ -46,6 +47,7 @@ const Button = ({
                 bgcolor={bgcolor}
                 colortext={colortext}
                 onClick={onClick}
+
             >
                 <ContainerIcons>
                     <TbPlus color={"white"} size={"2rem"} />
@@ -76,6 +78,7 @@ const Button = ({
             <ButtonReturnStyled
                 type={"button"}
                 onClick={onClick}
+
                 bgcolor={bgcolor}
                 colortext={colortext}
             >
@@ -85,7 +88,7 @@ const Button = ({
                 {text ? text : "Return"}
             </ButtonReturnStyled>
         );
-
+        
     if (buttons === "certificates")
         return (
             <ButtonCertificatesStyled
@@ -100,6 +103,7 @@ const Button = ({
                 </ContainerIcons>
             </ButtonCertificatesStyled>
         );
+
 
     if (buttons === "removeCertificate")
         return (

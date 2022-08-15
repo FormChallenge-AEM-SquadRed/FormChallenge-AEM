@@ -19,17 +19,27 @@
 package com.reactapp.core.models;
 
 import com.adobe.cq.export.json.ComponentExporter;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.osgi.annotation.versioning.ConsumerType;
 
 
 /**
- * Defines the {@code Birthday} Sling Model used for the {@code reactapp/components/birthday} component.
+ * Defines the {@code basicCheckboxModel} Sling Model used for the multifield in {@code reactapp/components/multifield-card} component.
  * 
  */
 @ConsumerType
-public interface Birthday
+public interface basicCheckboxModel
     extends ComponentExporter
 {
 
+
+    @JsonProperty("checkboxtext")
+    String getCheckboxtext();
+
+    @JsonProperty("checkboxcolor")
+    String getCheckboxcolor();
+
+    @JsonProperty("fonts")
+    String getFonts();
 
 }

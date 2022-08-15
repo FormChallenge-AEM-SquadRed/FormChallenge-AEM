@@ -41,6 +41,12 @@ body {
     font-size: 1.6rem;
 }
 
+@media (max-width: 768px) {
+    body {
+        background-color: #ffffff;
+    }
+}
+
 h1,
 h2,
 h3,
