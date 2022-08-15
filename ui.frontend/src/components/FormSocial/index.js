@@ -24,7 +24,7 @@ const FormSocial = ({ socialTitle, socialInput, socialButton }) => {
   }                          
   return (
   
-    <form onSubmit = {handleSubmit(onSubmit)}>
+    <>
     
       {selectedTab === 1 &&
         socialTitle &&
@@ -36,11 +36,11 @@ const FormSocial = ({ socialTitle, socialInput, socialButton }) => {
           </Title>
         ))}
       <Tabs />
-      <ContainerForm>
-        
+      <ContainerForm onSubmit = {handleSubmit(onSubmit)}>     
+      <ContainerInputs>  
         {socialInput &&
           socialInput.map((item, index) => (
-          <ContainerInputs>
+          
             <InputContainer key = {index}>
               <Input
                 key={index}
@@ -54,10 +54,9 @@ const FormSocial = ({ socialTitle, socialInput, socialButton }) => {
                 {errors[index] && 
                   `${item.labeltext} is required`}
               </p>
-            </InputContainer>
-            </ContainerInputs>
+            </InputContainer>            
           ))}
-        
+        </ContainerInputs>
         <ContainerButtons>
           {socialButton &&
             socialButton.map((item, index) => (
@@ -72,10 +71,10 @@ const FormSocial = ({ socialTitle, socialInput, socialButton }) => {
               </Button>
             </ButtonContainer>  
             ))}        
-        </ContainerButtons>
-          
+        </ContainerButtons>   
       </ContainerForm> 
-    </form>
+    
+    </>
   );
 };
 export default FormSocial;
