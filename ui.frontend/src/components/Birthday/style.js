@@ -58,6 +58,7 @@ export const StyledSelect = styled.select`
     width: 100%;
     border: 2px solid #aaaaaa;
     border-radius: 4px;
+    background-color: #ffffff;
     height: 4rem;
     font-size: 1.6rem;
 `;
