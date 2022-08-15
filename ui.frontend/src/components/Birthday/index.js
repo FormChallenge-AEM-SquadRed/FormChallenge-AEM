@@ -1,7 +1,5 @@
 import {useEffect} from "react";
 import {useForm} from "react-hook-form";
-import {MapTo} from "@adobe/aem-react-editable-components";
-import {yupResolver} from "@hookform/resolvers/yup";
 import {
     StyledBlock,
     StyledBirthday,
@@ -20,7 +18,7 @@ const years = Array.from({length: 121}, (_, i) => -i + currentYear);
 const months = Array.from({length: 12}, (_, i) => i + 1);
 const days = Array.from({length: 31}, (_, i) => i + 1);
 
-const Birthday = () => {
+const Birthday = ({labeltitle, labelday, labelmonth, labelyear, labelage}) => {
     const {
         register,
         handleSubmit,
@@ -45,22 +43,17 @@ const Birthday = () => {
 
     return (
         <StyledBirthday>
-            <StyledTitle>Birthday *</StyledTitle>
+            <StyledTitle>{labeltitle} *</StyledTitle>
             <StyledBirthdayContainer>
                 <StyledBlock>
-                    <Select
-                        width={"100%"}
-                        {...{register: register("day")}}
-                        label={"Day"}
-                    >
+                    <Select {...{register: register("day")}} label={labelday}>
                         {days.map((day, index) => (
                             <option key={index}>{day}</option>
                         ))}
                     </Select>
                     <Select
-                        width={"100%"}
                         {...{register: register("month")}}
-                        label={"Month"}
+                        label={labelmonth}
                     >
                         {months.map((month, index) => (
                             <option key={index}>{month}</option>
@@ -68,22 +61,15 @@ const Birthday = () => {
                     </Select>
                 </StyledBlock>
                 <StyledBlock>
-                    <Select
-                        width={"100%"}
-                        {...{register: register("year")}}
-                        label={"Year"}
-                    >
+                    <Select {...{register: register("year")}} label={labelyear}>
                         {years.map((year, index) => (
                             <option key={index}>{year}</option>
                         ))}
                     </Select>
                     <Input
-                        width={"100%"}
-                        label={"Age"}
-                        placeholder='18'
+                        label={labelage}
                         type='text'
                         {...{register: register("age")}}
-                        readOnly
                     />
                 </StyledBlock>
             </StyledBirthdayContainer>
@@ -91,40 +77,20 @@ const Birthday = () => {
     );
 };
 
-export default MapTo("reactapp/components/birthday")(Birthday);
+export default Birthday;
 
-const Input = ({
-    type,
-    placeholder,
-    className,
-    inputdata,
-    label,
-    width,
-    height,
-    onChangeCapture,
-    readOnly,
-    register,
-}) => {
+const Input = ({label, register}) => {
     return (
-        <StyledInputContainer style={{width: `${width}`}}>
+        <StyledInputContainer>
             <StyledInputLabel>{label}</StyledInputLabel>
-            <StyledInput
-                type={type}
-                defaultValue={inputdata}
-                editable={true}
-                placeholder={placeholder}
-                className={className}
-                onChangeCapture={onChangeCapture}
-                readOnly={readOnly}
-                {...register}
-            />
+            <StyledInput {...register} readOnly />
         </StyledInputContainer>
     );
 };
 
-const Select = ({width, label, children, register}) => {
+const Select = ({label, children, register}) => {
     return (
-        <StyledSelectContainer style={{width: `${width}`}}>
+        <StyledSelectContainer>
             <StyledSelectLabel>{label}</StyledSelectLabel>
             <StyledSelect {...register}>{children}</StyledSelect>
         </StyledSelectContainer>
