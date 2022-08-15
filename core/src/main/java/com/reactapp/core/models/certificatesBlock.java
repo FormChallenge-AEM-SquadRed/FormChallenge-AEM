@@ -24,28 +24,43 @@ import org.osgi.annotation.versioning.ConsumerType;
 
 
 /**
- * Defines the {@code certificatesMoreModel} Sling Model used for the multifield in {@code reactapp/components/multifield-card} component.
+ * Defines the {@code certificatesBlock} Sling Model used for the multifield in {@code reactapp/components/multifield-card} component.
  * 
  */
 @ConsumerType
-public interface certificatesMoreModel
+public interface certificatesBlock
     extends ComponentExporter
 {
 
 
-    @JsonProperty("buttonlabel")
-    String getButtonlabel();
+    @JsonProperty("labeltext")
+    String getLabeltext();
 
-    @JsonProperty("buttonlabelcolor")
-    String getButtonlabelcolor();
+    @JsonProperty("labelcolor")
+    String getLabelcolor();
 
-    @JsonProperty("buttonbckgcolor")
-    String getButtonbckgcolor();
+    @JsonProperty("placeholdertext")
+    String getPlaceholdertext();
+
+    @JsonProperty("placeholdercolor")
+    String getPlaceholdercolor();
+
+    @JsonProperty("textcolor")
+    String getTextcolor();
+
+    @JsonProperty("btncertificateslabel")
+    String getBtncertificateslabel();
+
+    @JsonProperty("btnmorelabel")
+    String getBtnmorelabel();
+
+    @JsonProperty("btnlabelcolor")
+    String getBtnlabelcolor();
+
+    @JsonProperty("btnbckgcolor")
+    String getBtnbckgcolor();
 
     @JsonProperty("fonts")
     String getFonts();
-
-    @JsonProperty("buttons")
-    String getButtons();
 
 }
