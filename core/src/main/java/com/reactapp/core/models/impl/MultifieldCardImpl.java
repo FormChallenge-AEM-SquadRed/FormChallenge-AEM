@@ -25,6 +25,7 @@ import com.adobe.cq.export.json.ComponentExporter;
 import com.adobe.cq.export.json.ExporterConstants;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.reactapp.core.models.MultifieldCard;
+import com.reactapp.core.models.basicBirthdayModel;
 import com.reactapp.core.models.basicButtonModel;
 import com.reactapp.core.models.basicCheckboxModel;
 import com.reactapp.core.models.basicInputModel;
@@ -64,7 +65,7 @@ public class MultifieldCardImpl
     @ChildResourceFromRequest(injectionStrategy = InjectionStrategy.OPTIONAL)
     private List<basicInputModel> basicInput;
     @ChildResourceFromRequest(injectionStrategy = InjectionStrategy.OPTIONAL)
-    private List<com.reactapp.core.models.basicBirthday> basicBirthday;
+    private List<basicBirthdayModel> basicBirthday;
     @ChildResourceFromRequest(injectionStrategy = InjectionStrategy.OPTIONAL)
     private List<basicCheckboxModel> basicCheckbox;
     @ChildResourceFromRequest(injectionStrategy = InjectionStrategy.OPTIONAL)
@@ -109,7 +110,7 @@ public class MultifieldCardImpl
     }
 
     @Override
-    public List<com.reactapp.core.models.basicBirthday> getBasicBirthday() {
+    public List<basicBirthdayModel> getBasicBirthday() {
         return basicBirthday != null ? Collections.unmodifiableList(basicBirthday) : null;
     }
 
