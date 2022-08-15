@@ -29,10 +29,8 @@ import com.reactapp.core.models.basicButtonModel;
 import com.reactapp.core.models.basicCheckboxModel;
 import com.reactapp.core.models.basicInputModel;
 import com.reactapp.core.models.basicTitleModel;
-import com.reactapp.core.models.certificatesCertificateModel;
 import com.reactapp.core.models.certificatesFinishModel;
 import com.reactapp.core.models.certificatesInputModel;
-import com.reactapp.core.models.certificatesMoreModel;
 import com.reactapp.core.models.certificatesTitleModel;
 import com.reactapp.core.models.socialButtonModel;
 import com.reactapp.core.models.socialInputModel;
@@ -80,13 +78,11 @@ public class MultifieldCardImpl
     @ChildResourceFromRequest(injectionStrategy = InjectionStrategy.OPTIONAL)
     private List<certificatesTitleModel> certificatesTitle;
     @ChildResourceFromRequest(injectionStrategy = InjectionStrategy.OPTIONAL)
+    private List<com.reactapp.core.models.certificatesBlock> certificatesBlock;
+    @ChildResourceFromRequest(injectionStrategy = InjectionStrategy.OPTIONAL)
     private List<certificatesInputModel> certificatesInput;
     @ChildResourceFromRequest(injectionStrategy = InjectionStrategy.OPTIONAL)
-    private List<certificatesMoreModel> certificatesMore;
-    @ChildResourceFromRequest(injectionStrategy = InjectionStrategy.OPTIONAL)
     private List<certificatesFinishModel> certificatesFinish;
-    @ChildResourceFromRequest(injectionStrategy = InjectionStrategy.OPTIONAL)
-    private List<certificatesCertificateModel> certificatesCertificate;
     @ChildResourceFromRequest(injectionStrategy = InjectionStrategy.OPTIONAL)
     private List<successTitleModel> successTitle;
     @ChildResourceFromRequest(injectionStrategy = InjectionStrategy.OPTIONAL)
@@ -148,23 +144,18 @@ public class MultifieldCardImpl
     }
 
     @Override
+    public List<com.reactapp.core.models.certificatesBlock> getCertificatesBlock() {
+        return certificatesBlock != null ? Collections.unmodifiableList(certificatesBlock) : null;
+    }
+
+    @Override
     public List<certificatesInputModel> getCertificatesInput() {
         return certificatesInput != null ? Collections.unmodifiableList(certificatesInput) : null;
     }
 
     @Override
-    public List<certificatesMoreModel> getCertificatesMore() {
-        return certificatesMore != null ? Collections.unmodifiableList(certificatesMore) : null;
-    }
-
-    @Override
     public List<certificatesFinishModel> getCertificatesFinish() {
         return certificatesFinish != null ? Collections.unmodifiableList(certificatesFinish) : null;
-    }
-
-    @Override
-    public List<certificatesCertificateModel> getCertificatesCertificate() {
-        return certificatesCertificate != null ? Collections.unmodifiableList(certificatesCertificate) : null;
     }
 
     @Override

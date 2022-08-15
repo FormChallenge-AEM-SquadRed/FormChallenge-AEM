@@ -21,7 +21,7 @@ package com.reactapp.core.models.impl;
 import com.adobe.cq.export.json.ComponentExporter;
 import com.adobe.cq.export.json.ExporterConstants;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.reactapp.core.models.certificatesCertificateModel;
+import com.reactapp.core.models.certificatesBlock;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.Exporter;
@@ -33,55 +33,95 @@ import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
 @Model(adaptables = {
     SlingHttpServletRequest.class
 }, adapters = {
-    certificatesCertificateModel.class,
+    certificatesBlock.class,
     ComponentExporter.class
 })
 @Exporter(name = ExporterConstants.SLING_MODEL_EXPORTER_NAME, extensions = ExporterConstants.SLING_MODEL_EXTENSION)
-public class certificatesCertificateModelImpl
-    implements certificatesCertificateModel
+public class certificatesBlockImpl
+    implements certificatesBlock
 {
 
     @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
-    private String buttonlabel;
+    private String labeltext;
     @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
-    private String buttonlabelcolor;
+    private String labelcolor;
     @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
-    private String buttonbckgcolor;
+    private String placeholdertext;
+    @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
+    private String placeholdercolor;
+    @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
+    private String textcolor;
+    @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
+    private String btncertificateslabel;
+    @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
+    private String btnmorelabel;
+    @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
+    private String btnlabelcolor;
+    @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
+    private String btnbckgcolor;
     @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
     private String fonts;
-    @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
-    private String buttons;
     @SlingObject
     private Resource resource;
 
     @Override
-    @JsonProperty("buttonlabel")
-    public String getButtonlabel() {
-        return buttonlabel;
+    @JsonProperty("labeltext")
+    public String getLabeltext() {
+        return labeltext;
     }
 
     @Override
-    @JsonProperty("buttonlabelcolor")
-    public String getButtonlabelcolor() {
-        return buttonlabelcolor;
+    @JsonProperty("labelcolor")
+    public String getLabelcolor() {
+        return labelcolor;
     }
 
     @Override
-    @JsonProperty("buttonbckgcolor")
-    public String getButtonbckgcolor() {
-        return buttonbckgcolor;
+    @JsonProperty("placeholdertext")
+    public String getPlaceholdertext() {
+        return placeholdertext;
+    }
+
+    @Override
+    @JsonProperty("placeholdercolor")
+    public String getPlaceholdercolor() {
+        return placeholdercolor;
+    }
+
+    @Override
+    @JsonProperty("textcolor")
+    public String getTextcolor() {
+        return textcolor;
+    }
+
+    @Override
+    @JsonProperty("btncertificateslabel")
+    public String getBtncertificateslabel() {
+        return btncertificateslabel;
+    }
+
+    @Override
+    @JsonProperty("btnmorelabel")
+    public String getBtnmorelabel() {
+        return btnmorelabel;
+    }
+
+    @Override
+    @JsonProperty("btnlabelcolor")
+    public String getBtnlabelcolor() {
+        return btnlabelcolor;
+    }
+
+    @Override
+    @JsonProperty("btnbckgcolor")
+    public String getBtnbckgcolor() {
+        return btnbckgcolor;
     }
 
     @Override
     @JsonProperty("fonts")
     public String getFonts() {
         return fonts;
-    }
-
-    @Override
-    @JsonProperty("buttons")
-    public String getButtons() {
-        return buttons;
     }
 
     @Override

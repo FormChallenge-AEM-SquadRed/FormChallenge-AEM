@@ -55,13 +55,11 @@ public interface MultifieldCard
 
     List<certificatesTitleModel> getCertificatesTitle();
 
+    List<certificatesBlock> getCertificatesBlock();
+
     List<certificatesInputModel> getCertificatesInput();
 
-    List<certificatesMoreModel> getCertificatesMore();
-
     List<certificatesFinishModel> getCertificatesFinish();
-
-    List<certificatesCertificateModel> getCertificatesCertificate();
 
     List<successTitleModel> getSuccessTitle();
 
