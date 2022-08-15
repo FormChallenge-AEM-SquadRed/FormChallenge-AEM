@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Tab = styled.button`
     height: 4.4rem;
-    width: 17.16rem;
+    flex: 1;
     background: #ffffff;
     font-size: 1.6rem;
     color: #111111;
@@ -19,8 +19,7 @@ export const Tab = styled.button`
 
 export const TabGroup = styled.div`
     display: flex;
-    max-width: 100%;
-    margin-bottom: 5%;
+    width: 100%;
     align-self: center;
     &.none {
         display: none;
