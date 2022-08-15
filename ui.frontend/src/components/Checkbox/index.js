@@ -1,12 +1,12 @@
 import React from "react";
 import { CustomCheckbox, HiddenCheckbox, Checkmark, Terms } from "./style.js";
 
-const Checkbox = ({ checkboxtext, checkboxcolor, fonts, register }) => {
+const Checkbox = ({ checkboxtextcolor, checkboxtext, checkboxcolor, fonts, register }) => {
   return (
-    <CustomCheckbox>
+    <CustomCheckbox  checkboxcolor={checkboxcolor}>
       <HiddenCheckbox type='checkbox' {...register} />
       <Checkmark />
-      <Terms fonts={fonts} checkboxcolor={checkboxcolor}>
+      <Terms fonts={fonts} checkboxtextcolor={checkboxtextcolor}>
         {checkboxtext ? checkboxtext : "I accept the terms and privacy"}
       </Terms>
     </CustomCheckbox>

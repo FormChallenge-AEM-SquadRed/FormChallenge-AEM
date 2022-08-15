@@ -14,7 +14,6 @@ export const Card = styled.div`
 
     @media (max-width: 768px) {
         display: flex;
-        width: 100vw;
         height: calc(100vh - 0.35rem);
         border-radius: 0px;
         padding: 1.5rem;
