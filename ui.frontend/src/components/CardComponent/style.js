@@ -13,7 +13,6 @@ export const Card = styled.div`
     gap: 3rem;
 
     @media (max-width: 768px) {
-        width: 100vw;
         display: flex;
         height: calc(100vh - 0.35rem);
         border-radius: 0px;
