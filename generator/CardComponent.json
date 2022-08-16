@@ -295,7 +295,7 @@
                 "field": "basicBirthday",
                 "type": "multifield",
                 "label": "Birthday",
-                "model-name": "basicBirthday",
+                "model-name": "basicBirthdayModel",
                 "use-existing-model": false,
                 "json-expose": true,
                 "items": [
@@ -311,7 +311,7 @@
                         "type": "textfield",
                         "label": "Digite a cor para o título:",
                         "json-expose": true,
-                        "json-property": "labeltitle"
+                        "json-property": "colortitle"
                     },
                     {
                         "field": "labelday",
@@ -346,7 +346,7 @@
                         "type": "textfield",
                         "label": "Digite a cor para os inputs:",
                         "json-expose": true,
-                        "json-property": "labeltitle"
+                        "json-property": "colorinput"
                     },
                     {
                         "field": "fonts",
