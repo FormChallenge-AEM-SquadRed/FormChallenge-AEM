@@ -17,17 +17,21 @@ export const InputGlobal = styled.input`
 `;
 
 export const ContainerEmail = styled.div`
-    display: flex;
-    flex-direction: column;
-    width: 65%;
+    flex: 2 1 50%;
+    @media (max-width: 768px) {
+        flex: unset;
+        width: 100%;
+    }
 `;
 
 export const InputEmail = styled(InputGlobal)``;
 
 export const ContainerTel = styled.div`
-    display: flex;
-    flex-direction: column;
-    width: 25%;
+    flex: 1 1 25%;
+    @media (max-width: 768px) {
+        flex: unset;
+        width: 100%;
+    }
 `;
 
 export const InputPhone = styled(InputGlobal)``;
