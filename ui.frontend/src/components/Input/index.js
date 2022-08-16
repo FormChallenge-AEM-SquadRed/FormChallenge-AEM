@@ -33,4 +33,3 @@ import {
   };
   
   export default Input;
-  

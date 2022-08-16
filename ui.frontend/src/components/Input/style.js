@@ -8,10 +8,11 @@ export const InputGlobal = styled.input`
   height: 4rem;
   font-size: 1.6rem;
   font-family: ${({ fonts }) => fonts || "Nunito"};
-  color: ${({ colortext }) => colortext || "#111111"};
+  color: ${({ textcolor }) => textcolor || "#111111"};
 
   ::placeholder {
     font-size: 1.6rem;
+    color: ${({ placeholdercolor }) => placeholdercolor || "#767676"};
   }
 `;
 
