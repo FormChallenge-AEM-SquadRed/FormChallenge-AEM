@@ -108,7 +108,7 @@
                                 "field": "nunito",
                                 "attributes": {
                                     "text": "Nunito",
-                                    "value": "nunito"
+                                    "value": "Nunito"
                                 }
                             },
                             {
@@ -116,21 +116,21 @@
                                 "attributes": {
                                     "selected": "true",
                                     "text": "Inter",
-                                    "value": "inter"
+                                    "value": "Inter"
                                 }
                             },
                             {
                                 "field": "montserrat",
                                 "attributes": {
                                     "text": "Montserrat",
-                                    "value": "montserrat"
+                                    "value": "Montserrat"
                                 }
                             },
                             {
                                 "field": "roboto",
                                 "attributes": {
                                     "text": "Roboto",
-                                    "value": "roboto"
+                                    "value": "Roboto"
                                 }
                             }
                         ]
@@ -195,7 +195,7 @@
                                 "field": "nunito",
                                 "attributes": {
                                     "text": "Nunito",
-                                    "value": "nunito"
+                                    "value": "Nunito"
                                 }
                             },
                             {
@@ -203,21 +203,21 @@
                                 "attributes": {
                                     "selected": "true",
                                     "text": "Inter",
-                                    "value": "inter"
+                                    "value": "Inter"
                                 }
                             },
                             {
                                 "field": "montserrat",
                                 "attributes": {
                                     "text": "Montserrat",
-                                    "value": "montserrat"
+                                    "value": "Montserrat"
                                 }
                             },
                             {
                                 "field": "roboto",
                                 "attributes": {
                                     "text": "Roboto",
-                                    "value": "roboto"
+                                    "value": "Roboto"
                                 }
                             }
                         ]
@@ -351,7 +351,7 @@
                     {
                         "field": "fonts",
                         "type": "select",
-                        "label": "Fonte para as labels:",
+                        "label": "Fonte para o texto",
                         "json-expose": true,
                         "json-property": "fonts",
                         "attributes": {
@@ -363,7 +363,7 @@
                                 "field": "nunito",
                                 "attributes": {
                                     "text": "Nunito",
-                                    "value": "nunito"
+                                    "value": "Nunito"
                                 }
                             },
                             {
@@ -371,21 +371,21 @@
                                 "attributes": {
                                     "selected": "true",
                                     "text": "Inter",
-                                    "value": "inter"
+                                    "value": "Inter"
                                 }
                             },
                             {
                                 "field": "montserrat",
                                 "attributes": {
                                     "text": "Montserrat",
-                                    "value": "montserrat"
+                                    "value": "Montserrat"
                                 }
                             },
                             {
                                 "field": "roboto",
                                 "attributes": {
                                     "text": "Roboto",
-                                    "value": "roboto"
+                                    "value": "Roboto"
                                 }
                             }
                         ]
@@ -440,7 +440,7 @@
                                 "field": "nunito",
                                 "attributes": {
                                     "text": "Nunito",
-                                    "value": "nunito"
+                                    "value": "Nunito"
                                 }
                             },
                             {
@@ -448,21 +448,21 @@
                                 "attributes": {
                                     "selected": "true",
                                     "text": "Inter",
-                                    "value": "inter"
+                                    "value": "Inter"
                                 }
                             },
                             {
                                 "field": "montserrat",
                                 "attributes": {
                                     "text": "Montserrat",
-                                    "value": "montserrat"
+                                    "value": "Montserrat"
                                 }
                             },
                             {
                                 "field": "roboto",
                                 "attributes": {
                                     "text": "Roboto",
-                                    "value": "roboto"
+                                    "value": "Roboto"
                                 }
                             }
                         ]
@@ -513,7 +513,7 @@
                                 "field": "nunito",
                                 "attributes": {
                                     "text": "Nunito",
-                                    "value": "nunito"
+                                    "value": "Nunito"
                                 }
                             },
                             {
@@ -521,21 +521,21 @@
                                 "attributes": {
                                     "selected": "true",
                                     "text": "Inter",
-                                    "value": "inter"
+                                    "value": "Inter"
                                 }
                             },
                             {
                                 "field": "montserrat",
                                 "attributes": {
                                     "text": "Montserrat",
-                                    "value": "montserrat"
+                                    "value": "Montserrat"
                                 }
                             },
                             {
                                 "field": "roboto",
                                 "attributes": {
                                     "text": "Roboto",
-                                    "value": "roboto"
+                                    "value": "Roboto"
                                 }
                             }
                         ]
@@ -625,7 +625,7 @@
                                 "field": "nunito",
                                 "attributes": {
                                     "text": "Nunito",
-                                    "value": "nunito"
+                                    "value": "Nunito"
                                 }
                             },
                             {
@@ -633,21 +633,21 @@
                                 "attributes": {
                                     "selected": "true",
                                     "text": "Inter",
-                                    "value": "inter"
+                                    "value": "Inter"
                                 }
                             },
                             {
                                 "field": "montserrat",
                                 "attributes": {
                                     "text": "Montserrat",
-                                    "value": "montserrat"
+                                    "value": "Montserrat"
                                 }
                             },
                             {
                                 "field": "roboto",
                                 "attributes": {
                                     "text": "Roboto",
-                                    "value": "roboto"
+                                    "value": "Roboto"
                                 }
                             }
                         ]
@@ -712,7 +712,7 @@
                                 "field": "nunito",
                                 "attributes": {
                                     "text": "Nunito",
-                                    "value": "nunito"
+                                    "value": "Nunito"
                                 }
                             },
                             {
@@ -720,21 +720,21 @@
                                 "attributes": {
                                     "selected": "true",
                                     "text": "Inter",
-                                    "value": "inter"
+                                    "value": "Inter"
                                 }
                             },
                             {
                                 "field": "montserrat",
                                 "attributes": {
                                     "text": "Montserrat",
-                                    "value": "montserrat"
+                                    "value": "Montserrat"
                                 }
                             },
                             {
                                 "field": "roboto",
                                 "attributes": {
                                     "text": "Roboto",
-                                    "value": "roboto"
+                                    "value": "Roboto"
                                 }
                             }
                         ]
@@ -852,7 +852,7 @@
                                 "field": "nunito",
                                 "attributes": {
                                     "text": "Nunito",
-                                    "value": "nunito"
+                                    "value": "Nunito"
                                 }
                             },
                             {
@@ -860,21 +860,21 @@
                                 "attributes": {
                                     "selected": "true",
                                     "text": "Inter",
-                                    "value": "inter"
+                                    "value": "Inter"
                                 }
                             },
                             {
                                 "field": "montserrat",
                                 "attributes": {
                                     "text": "Montserrat",
-                                    "value": "montserrat"
+                                    "value": "Montserrat"
                                 }
                             },
                             {
                                 "field": "roboto",
                                 "attributes": {
                                     "text": "Roboto",
-                                    "value": "roboto"
+                                    "value": "Roboto"
                                 }
                             }
                         ]
@@ -963,7 +963,7 @@
                                 "field": "nunito",
                                 "attributes": {
                                     "text": "Nunito",
-                                    "value": "nunito"
+                                    "value": "Nunito"
                                 }
                             },
                             {
@@ -971,21 +971,21 @@
                                 "attributes": {
                                     "selected": "true",
                                     "text": "Inter",
-                                    "value": "inter"
+                                    "value": "Inter"
                                 }
                             },
                             {
                                 "field": "montserrat",
                                 "attributes": {
                                     "text": "Montserrat",
-                                    "value": "montserrat"
+                                    "value": "Montserrat"
                                 }
                             },
                             {
                                 "field": "roboto",
                                 "attributes": {
                                     "text": "Roboto",
-                                    "value": "roboto"
+                                    "value": "Roboto"
                                 }
                             }
                         ]
@@ -1078,7 +1078,7 @@
                                 "field": "nunito",
                                 "attributes": {
                                     "text": "Nunito",
-                                    "value": "nunito"
+                                    "value": "Nunito"
                                 }
                             },
                             {
@@ -1086,21 +1086,21 @@
                                 "attributes": {
                                     "selected": "true",
                                     "text": "Inter",
-                                    "value": "inter"
+                                    "value": "Inter"
                                 }
                             },
                             {
                                 "field": "montserrat",
                                 "attributes": {
                                     "text": "Montserrat",
-                                    "value": "montserrat"
+                                    "value": "Montserrat"
                                 }
                             },
                             {
                                 "field": "roboto",
                                 "attributes": {
                                     "text": "Roboto",
-                                    "value": "roboto"
+                                    "value": "Roboto"
                                 }
                             }
                         ]
@@ -1165,7 +1165,7 @@
                                 "field": "nunito",
                                 "attributes": {
                                     "text": "Nunito",
-                                    "value": "nunito"
+                                    "value": "Nunito"
                                 }
                             },
                             {
@@ -1173,21 +1173,21 @@
                                 "attributes": {
                                     "selected": "true",
                                     "text": "Inter",
-                                    "value": "inter"
+                                    "value": "Inter"
                                 }
                             },
                             {
                                 "field": "montserrat",
                                 "attributes": {
                                     "text": "Montserrat",
-                                    "value": "montserrat"
+                                    "value": "Montserrat"
                                 }
                             },
                             {
                                 "field": "roboto",
                                 "attributes": {
                                     "text": "Roboto",
-                                    "value": "roboto"
+                                    "value": "Roboto"
                                 }
                             }
                         ]
@@ -1305,7 +1305,7 @@
                                 "field": "nunito",
                                 "attributes": {
                                     "text": "Nunito",
-                                    "value": "nunito"
+                                    "value": "Nunito"
                                 }
                             },
                             {
@@ -1313,21 +1313,21 @@
                                 "attributes": {
                                     "selected": "true",
                                     "text": "Inter",
-                                    "value": "inter"
+                                    "value": "Inter"
                                 }
                             },
                             {
                                 "field": "montserrat",
                                 "attributes": {
                                     "text": "Montserrat",
-                                    "value": "montserrat"
+                                    "value": "Montserrat"
                                 }
                             },
                             {
                                 "field": "roboto",
                                 "attributes": {
                                     "text": "Roboto",
-                                    "value": "roboto"
+                                    "value": "Roboto"
                                 }
                             }
                         ]
@@ -1416,7 +1416,7 @@
                                 "field": "nunito",
                                 "attributes": {
                                     "text": "Nunito",
-                                    "value": "nunito"
+                                    "value": "Nunito"
                                 }
                             },
                             {
@@ -1424,21 +1424,21 @@
                                 "attributes": {
                                     "selected": "true",
                                     "text": "Inter",
-                                    "value": "inter"
+                                    "value": "Inter"
                                 }
                             },
                             {
                                 "field": "montserrat",
                                 "attributes": {
                                     "text": "Montserrat",
-                                    "value": "montserrat"
+                                    "value": "Montserrat"
                                 }
                             },
                             {
                                 "field": "roboto",
                                 "attributes": {
                                     "text": "Roboto",
-                                    "value": "roboto"
+                                    "value": "Roboto"
                                 }
                             }
                         ]
@@ -1470,7 +1470,7 @@
                     {
                         "field": "fonts",
                         "type": "select",
-                        "label": "Fonte para o texto:",
+                        "label": "Fonte para o texto",
                         "json-expose": true,
                         "json-property": "fonts",
                         "attributes": {
@@ -1482,7 +1482,7 @@
                                 "field": "nunito",
                                 "attributes": {
                                     "text": "Nunito",
-                                    "value": "nunito"
+                                    "value": "Nunito"
                                 }
                             },
                             {
@@ -1490,21 +1490,21 @@
                                 "attributes": {
                                     "selected": "true",
                                     "text": "Inter",
-                                    "value": "inter"
+                                    "value": "Inter"
                                 }
                             },
                             {
                                 "field": "montserrat",
                                 "attributes": {
                                     "text": "Montserrat",
-                                    "value": "montserrat"
+                                    "value": "Montserrat"
                                 }
                             },
                             {
                                 "field": "roboto",
                                 "attributes": {
                                     "text": "Roboto",
-                                    "value": "roboto"
+                                    "value": "Roboto"
                                 }
                             }
                         ]
@@ -1543,7 +1543,7 @@
                     {
                         "field": "fonts",
                         "type": "select",
-                        "label": "Fonte para o texto do botão:",
+                        "label": "Fonte para o texto",
                         "json-expose": true,
                         "json-property": "fonts",
                         "attributes": {
@@ -1555,7 +1555,7 @@
                                 "field": "nunito",
                                 "attributes": {
                                     "text": "Nunito",
-                                    "value": "nunito"
+                                    "value": "Nunito"
                                 }
                             },
                             {
@@ -1563,21 +1563,21 @@
                                 "attributes": {
                                     "selected": "true",
                                     "text": "Inter",
-                                    "value": "inter"
+                                    "value": "Inter"
                                 }
                             },
                             {
                                 "field": "montserrat",
                                 "attributes": {
                                     "text": "Montserrat",
-                                    "value": "montserrat"
+                                    "value": "Montserrat"
                                 }
                             },
                             {
                                 "field": "roboto",
                                 "attributes": {
                                     "text": "Roboto",
-                                    "value": "roboto"
+                                    "value": "Roboto"
                                 }
                             }
                         ]
