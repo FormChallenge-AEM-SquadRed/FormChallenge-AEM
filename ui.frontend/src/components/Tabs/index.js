@@ -6,7 +6,7 @@ import {TabsContext} from "../../contexts/TabsProvider";
 // import FormSocial from "../FormSocial/FormSocial";
 // import FormSucess from "../FormSucess/FormSucess";
 
-const options = ["Basic", "Social", "Certificates"];
+const options = ["Basic", "Social", "Certificates", "Sucess"];
 
 const Tabs = () => {
     const [selectedTab, setSelectedTab] = useContext(TabsContext);
