@@ -6,30 +6,66 @@ import {
     ContainerTel,
     InputPhone,
     InputEmail,
-  } from "./style.js";
-  
-  const Input = ({ placeholder, register, children, type, labelcolor, placeholdercolor, textcolor, fonts }) => {
+} from "./style.js";
+
+const Input = ({
+    placeholder,
+    register,
+    children,
+    type,
+    labelcolor,
+    placeholdercolor,
+    textcolor,
+    fonts,
+}) => {
     if (type === "email")
-      return (
-        <ContainerEmail>
-          <Label labelcolor={labelcolor}>{children}</Label>
-          <InputEmail fonts={fonts} textcolor={textcolor} type={type} placeholder={placeholder} placeholdercolor={placeholdercolor} {...register} />
-        </ContainerEmail>
-      );
+        return (
+            <ContainerEmail>
+                <Label fonts={fonts} labelcolor={labelcolor}>
+                    {children}
+                </Label>
+                <InputEmail
+                    fonts={fonts}
+                    textcolor={textcolor}
+                    type={type}
+                    placeholder={placeholder}
+                    placeholdercolor={placeholdercolor}
+                    {...register}
+                />
+            </ContainerEmail>
+        );
     if (type === "tel")
-      return (
-        <ContainerTel>
-          <Label labelcolor={labelcolor}>{children}</Label>
-          <InputPhone fonts={fonts} textcolor={textcolor} type={type} placeholder={placeholder} placeholdercolor={placeholdercolor} {...register} />
-        </ContainerTel>
-      );
+        return (
+            <ContainerTel>
+                <Label fonts={fonts} labelcolor={labelcolor}>
+                    {children}
+                </Label>
+                <InputPhone
+                    fonts={fonts}
+                    textcolor={textcolor}
+                    type={type}
+                    placeholder={placeholder}
+                    placeholdercolor={placeholdercolor}
+                    {...register}
+                />
+            </ContainerTel>
+        );
     else
-      return (
-        <Container>
-          <Label labelcolor={labelcolor}>{children}</Label>
-          <InputGlobal fonts={fonts} textcolor={textcolor} type={type} placeholder={placeholder} placeholdercolor={placeholdercolor} {...register} />
-        </Container>
-      );
-  };
-  
-  export default Input;
+        return (
+            <Container>
+                <Label fonts={fonts} labelcolor={labelcolor}>
+                    {children}
+                </Label>
+                <InputGlobal
+                    fonts={fonts}
+                    textcolor={textcolor}
+                    type={type}
+                    placeholder={placeholder}
+                    placeholdercolor={placeholdercolor}
+                    {...register}
+                />
+            </Container>
+        );
+};
+
+export default Input;
