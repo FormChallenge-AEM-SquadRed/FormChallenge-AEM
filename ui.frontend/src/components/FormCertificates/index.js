@@ -1,4 +1,4 @@
-import react, {useContext, useEffect, useState} from "react";
+import {useContext} from "react";
 import {useForm} from "react-hook-form";
 import {TabsContext} from "../../contexts/TabsProvider";
 import Certificates from "../Certificates";
@@ -6,7 +6,8 @@ import Title from "../Title";
 import Tabs from "../Tabs";
 import Input from "../Input";
 import Button from "../Buttons";
-import {Form, ButtonContainer} from "./style";
+
+import {Form, ButtonContainer, Container, Inputs, ErrorMessage} from "./style";
 import {CertificatesContext} from "../../contexts/CertificatesProvider";
 import {UserDataContext} from "../../contexts/UserDataProvider";
 
@@ -17,7 +18,7 @@ const FormCertificates = ({
     certificatesFinish,
 }) => {
     const [selectedTab, setSelectedTab] = useContext(TabsContext);
-    const [certificates, setCertificates] = useContext(CertificatesContext);
+    const [certificates] = useContext(CertificatesContext);
     const [userData, setUserData] = useContext(UserDataContext);
 
     const {
@@ -36,8 +37,8 @@ const FormCertificates = ({
     const regexp = {
         text: /^[a-zA-Zà-úÀ-Ú]+(?:\s[a-zA-Zà-úÀ-Ú]+)+$/,
         email: /^[a-z0-9._-]+(?:\.[a-z0-9._-]+)*@(?:[a-z0-9](?:[a-z-]*[a-z])?.)+[a-z](?:[a-z]*[a-z]){1,}?$/,
+        phone: /^[0-9]$/,
     };
-
     return (
         <>
             {selectedTab === 2 &&
@@ -59,12 +60,14 @@ const FormCertificates = ({
                             {item.labeltext}
                         </Certificates>
                     ))}
-                {certificatesInput &&
-                    certificatesInput.map((item, index) => (
-                        <div key={index}>
+                <Inputs>
+                    {certificatesInput &&
+                        certificatesInput.map((item, index) => (
                             <Input
+                                key={index}
                                 type={item.types}
                                 placeholder={item.placeholdertext}
+                                fonts={item.fonts}
                                 {...{
                                     register: register(`${item.labeltext}`, {
                                         required: item.required,
@@ -73,20 +76,25 @@ const FormCertificates = ({
                                 }}
                             >
                                 {item.labeltext}
+                                {errors[item.labeltext] && (
+                                    <ErrorMessage>is required</ErrorMessage>
+                                )}
                             </Input>
-                            <p>{errors[item.labeltext] && "Teste"}</p>
-                        </div>
-                    ))}
+                        ))}
+                </Inputs>
+
                 {certificatesFinish &&
                     certificatesFinish.map((item, index) => (
-                        <ButtonContainer key={index}>
-                            <Button
-                                text={item.buttonlabel}
-                                buttons={item.buttons}
-                                bgcolor={item.buttonbckgcolor}
-                                colortext={item.buttonlabelcolor}
-                            />
-                        </ButtonContainer>
+                        <Container key={index}>
+                            <ButtonContainer>
+                                <Button
+                                    text={item.buttonlabel}
+                                    buttons={item.buttons}
+                                    bgcolor={item.buttonbckgcolor}
+                                    colortext={item.buttonlabelcolor}
+                                />
+                            </ButtonContainer>
+                        </Container>
                     ))}
             </Form>
         </>
