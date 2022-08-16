@@ -11,6 +11,7 @@ const CardComponent = ({
     basicTitle,
     socialTitle,
     certificatesTitle,
+    sucessTitle,
 }) => {
     const [selectedTab, setSelectedTab] = useContext(TabsContext);
 
@@ -34,6 +35,13 @@ const CardComponent = ({
                 {selectedTab === 2 &&
                     certificatesTitle &&
                     certificatesTitle.map((item, index) => (
+                        <Title key={index} color={item.titlecolor}>
+                            {item.titletext}
+                        </Title>
+                    ))}
+                {selectedTab === 3 &&
+                    sucessTitle &&
+                    sucessTitle.map((item, index) => (
                         <Title key={index} color={item.titlecolor}>
                             {item.titletext}
                         </Title>

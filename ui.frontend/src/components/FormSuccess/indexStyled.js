@@ -9,7 +9,7 @@ export const ContainerForm = styled.form`
         justify-content: flex-start;
     }
 `;
-export const SucessText = styled.p`
+export const SuccessText = styled.p`
     
 `;
 

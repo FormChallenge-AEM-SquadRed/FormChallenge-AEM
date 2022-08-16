@@ -4,10 +4,10 @@ import Title from "../Title";
 import Tabs from "../Tabs";
 import Button from "../Buttons";
 import { useForm } from "react-hook-form";
-import {SucessText, ContainerTexts, TextContainer, ContainerForm, ContainerButtons, ButtonContainer} from "./indexStyled";
+import {SuccessText, ContainerTexts, TextContainer, ContainerForm, ContainerButtons, ButtonContainer} from "./indexStyled";
 
 
-const FormSucess = ({ sucessTitle, sucessText, socialButton }) => {
+const FormSucess = ({successTitle, successText, successButton}) => {
   const [selectedTab, setSelectedTab] = useContext(TabsContext);
   const {
     register,
@@ -20,13 +20,11 @@ const FormSucess = ({ sucessTitle, sucessText, socialButton }) => {
   const onSubmit = () => {
     setSelectedTab(selectedTab+1)
   }                          
-  return (
-  
-    <>
-    
+  return ( 
+    <>    
       {selectedTab === 1 &&
-        sucessTitle &&
-        sucessTitle.map((item, index) => (
+        successTitle &&
+        successTitle.map((item, index) => (
           <Title 
           key={index} 
           color={item.titlecolor}>
@@ -36,15 +34,16 @@ const FormSucess = ({ sucessTitle, sucessText, socialButton }) => {
       <Tabs />
       <ContainerForm onSubmit = {handleSubmit(onSubmit)}>     
       <ContainerTexts>  
-        {sucessText &&
-          sucessText.map((item, index) => (
+        {successText &&
+          successText.map((item, index) => (
           
             <TextContainer key = {index}>
-              <SucessText
+              <SuccessText
                 key={index}
+                color={item.resultcolor}
               >
                 {item.resulttext}
-              </SucessText>
+              </SuccessText>
               <p>
                 {errors[index] && 
                   `${item.labeltext} is required`}
@@ -53,22 +52,21 @@ const FormSucess = ({ sucessTitle, sucessText, socialButton }) => {
           ))}
         </ContainerTexts>
         <ContainerButtons>
-          {socialButton &&
-            socialButton.map((item, index) => (
+          {successButton &&
+            successButton.map((item, index) => (
             <ButtonContainer>
                <Button
                 key={index}
                 buttons={item.buttons}
-                text = {item.buttonlabel}
-                bgcolor = {item.backgroundcolor}
-                colortext = {item.buttonlabelcolor}
+                text = {item.resulttext}
+                bgcolor = {item.buttonbckgcolor}
+                colortext = {item.resultcolor}
               >          
               </Button>
             </ButtonContainer>  
             ))}        
         </ContainerButtons>   
-      </ContainerForm> 
-    
+      </ContainerForm>  
     </>
   );
 };
