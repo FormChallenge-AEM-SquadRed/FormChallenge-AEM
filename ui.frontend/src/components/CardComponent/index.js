@@ -15,6 +15,7 @@ const CardComponent = ({
   basicButton,
   basicInput,
   basicCheckbox,
+  basicBirthday
 }) => {
   const [selectedTab, setSelectedTab] = useContext(TabsContext);
 
@@ -40,6 +41,7 @@ const CardComponent = ({
             basicButton={basicButton}
             basicTitle={basicTitle}
             basicInput={basicInput}
+            basicBirthday={basicBirthday}
             basicCheckbox={basicCheckbox}
           />
         )}

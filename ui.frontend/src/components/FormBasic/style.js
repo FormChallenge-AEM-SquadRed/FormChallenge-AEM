@@ -4,13 +4,16 @@ export const Form = styled.form`
   display: flex;
 `;
 
-export const ContainerBasic = styled.div`
+export const ContainerInput = styled.div`
   flex-wrap: wrap;
   width: 100%;
 `;
 
 export const DivKey = styled.div`
   width: 100%;
+`;
+
+export const ContainerBirthday = styled.div`
 `;
 
 export const ContainerButton = styled.div`

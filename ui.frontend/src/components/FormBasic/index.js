@@ -4,18 +4,26 @@ import { TabsContext } from "../../contexts/TabsProvider";
 import Title from "../Title";
 import Tabs from "../Tabs";
 import Input from "../Input";
+import Birthday from "../Birthday";
 import Checkbox from "../Checkbox";
 import { useForm } from "react-hook-form";
 import {
   ErrorMessage,
   ContainerCheckbox,
   ContainerButton,
-  ContainerBasic,
+  ContainerInput,
+  ContainerBirthday,
   Form,
-  DivKey
+  DivKey,
 } from "./style.js";
 
-const FormBasic = ({ basicButton, basicTitle, basicInput, basicCheckbox }) => {
+const FormBasic = ({
+  basicButton,
+  basicTitle,
+  basicInput,
+  basicCheckbox,
+  basicBirthday,
+}) => {
   const [selectedTab, setSelectedTab] = useContext(TabsContext);
   const {
     register,
@@ -26,6 +34,7 @@ const FormBasic = ({ basicButton, basicTitle, basicInput, basicCheckbox }) => {
     getValues,
   } = useForm();
 
+  console.log(basicBirthday.colortitle);
   return (
     <>
       {selectedTab === 0 &&
@@ -38,7 +47,7 @@ const FormBasic = ({ basicButton, basicTitle, basicInput, basicCheckbox }) => {
       <Tabs />
 
       <Form>
-        <ContainerBasic>
+        {basicInput && <ContainerInput>
           {basicInput &&
             basicInput.map((item, index) => (
               <DivKey key={index}>
@@ -62,8 +71,22 @@ const FormBasic = ({ basicButton, basicTitle, basicInput, basicCheckbox }) => {
                 </ErrorMessage>
               </DivKey>
             ))}
-        </ContainerBasic>
-        
+        </ContainerInput>}
+
+        {basicBirthday &&
+          basicBirthday.map((item, index) => (
+            <Birthday
+              key={index}
+              labeltitle={item.labeltitle}
+              colortitle={item.colortitle}
+              labelday={item.labelday}
+              labelmonth={item.labelmonth}
+              labelyear={item.labelyear}
+              labelage={item.labelage}
+              colorinput={item.colorinput}
+            />
+          ))}
+
         {basicCheckbox &&
           basicCheckbox.map((item, index) => (
             <ContainerCheckbox key={index}>
