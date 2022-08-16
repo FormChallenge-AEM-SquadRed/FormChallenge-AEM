@@ -41,7 +41,7 @@ public interface MultifieldCard
 
     List<basicInputModel> getBasicInput();
 
-    List<basicBirthday> getBasicBirthday();
+    List<basicBirthdayModel> getBasicBirthday();
 
     List<basicCheckboxModel> getBasicCheckbox();
 
@@ -55,13 +55,11 @@ public interface MultifieldCard
 
     List<certificatesTitleModel> getCertificatesTitle();
 
+    List<certificatesBlock> getCertificatesBlock();
+
     List<certificatesInputModel> getCertificatesInput();
 
-    List<certificatesMoreModel> getCertificatesMore();
-
     List<certificatesFinishModel> getCertificatesFinish();
-
-    List<certificatesCertificateModel> getCertificatesCertificate();
 
     List<successTitleModel> getSuccessTitle();
 

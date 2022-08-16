@@ -55,6 +55,8 @@ public class basicInputModelImpl
     private String fonts;
     @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
     private String types;
+    @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
+    private Boolean required;
     @SlingObject
     private Resource resource;
 
@@ -98,6 +100,12 @@ public class basicInputModelImpl
     @JsonProperty("types")
     public String getTypes() {
         return types;
+    }
+
+    @Override
+    @JsonProperty("required")
+    public Boolean getRequired() {
+        return required;
     }
 
     @Override

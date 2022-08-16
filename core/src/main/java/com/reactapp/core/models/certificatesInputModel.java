@@ -54,4 +54,7 @@ public interface certificatesInputModel
     @JsonProperty("types")
     String getTypes();
 
+    @JsonProperty("required")
+    Boolean getRequired();
+
 }

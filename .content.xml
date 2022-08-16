@@ -115,7 +115,7 @@
 												<labelcolor fieldLabel="Escolha a cor da label:"
 													jcr:primaryType="nt:unstructured"
 													name="./labelcolor"
-													sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+													sling:resourceType="granite/ui/components/coral/foundation/form/colorfield"/>
 												<placeholdertext fieldLabel="Digite o texto do placeholder:"
 													jcr:primaryType="nt:unstructured"
 													name="./placeholdertext"
@@ -123,11 +123,11 @@
 												<placeholdercolor fieldLabel="Escolha a cor do placeholder:"
 													jcr:primaryType="nt:unstructured"
 													name="./placeholdercolor"
-													sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+													sling:resourceType="granite/ui/components/coral/foundation/form/colorfield"/>
 												<textcolor fieldLabel="Escolha a cor do texto do input:"
 													jcr:primaryType="nt:unstructured"
 													name="./textcolor"
-													sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+													sling:resourceType="granite/ui/components/coral/foundation/form/colorfield"/>
 												<fonts defaultValue="fonts"
 													fieldLabel="Fonte para o texto"
 													jcr:primaryType="nt:unstructured"
@@ -178,6 +178,12 @@
 															value="password"/>
 													</items>
 												</types>
+												<required jcr:primaryType="nt:unstructured"
+													name="./required"
+													sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+													text="Required?"
+													uncheckedValue="{Boolean}false"
+													value="{Boolean}true"/>
 											</items>
 										</field>
 									</basicInput>
@@ -197,7 +203,7 @@
 												<colortitle fieldLabel="Digite a cor para o título:"
 													jcr:primaryType="nt:unstructured"
 													name="./colortitle"
-													sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+													sling:resourceType="granite/ui/components/coral/foundation/form/colorfield"/>
 												<labelday fieldLabel="Digite a label para o dia:"
 													jcr:primaryType="nt:unstructured"
 													name="./labelday"
@@ -217,9 +223,9 @@
 												<colorinput fieldLabel="Digite a cor para os inputs:"
 													jcr:primaryType="nt:unstructured"
 													name="./colorinput"
-													sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+													sling:resourceType="granite/ui/components/coral/foundation/form/colorfield"/>
 												<fonts defaultValue="fonts"
-													fieldLabel="Fonte para o texto"
+													fieldLabel="Fonte para as labels:"
 													jcr:primaryType="nt:unstructured"
 													name="./fonts"
 													sling:resourceType="granite/ui/components/coral/foundation/form/select"
@@ -240,6 +246,12 @@
 															value="nunito"/>
 													</items>
 												</fonts>
+												<required jcr:primaryType="nt:unstructured"
+													name="./required"
+													sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+													text="Required?"
+													uncheckedValue="{Boolean}false"
+													value="{Boolean}true"/>
 											</items>
 										</field>
 									</basicBirthday>
@@ -259,7 +271,7 @@
 												<checkboxcolor fieldLabel="Escolha a cor do checkbox:"
 													jcr:primaryType="nt:unstructured"
 													name="./checkboxcolor"
-													sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+													sling:resourceType="granite/ui/components/coral/foundation/form/colorfield"/>
 												<fonts defaultValue="fonts"
 													fieldLabel="Fonte para o texto"
 													jcr:primaryType="nt:unstructured"
@@ -301,11 +313,11 @@
 												<buttonlabelcolor fieldLabel="Escolha a cor da label do botão:"
 													jcr:primaryType="nt:unstructured"
 													name="./buttonlabelcolor"
-													sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+													sling:resourceType="granite/ui/components/coral/foundation/form/colorfield"/>
 												<buttonbckgcolor fieldLabel="Escolha a cor do background do botão:"
 													jcr:primaryType="nt:unstructured"
 													name="./buttonbckgcolor"
-													sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+													sling:resourceType="granite/ui/components/coral/foundation/form/colorfield"/>
 												<fonts defaultValue="fonts"
 													fieldLabel="Fonte para o texto"
 													jcr:primaryType="nt:unstructured"
@@ -384,7 +396,7 @@
 												<titlecolor fieldLabel="Escolha a cor do titulo:"
 													jcr:primaryType="nt:unstructured"
 													name="./titlecolor"
-													sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+													sling:resourceType="granite/ui/components/coral/foundation/form/colorfield"/>
 												<fonts defaultValue="fonts"
 													fieldLabel="Fonte para o texto"
 													jcr:primaryType="nt:unstructured"
@@ -426,7 +438,7 @@
 												<labelcolor fieldLabel="Escolha a cor da label:"
 													jcr:primaryType="nt:unstructured"
 													name="./labelcolor"
-													sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+													sling:resourceType="granite/ui/components/coral/foundation/form/colorfield"/>
 												<placeholdertext fieldLabel="Digite o texto do placeholder:"
 													jcr:primaryType="nt:unstructured"
 													name="./placeholdertext"
@@ -434,11 +446,11 @@
 												<placeholdercolor fieldLabel="Escolha a cor do placeholder:"
 													jcr:primaryType="nt:unstructured"
 													name="./placeholdercolor"
-													sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+													sling:resourceType="granite/ui/components/coral/foundation/form/colorfield"/>
 												<textcolor fieldLabel="Escolha a cor do texto do input:"
 													jcr:primaryType="nt:unstructured"
 													name="./textcolor"
-													sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+													sling:resourceType="granite/ui/components/coral/foundation/form/colorfield"/>
 												<fonts defaultValue="fonts"
 													fieldLabel="Fonte para o texto"
 													jcr:primaryType="nt:unstructured"
@@ -489,6 +501,12 @@
 															value="password"/>
 													</items>
 												</types>
+												<required jcr:primaryType="nt:unstructured"
+													name="./required"
+													sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+													text="Required?"
+													uncheckedValue="{Boolean}false"
+													value="{Boolean}true"/>
 											</items>
 										</field>
 									</socialInput>
@@ -508,11 +526,11 @@
 												<buttonlabelcolor fieldLabel="Escolha a cor da label do botão: "
 													jcr:primaryType="nt:unstructured"
 													name="./buttonlabelcolor"
-													sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+													sling:resourceType="granite/ui/components/coral/foundation/form/colorfield"/>
 												<buttonbckgcolor fieldLabel="Escolha o background do botão:"
 													jcr:primaryType="nt:unstructured"
 													name="./buttonbckgcolor"
-													sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+													sling:resourceType="granite/ui/components/coral/foundation/form/colorfield"/>
 												<fonts defaultValue="fonts"
 													fieldLabel="Fonte para o texto"
 													jcr:primaryType="nt:unstructured"
@@ -591,7 +609,7 @@
 												<certificatesTitleColor fieldLabel="Escolha a cor do titulo:"
 													jcr:primaryType="nt:unstructured"
 													name="./certificatesTitleColor"
-													sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+													sling:resourceType="granite/ui/components/coral/foundation/form/colorfield"/>
 												<fonts defaultValue="fonts"
 													fieldLabel="Fonte para o texto"
 													jcr:primaryType="nt:unstructured"
@@ -617,6 +635,82 @@
 											</items>
 										</field>
 									</certificatesTitle>
+									<certificatesBlock composite="{Boolean}true"
+										fieldLabel="Certificates Block"
+										jcr:primaryType="nt:unstructured"
+										sling:resourceType="granite/ui/components/coral/foundation/form/multifield">
+										<field cq-msm-lockable="./certificatesBlock"
+											jcr:primaryType="nt:unstructured"
+											name="./certificatesBlock"
+											sling:resourceType="granite/ui/components/foundation/form/fieldset">
+											<items jcr:primaryType="nt:unstructured">
+												<labeltext fieldLabel="Digite o texto da label:"
+													jcr:primaryType="nt:unstructured"
+													name="./labeltext"
+													sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+												<labelcolor fieldLabel="Escolha a cor da label:"
+													jcr:primaryType="nt:unstructured"
+													name="./labelcolor"
+													sling:resourceType="granite/ui/components/coral/foundation/form/colorfield"/>
+												<placeholdertext fieldLabel="Digite o texto do placeholder:"
+													jcr:primaryType="nt:unstructured"
+													name="./placeholdertext"
+													sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+												<placeholdercolor fieldLabel="Escolha a cor do placeholder:"
+													jcr:primaryType="nt:unstructured"
+													name="./placeholdercolor"
+													sling:resourceType="granite/ui/components/coral/foundation/form/colorfield"/>
+												<textcolor fieldLabel="Escolha a cor do texto do input:"
+													jcr:primaryType="nt:unstructured"
+													name="./textcolor"
+													sling:resourceType="granite/ui/components/coral/foundation/form/colorfield"/>
+												<btncertificateslabel fieldLabel="Digite a label do botão esquerdo:"
+													jcr:primaryType="nt:unstructured"
+													name="./btncertificateslabel"
+													sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+												<btnmorelabel fieldLabel="Digite a label do botão direito:"
+													jcr:primaryType="nt:unstructured"
+													name="./btnmorelabel"
+													sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+												<btnlabelcolor fieldLabel="Escolha a cor da label dos botões:"
+													jcr:primaryType="nt:unstructured"
+													name="./btnlabelcolor"
+													sling:resourceType="granite/ui/components/coral/foundation/form/colorfield"/>
+												<btnbckgcolor fieldLabel="Escolha o background dos botões:"
+													jcr:primaryType="nt:unstructured"
+													name="./btnbckgcolor"
+													sling:resourceType="granite/ui/components/coral/foundation/form/colorfield"/>
+												<fonts defaultValue="fonts"
+													fieldLabel="Fonte para o texto"
+													jcr:primaryType="nt:unstructured"
+													name="./fonts"
+													sling:resourceType="granite/ui/components/coral/foundation/form/select"
+													value="false">
+													<items jcr:primaryType="nt:unstructured">
+														<inter jcr:primaryType="nt:unstructured"
+															selected="true"
+															text="Inter"
+															value="inter"/>
+														<montserrat jcr:primaryType="nt:unstructured"
+															text="Montserrat"
+															value="montserrat"/>
+														<roboto jcr:primaryType="nt:unstructured"
+															text="Roboto"
+															value="roboto"/>
+														<nunito jcr:primaryType="nt:unstructured"
+															text="Nunito"
+															value="nunito"/>
+													</items>
+												</fonts>
+												<required jcr:primaryType="nt:unstructured"
+													name="./required"
+													sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+													text="Required?"
+													uncheckedValue="{Boolean}false"
+													value="{Boolean}true"/>
+											</items>
+										</field>
+									</certificatesBlock>
 									<certificatesInput composite="{Boolean}true"
 										fieldLabel="Input"
 										jcr:primaryType="nt:unstructured"
@@ -633,7 +727,7 @@
 												<labelcolor fieldLabel="Escolha a cor da label:"
 													jcr:primaryType="nt:unstructured"
 													name="./labelcolor"
-													sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+													sling:resourceType="granite/ui/components/coral/foundation/form/colorfield"/>
 												<placeholdertext fieldLabel="Digite o texto do placeholder:"
 													jcr:primaryType="nt:unstructured"
 													name="./placeholdertext"
@@ -641,11 +735,11 @@
 												<placeholdercolor fieldLabel="Escolha a cor do placeholder:"
 													jcr:primaryType="nt:unstructured"
 													name="./placeholdercolor"
-													sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+													sling:resourceType="granite/ui/components/coral/foundation/form/colorfield"/>
 												<textcolor fieldLabel="Escolha a cor do texto do input:"
 													jcr:primaryType="nt:unstructured"
 													name="./textcolor"
-													sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+													sling:resourceType="granite/ui/components/coral/foundation/form/colorfield"/>
 												<fonts defaultValue="fonts"
 													fieldLabel="Fonte para o texto"
 													jcr:primaryType="nt:unstructured"
@@ -696,79 +790,15 @@
 															value="password"/>
 													</items>
 												</types>
+												<required jcr:primaryType="nt:unstructured"
+													name="./required"
+													sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+													text="Required?"
+													uncheckedValue="{Boolean}false"
+													value="{Boolean}true"/>
 											</items>
 										</field>
 									</certificatesInput>
-									<certificatesMore composite="{Boolean}true"
-										fieldLabel="Button More"
-										jcr:primaryType="nt:unstructured"
-										sling:resourceType="granite/ui/components/coral/foundation/form/multifield">
-										<field cq-msm-lockable="./certificatesMore"
-											jcr:primaryType="nt:unstructured"
-											name="./certificatesMore"
-											sling:resourceType="granite/ui/components/foundation/form/fieldset">
-											<items jcr:primaryType="nt:unstructured">
-												<buttonlabel fieldLabel="Digite a label do botão:"
-													jcr:primaryType="nt:unstructured"
-													name="./buttonlabel"
-													sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
-												<buttonlabelcolor fieldLabel="Escolha a cor da label do botão:"
-													jcr:primaryType="nt:unstructured"
-													name="./buttonlabelcolor"
-													sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
-												<buttonbckgcolor fieldLabel="Escolha o background do botão:"
-													jcr:primaryType="nt:unstructured"
-													name="./buttonbckgcolor"
-													sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
-												<fonts defaultValue="fonts"
-													fieldLabel="Fonte para o texto"
-													jcr:primaryType="nt:unstructured"
-													name="./fonts"
-													sling:resourceType="granite/ui/components/coral/foundation/form/select"
-													value="false">
-													<items jcr:primaryType="nt:unstructured">
-														<inter jcr:primaryType="nt:unstructured"
-															selected="true"
-															text="Inter"
-															value="inter"/>
-														<montserrat jcr:primaryType="nt:unstructured"
-															text="Montserrat"
-															value="montserrat"/>
-														<roboto jcr:primaryType="nt:unstructured"
-															text="Roboto"
-															value="roboto"/>
-														<nunito jcr:primaryType="nt:unstructured"
-															text="Nunito"
-															value="nunito"/>
-													</items>
-												</fonts>
-												<buttons cq-msm-lockable="./buttons"
-													fieldLabel="Escolha um tipo de botão"
-													jcr:primaryType="nt:unstructured"
-													name="./buttons"
-													sling:resourceType="granite/ui/components/coral/foundation/form/select">
-													<items jcr:primaryType="nt:unstructured">
-														<next jcr:primaryType="nt:unstructured"
-															selected="true"
-															text="Botão Next"
-															value="next"/>
-														<more jcr:primaryType="nt:unstructured"
-															text="Botão More"
-															value="more"/>
-														<finish jcr:primaryType="nt:unstructured"
-															text="Botão Finish"
-															value="finish"/>
-														<return jcr:primaryType="nt:unstructured"
-															text="Botão Return"
-															value="return"/>
-														<certificates jcr:primaryType="nt:unstructured"
-															text="Botão Certificates"
-															value="certificates"/>
-													</items>
-												</buttons>
-											</items>
-										</field>
-									</certificatesMore>
 									<certificatesFinish composite="{Boolean}true"
 										fieldLabel="Button Finish"
 										jcr:primaryType="nt:unstructured"
@@ -785,11 +815,11 @@
 												<buttonlabelcolor fieldLabel="Escolha a cor da label do botão: "
 													jcr:primaryType="nt:unstructured"
 													name="./buttonlabelcolor"
-													sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+													sling:resourceType="granite/ui/components/coral/foundation/form/colorfield"/>
 												<buttonbckgcolor fieldLabel="Escolha o background do botão:"
 													jcr:primaryType="nt:unstructured"
 													name="./buttonbckgcolor"
-													sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+													sling:resourceType="granite/ui/components/coral/foundation/form/colorfield"/>
 												<fonts defaultValue="fonts"
 													fieldLabel="Fonte para o texto"
 													jcr:primaryType="nt:unstructured"
@@ -868,7 +898,7 @@
 												<titlecolor fieldLabel="Escolha a cor do titulo:"
 													jcr:primaryType="nt:unstructured"
 													name="./titlecolor"
-													sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+													sling:resourceType="granite/ui/components/coral/foundation/form/colorfield"/>
 												<fonts defaultValue="fonts"
 													fieldLabel="Fonte para o texto"
 													jcr:primaryType="nt:unstructured"
@@ -910,9 +940,9 @@
 												<resultcolor fieldLabel="Escolha a cor do titulo:"
 													jcr:primaryType="nt:unstructured"
 													name="./resultcolor"
-													sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+													sling:resourceType="granite/ui/components/coral/foundation/form/colorfield"/>
 												<fonts defaultValue="fonts"
-													fieldLabel="Fonte para o texto"
+													fieldLabel="Fonte para o texto:"
 													jcr:primaryType="nt:unstructured"
 													name="./fonts"
 													sling:resourceType="granite/ui/components/coral/foundation/form/select"
@@ -952,13 +982,13 @@
 												<resultcolor fieldLabel="Escolha a cor do texto do botão:"
 													jcr:primaryType="nt:unstructured"
 													name="./resultcolor"
-													sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+													sling:resourceType="granite/ui/components/coral/foundation/form/colorfield"/>
 												<buttonbckgcolor fieldLabel="Escolha o background do botão:"
 													jcr:primaryType="nt:unstructured"
 													name="./buttonbckgcolor"
-													sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+													sling:resourceType="granite/ui/components/coral/foundation/form/colorfield"/>
 												<fonts defaultValue="fonts"
-													fieldLabel="Fonte para o texto"
+													fieldLabel="Fonte para o texto do botão:"
 													jcr:primaryType="nt:unstructured"
 													name="./fonts"
 													sling:resourceType="granite/ui/components/coral/foundation/form/select"

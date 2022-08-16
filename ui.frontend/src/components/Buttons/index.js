@@ -75,7 +75,8 @@ const Button = ({
         return (
             <ButtonReturnStyled
                 type={"button"}
-                onClick={() => console.log("buttonReturn")}
+                onClick={onClick}
+
                 bgcolor={bgcolor}
                 colortext={colortext}
             >
@@ -85,7 +86,7 @@ const Button = ({
                 {text ? text : "Return"}
             </ButtonReturnStyled>
         );
-
+        
     if (buttons === "certificates")
         return (
             <ButtonCertificatesStyled
@@ -100,6 +101,7 @@ const Button = ({
                 </ContainerIcons>
             </ButtonCertificatesStyled>
         );
+
 
     if (buttons === "removeCertificate")
         return (
