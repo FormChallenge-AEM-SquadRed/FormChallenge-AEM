@@ -1,9 +1,16 @@
 import styled from "styled-components";
 
-export const ContainerInput = styled.div`
+export const Form = styled.form`
   display: flex;
-  width: max-content;
-  position: relative;
+`;
+
+export const ContainerBasic = styled.div`
+  flex-wrap: wrap;
+  width: 100%;
+`;
+
+export const DivKey = styled.div`
+  width: 100%;
 `;
 
 export const ContainerButton = styled.div`
