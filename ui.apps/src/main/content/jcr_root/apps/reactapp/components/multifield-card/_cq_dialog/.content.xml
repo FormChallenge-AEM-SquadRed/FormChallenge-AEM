@@ -173,9 +173,12 @@
 														<number jcr:primaryType="nt:unstructured"
 															text="Number"
 															value="number"/>
+														<link jcr:primaryType="nt:unstructured"
+															text="Link"
+															value="link"/>
 														<password jcr:primaryType="nt:unstructured"
 															text="Password"
-															value="password"/>
+															value="password"/>														
 													</items>
 												</types>
 												<required jcr:primaryType="nt:unstructured"
@@ -496,6 +499,9 @@
 														<number jcr:primaryType="nt:unstructured"
 															text="Number"
 															value="number"/>
+														<link jcr:primaryType="nt:unstructured"
+															text="Link"
+															value="link"/>
 														<password jcr:primaryType="nt:unstructured"
 															text="Password"
 															value="password"/>
@@ -785,6 +791,9 @@
 														<number jcr:primaryType="nt:unstructured"
 															text="Number"
 															value="number"/>
+														<link jcr:primaryType="nt:unstructured"
+															text="Link"
+															value="link"/>
 														<password jcr:primaryType="nt:unstructured"
 															text="Password"
 															value="password"/>
