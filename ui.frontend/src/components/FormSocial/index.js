@@ -6,11 +6,9 @@ import Input from "../Input";
 import Button from "../Buttons";
 import {useForm} from "react-hook-form";
 import {
-    InputContainer,
     ContainerInputs,
     ContainerForm,
     ButtonContainer,
-    ContainerButtons,
     ErrorMessage,
 } from "./style";
 import {UserDataContext} from "../../contexts/UserDataProvider";
@@ -22,10 +20,7 @@ const FormSocial = ({socialTitle, socialInput, socialButton}) => {
     const {
         register,
         handleSubmit,
-        watch,
         formState: {errors},
-        setValue,
-        getValues,
     } = useForm();
 
     const onSubmit = (data) => {
