@@ -72,7 +72,7 @@ const FormSocial = ({socialTitle, socialInput, socialButton}) => {
 
                 {socialButton &&
                     socialButton.map((item, index) => (
-                        <ButtonContainer>
+                        <ButtonContainer key={index}>
                             <Button
                                 key={index}
                                 buttons={item.buttons}
