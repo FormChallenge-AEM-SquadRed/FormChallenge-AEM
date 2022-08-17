@@ -13,18 +13,12 @@ export const Form = styled.form`
     }
 `;
 
-export const Container = styled.div`
+export const ButtonContainer = styled.div`
     width: 100%;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
     flex: 1;
-`;
-
-export const ButtonContainer = styled.div`
-    display: flex;
-    width: 100%;
-    justify-content: flex-end;
 `;
 
 export const Inputs = styled.div`

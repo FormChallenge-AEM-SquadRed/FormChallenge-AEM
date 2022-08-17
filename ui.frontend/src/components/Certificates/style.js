@@ -32,15 +32,12 @@ export const CertificatesContainer = styled.div`
 `;
 
 export const CertificatesList = styled.div`
-    max-width: 50%;
-    flex: 1;
     display: flex;
     flex-direction: column;
     position: relative;
 `;
 export const RemoveCertificate = styled.div`
-    flex: 1;
-    max-width: 100%;
+    width: 100%;
     position: absolute;
     z-index: 1;
     top: 4rem;

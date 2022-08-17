@@ -31,7 +31,14 @@ const FormCertificates = ({
     } = useForm();
 
     const onSubmit = (data) => {
-        setUserData({...userData, ...data, certificates: {...certificates}});
+        const result = Object.entries(data).map(([label, value]) => {
+            return {label, value};
+        });
+        setUserData([
+            ...userData,
+            {label: certificatesBlock[0].labeltext, value: certificates},
+            ...result,
+        ]);
         setSelectedTab(selectedTab + 1);
     };
     const regexp = {
@@ -85,16 +92,14 @@ const FormCertificates = ({
 
                 {certificatesFinish &&
                     certificatesFinish.map((item, index) => (
-                        <Container key={index}>
-                            <ButtonContainer>
-                                <Button
-                                    text={item.buttonlabel}
-                                    buttons={item.buttons}
-                                    bgcolor={item.buttonbckgcolor}
-                                    colortext={item.buttonlabelcolor}
-                                />
-                            </ButtonContainer>
-                        </Container>
+                        <ButtonContainer key={index}>
+                            <Button
+                                text={item.buttonlabel}
+                                buttons={item.buttons}
+                                bgcolor={item.buttonbckgcolor}
+                                colortext={item.buttonlabelcolor}
+                            />
+                        </ButtonContainer>
                     ))}
             </Form>
         </>
