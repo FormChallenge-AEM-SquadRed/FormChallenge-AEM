@@ -15,7 +15,7 @@ const CardComponent = ({
     const [selectedTab, setSelectedTab] = useContext(TabsContext);
 
     return (
-        <Container>
+        <Container cardColor={cardColor}>
             <Card cardColor={cardColor}>
                 {selectedTab === 0 &&
                     basicTitle &&
