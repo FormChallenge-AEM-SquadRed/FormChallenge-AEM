@@ -6,20 +6,16 @@ import {
     Terms,
 } from './checkboxStyled';
 
-const Checkbox = ({ checkboxtext, checkboxcolor, fonts, onChange, register}) => {
-    return (
-        <CustomCheckbox>
-            <HiddenCheckbox
-                checkboxtext={checkboxtext}
-                chekboxcolor={checkboxcolor}
-                fonts={fonts}
-                onChange={onChange}
-                {...register}
-            />
-            <Checkmark />
-            <Terms>I accept the terms and privacy</Terms>
-        </CustomCheckbox>
-    );
+const Checkbox = ({ checkboxtextcolor, checkboxtext, checkboxcolor, fonts, register }) => {
+  return (
+    <CustomCheckbox  checkboxcolor={checkboxcolor}>
+      <HiddenCheckbox type='checkbox' {...register} />
+      <Checkmark />
+      <Terms fonts={fonts} checkboxtextcolor={checkboxtextcolor}>
+        {checkboxtext ? checkboxtext : "I accept the terms and privacy"}
+      </Terms>
+    </CustomCheckbox>
+  );
 };
 
 export default Checkbox;

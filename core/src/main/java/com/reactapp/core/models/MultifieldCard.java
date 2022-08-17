@@ -41,7 +41,7 @@ public interface MultifieldCard
 
     List<basicInputModel> getBasicInput();
 
-    List<basicBirthday> getBasicBirthday();
+    List<basicBirthdayModel> getBasicBirthday();
 
     List<basicCheckboxModel> getBasicCheckbox();
 

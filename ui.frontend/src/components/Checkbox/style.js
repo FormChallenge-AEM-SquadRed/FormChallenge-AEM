@@ -19,11 +19,11 @@ export const CustomCheckbox = styled.label`
     cursor: pointer;
     position: relative;
 
-    input:checked + ${Checkmark} {
-        background-color: #074ee8;
-        border-color: #074ee8;
-        background-size: 60%;
-    }
+  input:checked + ${Checkmark} {
+    background-color: ${({ checkboxcolor }) => checkboxcolor || "#074ee8"};
+    border-color: ${({ checkboxcolor }) => checkboxcolor || "#074ee8"};
+    background-size: 60%;
+  }
 `;
 
 export const HiddenCheckbox = styled.input`
@@ -31,9 +31,12 @@ export const HiddenCheckbox = styled.input`
 `;
 
 export const Terms = styled.span`
-    margin-left: 0.8rem;
-    display: inline-block;
-    @media (max-width: 300px) {
-        font-size: 1.4rem;
-    }
+  margin-left: 0.8rem;
+  display: inline-block;
+  font-family: ${({ fonts }) => fonts || "Nunito"};
+  color: ${({ checkboxtextcolor }) => checkboxtextcolor || "#111111"};
+  border-color: #074ee8;
+  @media (max-width: 300px) {
+    font-size: 1.4rem;
+  }
 `;

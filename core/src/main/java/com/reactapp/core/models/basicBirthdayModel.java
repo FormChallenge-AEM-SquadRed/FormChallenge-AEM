@@ -28,7 +28,7 @@ import org.osgi.annotation.versioning.ConsumerType;
  * 
  */
 @ConsumerType
-public interface basicBirthday
+public interface basicBirthdayModel
     extends ComponentExporter
 {
 
@@ -36,7 +36,7 @@ public interface basicBirthday
     @JsonProperty("labeltitle")
     String getLabeltitle();
 
-    @JsonProperty("labeltitle")
+    @JsonProperty("colortitle")
     String getColortitle();
 
     @JsonProperty("labelday")
@@ -51,7 +51,7 @@ public interface basicBirthday
     @JsonProperty("labelage")
     String getLabelage();
 
-    @JsonProperty("labeltitle")
+    @JsonProperty("colorinput")
     String getColorinput();
 
     @JsonProperty("fonts")

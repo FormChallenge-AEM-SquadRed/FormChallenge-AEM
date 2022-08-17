@@ -25,7 +25,6 @@ const Button = ({
     children,
     onClick,
 }) => {
-
     if (buttons === "next")
         return (
             <ButtonNextStyled
@@ -47,7 +46,6 @@ const Button = ({
                 bgcolor={bgcolor}
                 colortext={colortext}
                 onClick={onClick}
-
             >
                 <ContainerIcons>
                     <TbPlus color={"white"} size={"2rem"} />
