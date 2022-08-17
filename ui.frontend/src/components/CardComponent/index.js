@@ -3,8 +3,11 @@ import {useContext} from "react";
 import {MapTo} from "@adobe/aem-react-editable-components";
 import {Card, Container} from "./style";
 import {TabsContext} from "../../contexts/TabsProvider";
+import {UserDataContext} from "../../contexts/UserDataProvider";
 import FormBasic from "../FormBasic";
 import FormSocial from "../FormSocial";
+import FormCertificates from "../FormCertificates";
+
 const CardComponent = ({
     cardColor,
     basicTitle,
@@ -15,9 +18,14 @@ const CardComponent = ({
     socialTitle,
     socialInput,
     socialButton,
+    certificatesBlock,
+    certificatesInput,
     certificatesTitle,
+    certificatesFinish,
+    
 }) => {
     const [selectedTab, setSelectedTab] = useContext(TabsContext);
+    const [userData] = useContext(UserDataContext);
 
     return (
         <Container cardColor={cardColor}>
@@ -38,6 +46,17 @@ const CardComponent = ({
                         socialButton={socialButton}
                     />
                 )}
+
+                {selectedTab === 2 && (
+                    <FormCertificates
+                        certificatesBlock={certificatesBlock}
+                        certificatesInput={certificatesInput}
+                        certificatesTitle={certificatesTitle}
+                        certificatesFinish={certificatesFinish}
+                    />
+                )}
+
+                {selectedTab === 3 && console.log(userData)}
             </Card>
         </Container>
     );
