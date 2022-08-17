@@ -4,7 +4,7 @@ export const TabsContext = createContext();
 
 const TabsProvider = ({children}) => {
 
-    const [selectedTab, setSelectedTab] = useState(1);
+    const [selectedTab, setSelectedTab] = useState(0);
 
     return (
         <TabsContext.Provider value={[selectedTab, setSelectedTab]}>
