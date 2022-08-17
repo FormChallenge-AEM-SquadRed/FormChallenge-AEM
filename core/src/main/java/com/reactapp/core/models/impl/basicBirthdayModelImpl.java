@@ -21,7 +21,7 @@ package com.reactapp.core.models.impl;
 import com.adobe.cq.export.json.ComponentExporter;
 import com.adobe.cq.export.json.ExporterConstants;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.reactapp.core.models.basicBirthday;
+import com.reactapp.core.models.basicBirthdayModel;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.Exporter;
@@ -33,12 +33,12 @@ import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
 @Model(adaptables = {
     SlingHttpServletRequest.class
 }, adapters = {
-    basicBirthday.class,
+    basicBirthdayModel.class,
     ComponentExporter.class
 })
 @Exporter(name = ExporterConstants.SLING_MODEL_EXPORTER_NAME, extensions = ExporterConstants.SLING_MODEL_EXTENSION)
-public class basicBirthdayImpl
-    implements basicBirthday
+public class basicBirthdayModelImpl
+    implements basicBirthdayModel
 {
 
     @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
@@ -67,7 +67,7 @@ public class basicBirthdayImpl
     }
 
     @Override
-    @JsonProperty("labeltitle")
+    @JsonProperty("colortitle")
     public String getColortitle() {
         return colortitle;
     }
@@ -97,7 +97,7 @@ public class basicBirthdayImpl
     }
 
     @Override
-    @JsonProperty("labeltitle")
+    @JsonProperty("colorinput")
     public String getColorinput() {
         return colorinput;
     }
