@@ -4,36 +4,46 @@ import { MapTo } from "@adobe/aem-react-editable-components";
 import { Card, Container } from "./style";
 import Tabs from "../Tabs";
 import Title from "../Title";
-import FormSocial from "../FormSocial";
 import { TabsContext } from "../../contexts/TabsProvider";
-
+import FormBasic from "../FormBasic";
+import FormSocial from "../FormSocial";
 const CardComponent = ({
   cardColor,
+  basicTitle,
+  basicInput,
+  basicButton,
+  basicBirthday,
+  basicCheckbox,
   socialTitle,
-  certificatesTitle,
   socialInput,
   socialButton,
+  certificatesTitle,
 }) => {
   const [selectedTab, setSelectedTab] = useContext(TabsContext);
 
   return (
     <Container>
       <Card cardColor={cardColor}>
+      
+   {selectedTab === 0 && (
+          <FormBasic
+            basicButton={basicButton}
+            basicTitle={basicTitle}
+            basicInput={basicInput}
+            basicBirthday={basicBirthday}
+            basicCheckbox={basicCheckbox}
+          />
+        )}
+        
           {selectedTab === 1 && (
           <FormSocial
             socialTitle={socialTitle}
             socialInput={socialInput}
             socialButton={socialButton}
           />
-          
         )}    
-        {selectedTab === 2 &&
-          certificatesTitle &&
-          certificatesTitle.map((item, index) => (
-            <Title key={index} color={item.titlecolor}>
-              {item.titletext}
-            </Title>
           ))}   
+
       </Card>
     </Container>
   );

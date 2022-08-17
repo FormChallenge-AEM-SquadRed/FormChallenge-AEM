@@ -319,7 +319,7 @@
 													name="./buttonbckgcolor"
 													sling:resourceType="granite/ui/components/coral/foundation/form/colorfield"/>
 												<fonts defaultValue="fonts"
-													fieldLabel="Fonte para o texto"
+													fieldLabel="Fonte para o texto:"
 													jcr:primaryType="nt:unstructured"
 													name="./fonts"
 													sling:resourceType="granite/ui/components/coral/foundation/form/select"
@@ -341,7 +341,7 @@
 													</items>
 												</fonts>
 												<buttons cq-msm-lockable="./buttons"
-													fieldLabel="Escolha um tipo de botão"
+													fieldLabel="Escolha um tipo de botão:"
 													jcr:primaryType="nt:unstructured"
 													name="./buttons"
 													sling:resourceType="granite/ui/components/coral/foundation/form/select">
