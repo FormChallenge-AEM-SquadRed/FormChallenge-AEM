@@ -13,9 +13,11 @@ import {
     ContainerButtons,
     ErrorMessage,
 } from "./style";
+import {UserDataContext} from "../../contexts/UserDataProvider";
 
 const FormSocial = ({socialTitle, socialInput, socialButton}) => {
     const [selectedTab, setSelectedTab] = useContext(TabsContext);
+    const [userData, setUserData] = useContext(UserDataContext);
 
     const {
         register,
@@ -26,7 +28,11 @@ const FormSocial = ({socialTitle, socialInput, socialButton}) => {
         getValues,
     } = useForm();
 
-    const onSubmit = () => {
+    const onSubmit = (data) => {
+        const result = Object.entries(data).map(([label, value]) => {
+            return {label, value};
+        });
+        setUserData([...result, ...userData]);
         setSelectedTab(selectedTab + 1);
     };
 
