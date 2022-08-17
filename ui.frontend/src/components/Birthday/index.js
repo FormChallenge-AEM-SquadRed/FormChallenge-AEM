@@ -1,26 +1,33 @@
-import {useEffect} from "react";
+import {useContext, useEffect} from "react";
 import {useForm} from "react-hook-form";
-import {MapTo} from "@adobe/aem-react-editable-components";
-import {yupResolver} from "@hookform/resolvers/yup";
 import {
     StyledBlock,
     StyledBirthday,
     StyledTitle,
     StyledBirthdayContainer,
-    StyledInput,
-    StyledInputLabel,
-    StyledInputContainer,
-    StyledSelect,
-    StyledSelectContainer,
-    StyledSelectLabel,
+    Option,
 } from "./style";
+import Input from "./input";
+import Select from "./select";
+import {UserDataContext} from "../../contexts/UserDataProvider";
 
 const currentYear = new Date().getFullYear() - 1;
 const years = Array.from({length: 121}, (_, i) => -i + currentYear);
 const months = Array.from({length: 12}, (_, i) => i + 1);
 const days = Array.from({length: 31}, (_, i) => i + 1);
 
-const Birthday = () => {
+const Birthday = ({
+    labeltitle,
+    labelday,
+    labelmonth,
+    labelyear,
+    labelage,
+    colortitle,
+    fonts,
+    colorinput,
+}) => {
+    const [userData, setUserData] = useContext(UserDataContext);
+
     const {
         register,
         handleSubmit,
@@ -30,60 +37,81 @@ const Birthday = () => {
         getValues,
     } = useForm();
 
-    const watchFields = watch(["month", "day", "year"]);
+    const watchFields = watch([`${labelmonth}`, `${labelday}`, `${labelyear}`]);
+
+    const dateOfBirthday = new Date(
+        `${watchFields[2]}-${watchFields[0]}-${watchFields[1]}`,
+    );
+    const diff = Date.now() - dateOfBirthday.getTime();
+    const year = new Date(diff).getUTCFullYear();
+    const age = Math.abs(year - 1970);
 
     useEffect(() => {
-        const dateOfBirthday = new Date(
-            `${watchFields[2]}-${watchFields[0]}-${watchFields[1]}`,
-        );
-        const diff = Date.now() - dateOfBirthday.getTime();
-        const year = new Date(diff).getUTCFullYear();
-        const age = Math.abs(year - 1970);
-
-        age && setValue("age", age);
-    }, [watchFields]);
+        setValue(`${labelage}`, age);
+        setUserData([
+            {
+                label: labeltitle,
+                value: `${watchFields[1]}/${watchFields[0]}/${watchFields[2]}`,
+            },
+            {label: labelage, value: age},
+        ]);
+    }, [age]);
 
     return (
         <StyledBirthday>
-            <StyledTitle>Birthday *</StyledTitle>
+            <StyledTitle fonts={fonts} colortitle={colortitle}>
+                {labeltitle}
+            </StyledTitle>
             <StyledBirthdayContainer>
                 <StyledBlock>
                     <Select
-                        width={"100%"}
-                        {...{register: register("day")}}
-                        label={"Day"}
+                        {...{register: register(`${labelday}`)}}
+                        fonts={fonts}
+                        labelday={labelday}
+                        colortitle={colortitle}
+                        colorinput={colorinput}
                     >
                         {days.map((day, index) => (
-                            <option key={index}>{day}</option>
+                            <Option colorinput={colorinput} key={index}>
+                                {day}
+                            </Option>
                         ))}
                     </Select>
                     <Select
-                        width={"100%"}
-                        {...{register: register("month")}}
-                        label={"Month"}
+                        {...{register: register(`${labelmonth}`)}}
+                        fonts={fonts}
+                        labelmonth={labelmonth}
+                        colortitle={colortitle}
+                        colorinput={colorinput}
                     >
                         {months.map((month, index) => (
-                            <option key={index}>{month}</option>
+                            <Option colorinput={colorinput} key={index}>
+                                {month}
+                            </Option>
                         ))}
                     </Select>
                 </StyledBlock>
                 <StyledBlock>
                     <Select
-                        width={"100%"}
-                        {...{register: register("year")}}
-                        label={"Year"}
+                        {...{register: register(`${labelyear}`)}}
+                        fonts={fonts}
+                        labelyear={labelyear}
+                        colortitle={colortitle}
+                        colorinput={colorinput}
                     >
                         {years.map((year, index) => (
-                            <option key={index}>{year}</option>
+                            <Option colorinput={colorinput} key={index}>
+                                {year}
+                            </Option>
                         ))}
                     </Select>
                     <Input
-                        width={"100%"}
-                        label={"Age"}
-                        placeholder='18'
+                        colortitle={colortitle}
+                        labelage={labelage}
                         type='text'
-                        {...{register: register("age")}}
-                        readOnly
+                        fonts={fonts}
+                        colorinput={colorinput}
+                        {...{register: register(`${labelage}`)}}
                     />
                 </StyledBlock>
             </StyledBirthdayContainer>
@@ -91,42 +119,4 @@ const Birthday = () => {
     );
 };
 
-export default MapTo("reactapp/components/birthday")(Birthday);
-
-const Input = ({
-    type,
-    placeholder,
-    className,
-    inputdata,
-    label,
-    width,
-    height,
-    onChangeCapture,
-    readOnly,
-    register,
-}) => {
-    return (
-        <StyledInputContainer style={{width: `${width}`}}>
-            <StyledInputLabel>{label}</StyledInputLabel>
-            <StyledInput
-                type={type}
-                defaultValue={inputdata}
-                editable={true}
-                placeholder={placeholder}
-                className={className}
-                onChangeCapture={onChangeCapture}
-                readOnly={readOnly}
-                {...register}
-            />
-        </StyledInputContainer>
-    );
-};
-
-const Select = ({width, label, children, register}) => {
-    return (
-        <StyledSelectContainer style={{width: `${width}`}}>
-            <StyledSelectLabel>{label}</StyledSelectLabel>
-            <StyledSelect {...register}>{children}</StyledSelect>
-        </StyledSelectContainer>
-    );
-};
+export default Birthday;

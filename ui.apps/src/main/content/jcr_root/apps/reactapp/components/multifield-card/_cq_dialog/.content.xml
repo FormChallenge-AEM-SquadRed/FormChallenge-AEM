@@ -84,16 +84,16 @@
 														<inter jcr:primaryType="nt:unstructured"
 															selected="true"
 															text="Inter"
-															value="inter"/>
+															value="Inter"/>
 														<montserrat jcr:primaryType="nt:unstructured"
 															text="Montserrat"
-															value="montserrat"/>
+															value="Montserrat"/>
 														<roboto jcr:primaryType="nt:unstructured"
 															text="Roboto"
-															value="roboto"/>
+															value="Roboto"/>
 														<nunito jcr:primaryType="nt:unstructured"
 															text="Nunito"
-															value="nunito"/>
+															value="Nunito"/>
 													</items>
 												</fonts>
 											</items>
@@ -138,16 +138,16 @@
 														<inter jcr:primaryType="nt:unstructured"
 															selected="true"
 															text="Inter"
-															value="inter"/>
+															value="Inter"/>
 														<montserrat jcr:primaryType="nt:unstructured"
 															text="Montserrat"
-															value="montserrat"/>
+															value="Montserrat"/>
 														<roboto jcr:primaryType="nt:unstructured"
 															text="Roboto"
-															value="roboto"/>
+															value="Roboto"/>
 														<nunito jcr:primaryType="nt:unstructured"
 															text="Nunito"
-															value="nunito"/>
+															value="Nunito"/>
 													</items>
 												</fonts>
 												<types defaultValue="types"
@@ -173,9 +173,12 @@
 														<number jcr:primaryType="nt:unstructured"
 															text="Number"
 															value="number"/>
+														<link jcr:primaryType="nt:unstructured"
+															text="Link"
+															value="link"/>
 														<password jcr:primaryType="nt:unstructured"
 															text="Password"
-															value="password"/>
+															value="password"/>														
 													</items>
 												</types>
 												<required jcr:primaryType="nt:unstructured"
@@ -225,7 +228,7 @@
 													name="./colorinput"
 													sling:resourceType="granite/ui/components/coral/foundation/form/colorfield"/>
 												<fonts defaultValue="fonts"
-													fieldLabel="Fonte para as labels:"
+													fieldLabel="Fonte para o texto"
 													jcr:primaryType="nt:unstructured"
 													name="./fonts"
 													sling:resourceType="granite/ui/components/coral/foundation/form/select"
@@ -234,16 +237,16 @@
 														<inter jcr:primaryType="nt:unstructured"
 															selected="true"
 															text="Inter"
-															value="inter"/>
+															value="Inter"/>
 														<montserrat jcr:primaryType="nt:unstructured"
 															text="Montserrat"
-															value="montserrat"/>
+															value="Montserrat"/>
 														<roboto jcr:primaryType="nt:unstructured"
 															text="Roboto"
-															value="roboto"/>
+															value="Roboto"/>
 														<nunito jcr:primaryType="nt:unstructured"
 															text="Nunito"
-															value="nunito"/>
+															value="Nunito"/>
 													</items>
 												</fonts>
 												<required jcr:primaryType="nt:unstructured"
@@ -282,16 +285,16 @@
 														<inter jcr:primaryType="nt:unstructured"
 															selected="true"
 															text="Inter"
-															value="inter"/>
+															value="Inter"/>
 														<montserrat jcr:primaryType="nt:unstructured"
 															text="Montserrat"
-															value="montserrat"/>
+															value="Montserrat"/>
 														<roboto jcr:primaryType="nt:unstructured"
 															text="Roboto"
-															value="roboto"/>
+															value="Roboto"/>
 														<nunito jcr:primaryType="nt:unstructured"
 															text="Nunito"
-															value="nunito"/>
+															value="Nunito"/>
 													</items>
 												</fonts>
 											</items>
@@ -319,7 +322,7 @@
 													name="./buttonbckgcolor"
 													sling:resourceType="granite/ui/components/coral/foundation/form/colorfield"/>
 												<fonts defaultValue="fonts"
-													fieldLabel="Fonte para o texto"
+													fieldLabel="Fonte para o texto:"
 													jcr:primaryType="nt:unstructured"
 													name="./fonts"
 													sling:resourceType="granite/ui/components/coral/foundation/form/select"
@@ -328,20 +331,20 @@
 														<inter jcr:primaryType="nt:unstructured"
 															selected="true"
 															text="Inter"
-															value="inter"/>
+															value="Inter"/>
 														<montserrat jcr:primaryType="nt:unstructured"
 															text="Montserrat"
-															value="montserrat"/>
+															value="Montserrat"/>
 														<roboto jcr:primaryType="nt:unstructured"
 															text="Roboto"
-															value="roboto"/>
+															value="Roboto"/>
 														<nunito jcr:primaryType="nt:unstructured"
 															text="Nunito"
-															value="nunito"/>
+															value="Nunito"/>
 													</items>
 												</fonts>
 												<buttons cq-msm-lockable="./buttons"
-													fieldLabel="Escolha um tipo de botão"
+													fieldLabel="Escolha um tipo de botão:"
 													jcr:primaryType="nt:unstructured"
 													name="./buttons"
 													sling:resourceType="granite/ui/components/coral/foundation/form/select">
@@ -407,16 +410,16 @@
 														<inter jcr:primaryType="nt:unstructured"
 															selected="true"
 															text="Inter"
-															value="inter"/>
+															value="Inter"/>
 														<montserrat jcr:primaryType="nt:unstructured"
 															text="Montserrat"
-															value="montserrat"/>
+															value="Montserrat"/>
 														<roboto jcr:primaryType="nt:unstructured"
 															text="Roboto"
-															value="roboto"/>
+															value="Roboto"/>
 														<nunito jcr:primaryType="nt:unstructured"
 															text="Nunito"
-															value="nunito"/>
+															value="Nunito"/>
 													</items>
 												</fonts>
 											</items>
@@ -461,16 +464,16 @@
 														<inter jcr:primaryType="nt:unstructured"
 															selected="true"
 															text="Inter"
-															value="inter"/>
+															value="Inter"/>
 														<montserrat jcr:primaryType="nt:unstructured"
 															text="Montserrat"
-															value="montserrat"/>
+															value="Montserrat"/>
 														<roboto jcr:primaryType="nt:unstructured"
 															text="Roboto"
-															value="roboto"/>
+															value="Roboto"/>
 														<nunito jcr:primaryType="nt:unstructured"
 															text="Nunito"
-															value="nunito"/>
+															value="Nunito"/>
 													</items>
 												</fonts>
 												<types defaultValue="types"
@@ -496,6 +499,9 @@
 														<number jcr:primaryType="nt:unstructured"
 															text="Number"
 															value="number"/>
+														<link jcr:primaryType="nt:unstructured"
+															text="Link"
+															value="link"/>
 														<password jcr:primaryType="nt:unstructured"
 															text="Password"
 															value="password"/>
@@ -541,16 +547,16 @@
 														<inter jcr:primaryType="nt:unstructured"
 															selected="true"
 															text="Inter"
-															value="inter"/>
+															value="Inter"/>
 														<montserrat jcr:primaryType="nt:unstructured"
 															text="Montserrat"
-															value="montserrat"/>
+															value="Montserrat"/>
 														<roboto jcr:primaryType="nt:unstructured"
 															text="Roboto"
-															value="roboto"/>
+															value="Roboto"/>
 														<nunito jcr:primaryType="nt:unstructured"
 															text="Nunito"
-															value="nunito"/>
+															value="Nunito"/>
 													</items>
 												</fonts>
 												<buttons cq-msm-lockable="./buttons"
@@ -620,16 +626,16 @@
 														<inter jcr:primaryType="nt:unstructured"
 															selected="true"
 															text="Inter"
-															value="inter"/>
+															value="Inter"/>
 														<montserrat jcr:primaryType="nt:unstructured"
 															text="Montserrat"
-															value="montserrat"/>
+															value="Montserrat"/>
 														<roboto jcr:primaryType="nt:unstructured"
 															text="Roboto"
-															value="roboto"/>
+															value="Roboto"/>
 														<nunito jcr:primaryType="nt:unstructured"
 															text="Nunito"
-															value="nunito"/>
+															value="Nunito"/>
 													</items>
 												</fonts>
 											</items>
@@ -690,16 +696,16 @@
 														<inter jcr:primaryType="nt:unstructured"
 															selected="true"
 															text="Inter"
-															value="inter"/>
+															value="Inter"/>
 														<montserrat jcr:primaryType="nt:unstructured"
 															text="Montserrat"
-															value="montserrat"/>
+															value="Montserrat"/>
 														<roboto jcr:primaryType="nt:unstructured"
 															text="Roboto"
-															value="roboto"/>
+															value="Roboto"/>
 														<nunito jcr:primaryType="nt:unstructured"
 															text="Nunito"
-															value="nunito"/>
+															value="Nunito"/>
 													</items>
 												</fonts>
 												<required jcr:primaryType="nt:unstructured"
@@ -750,16 +756,16 @@
 														<inter jcr:primaryType="nt:unstructured"
 															selected="true"
 															text="Inter"
-															value="inter"/>
+															value="Inter"/>
 														<montserrat jcr:primaryType="nt:unstructured"
 															text="Montserrat"
-															value="montserrat"/>
+															value="Montserrat"/>
 														<roboto jcr:primaryType="nt:unstructured"
 															text="Roboto"
-															value="roboto"/>
+															value="Roboto"/>
 														<nunito jcr:primaryType="nt:unstructured"
 															text="Nunito"
-															value="nunito"/>
+															value="Nunito"/>
 													</items>
 												</fonts>
 												<types defaultValue="types"
@@ -785,6 +791,9 @@
 														<number jcr:primaryType="nt:unstructured"
 															text="Number"
 															value="number"/>
+														<link jcr:primaryType="nt:unstructured"
+															text="Link"
+															value="link"/>
 														<password jcr:primaryType="nt:unstructured"
 															text="Password"
 															value="password"/>
@@ -830,16 +839,16 @@
 														<inter jcr:primaryType="nt:unstructured"
 															selected="true"
 															text="Inter"
-															value="inter"/>
+															value="Inter"/>
 														<montserrat jcr:primaryType="nt:unstructured"
 															text="Montserrat"
-															value="montserrat"/>
+															value="Montserrat"/>
 														<roboto jcr:primaryType="nt:unstructured"
 															text="Roboto"
-															value="roboto"/>
+															value="Roboto"/>
 														<nunito jcr:primaryType="nt:unstructured"
 															text="Nunito"
-															value="nunito"/>
+															value="Nunito"/>
 													</items>
 												</fonts>
 												<buttons cq-msm-lockable="./buttons"
@@ -909,16 +918,16 @@
 														<inter jcr:primaryType="nt:unstructured"
 															selected="true"
 															text="Inter"
-															value="inter"/>
+															value="Inter"/>
 														<montserrat jcr:primaryType="nt:unstructured"
 															text="Montserrat"
-															value="montserrat"/>
+															value="Montserrat"/>
 														<roboto jcr:primaryType="nt:unstructured"
 															text="Roboto"
-															value="roboto"/>
+															value="Roboto"/>
 														<nunito jcr:primaryType="nt:unstructured"
 															text="Nunito"
-															value="nunito"/>
+															value="Nunito"/>
 													</items>
 												</fonts>
 											</items>
@@ -942,7 +951,7 @@
 													name="./resultcolor"
 													sling:resourceType="granite/ui/components/coral/foundation/form/colorfield"/>
 												<fonts defaultValue="fonts"
-													fieldLabel="Fonte para o texto:"
+													fieldLabel="Fonte para o texto"
 													jcr:primaryType="nt:unstructured"
 													name="./fonts"
 													sling:resourceType="granite/ui/components/coral/foundation/form/select"
@@ -951,16 +960,16 @@
 														<inter jcr:primaryType="nt:unstructured"
 															selected="true"
 															text="Inter"
-															value="inter"/>
+															value="Inter"/>
 														<montserrat jcr:primaryType="nt:unstructured"
 															text="Montserrat"
-															value="montserrat"/>
+															value="Montserrat"/>
 														<roboto jcr:primaryType="nt:unstructured"
 															text="Roboto"
-															value="roboto"/>
+															value="Roboto"/>
 														<nunito jcr:primaryType="nt:unstructured"
 															text="Nunito"
-															value="nunito"/>
+															value="Nunito"/>
 													</items>
 												</fonts>
 											</items>
@@ -988,7 +997,7 @@
 													name="./buttonbckgcolor"
 													sling:resourceType="granite/ui/components/coral/foundation/form/colorfield"/>
 												<fonts defaultValue="fonts"
-													fieldLabel="Fonte para o texto do botão:"
+													fieldLabel="Fonte para o texto"
 													jcr:primaryType="nt:unstructured"
 													name="./fonts"
 													sling:resourceType="granite/ui/components/coral/foundation/form/select"
@@ -997,16 +1006,16 @@
 														<inter jcr:primaryType="nt:unstructured"
 															selected="true"
 															text="Inter"
-															value="inter"/>
+															value="Inter"/>
 														<montserrat jcr:primaryType="nt:unstructured"
 															text="Montserrat"
-															value="montserrat"/>
+															value="Montserrat"/>
 														<roboto jcr:primaryType="nt:unstructured"
 															text="Roboto"
-															value="roboto"/>
+															value="Roboto"/>
 														<nunito jcr:primaryType="nt:unstructured"
 															text="Nunito"
-															value="nunito"/>
+															value="Nunito"/>
 													</items>
 												</fonts>
 												<buttons cq-msm-lockable="./buttons"
