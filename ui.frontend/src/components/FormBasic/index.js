@@ -12,10 +12,11 @@ import {
   ContainerCheckbox,
   ContainerButton,
   ContainerInput,
-  ContainerBirthday,
   Form,
-  DivKey,
+  ContainerSmall,
+  ErrorMessageCheckbox,
 } from "./style.js";
+import { UserDataContext } from "../../contexts/UserDataProvider";
 
 const FormBasic = ({
   basicButton,
@@ -25,6 +26,8 @@ const FormBasic = ({
   basicBirthday,
 }) => {
   const [selectedTab, setSelectedTab] = useContext(TabsContext);
+  const [userData, setUserData] = useContext(UserDataContext);
+
   const {
     register,
     handleSubmit,
@@ -34,7 +37,17 @@ const FormBasic = ({
     getValues,
   } = useForm();
 
-  console.log(basicBirthday.colortitle);
+  const onSubmit = (data) => {
+    setUserData({ ...userData, ...data });
+    setSelectedTab(selectedTab + 1);
+  };
+  const regexp = {
+    text: /^[a-zA-Zà-úÀ-Ú]+(?:\s[a-zA-Zà-úÀ-Ú]+)+$/,
+    email:
+      /^[a-z0-9._-]+(?:\.[a-z0-9._-]+)*@(?:[a-z0-9](?:[a-z-]*[a-z])?.)+[a-z](?:[a-z]*[a-z]){1,}?$/,
+    phone: /^[0-9]$/,
+  };
+  console.log(userData);
   return (
     <>
       {selectedTab === 0 &&
@@ -46,32 +59,32 @@ const FormBasic = ({
         ))}
       <Tabs />
 
-      <Form>
-        {basicInput && <ContainerInput>
+      <Form onSubmit={handleSubmit(onSubmit)}>
+        <ContainerInput>
           {basicInput &&
             basicInput.map((item, index) => (
-              <DivKey key={index}>
-                <Input
-                  type={item.types}
-                  placeholder={item.placeholdertext}
-                  placeholdercolor={item.placeholdercolor}
-                  labelcolor={item.labelcolor}
-                  textcolor={item.textcolor}
-                  fonts={item.fonts}
-                  {...{
-                    register: register(`${index}`, {
-                      required: `${item.required}`,
-                    }),
-                  }}
-                >
-                  {item.labeltext}
-                </Input>
-                <ErrorMessage>
-                  {errors[index] && `${item.labeltext} is required`}
-                </ErrorMessage>
-              </DivKey>
+              <Input
+                key={index}
+                type={item.types}
+                placeholder={item.placeholdertext}
+                placeholdercolor={item.placeholdercolor}
+                labelcolor={item.labelcolor}
+                textcolor={item.textcolor}
+                fonts={item.fonts}
+                {...{
+                  register: register(`${item.labeltext}`, {
+                    required: item.required,
+                    pattern: regexp[item.types] ?? "",
+                  }),
+                }}
+              >
+                {item.labeltext}
+                {errors[item.labeltext] && (
+                  <ErrorMessage>is required</ErrorMessage>
+                )}
+              </Input>
             ))}
-        </ContainerInput>}
+        </ContainerInput>
 
         {basicBirthday &&
           basicBirthday.map((item, index) => (
@@ -96,26 +109,28 @@ const FormBasic = ({
                 checkboxtextcolor={item.checkboxtextcolor}
                 fonts={item.fonts}
                 {...{
-                  register: register(`${index}`, {
+                  register: register(`Checkbox${index}`, {
                     required: `${item.required}`,
                   }),
                 }}
               />
-              <ErrorMessage>
+              <ErrorMessageCheckbox>
                 {errors[index] && `Please confirm the terms`}
-              </ErrorMessage>
+              </ErrorMessageCheckbox>
             </ContainerCheckbox>
           ))}
 
         {basicButton &&
           basicButton.map((item, index) => (
             <ContainerButton key={index}>
-              <Button
-                text={item.buttonlabel}
-                buttons={item.buttons}
-                bgcolor={item.buttonbckgcolor}
-                colortext={item.buttonlabelcolor}
-              />
+              <ContainerSmall>
+                <Button
+                  text={item.buttonlabel}
+                  buttons={item.buttons}
+                  bgcolor={item.buttonbckgcolor}
+                  colortext={item.buttonlabelcolor}
+                />
+              </ContainerSmall>
             </ContainerButton>
           ))}
       </Form>
