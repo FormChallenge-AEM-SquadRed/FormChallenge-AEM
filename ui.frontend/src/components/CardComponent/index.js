@@ -22,6 +22,7 @@ const CardComponent = ({
     certificatesInput,
     certificatesTitle,
     certificatesFinish,
+    
 }) => {
     const [selectedTab, setSelectedTab] = useContext(TabsContext);
     const [userData] = useContext(UserDataContext);
@@ -45,6 +46,7 @@ const CardComponent = ({
                         socialButton={socialButton}
                     />
                 )}
+
                 {selectedTab === 2 && (
                     <FormCertificates
                         certificatesBlock={certificatesBlock}
