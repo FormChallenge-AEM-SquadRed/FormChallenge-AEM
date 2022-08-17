@@ -6,37 +6,26 @@ import Tabs from "../Tabs";
 import Title from "../Title";
 import { TabsContext } from "../../contexts/TabsProvider";
 import FormBasic from "../FormBasic";
-
+import FormSocial from "../FormSocial";
 const CardComponent = ({
   cardColor,
   basicTitle,
-  socialTitle,
-  certificatesTitle,
-  basicButton,
   basicInput,
+  basicButton,
+  basicBirthday,
   basicCheckbox,
-  basicBirthday
+  socialTitle,
+  socialInput,
+  socialButton,
+  certificatesTitle,
 }) => {
   const [selectedTab, setSelectedTab] = useContext(TabsContext);
 
   return (
     <Container>
       <Card cardColor={cardColor}>
-        {selectedTab === 1 &&
-          socialTitle &&
-          socialTitle.map((item, index) => (
-            <Title key={index} color={item.titlecolor}>
-              {item.titletext}
-            </Title>
-          ))}
-        {selectedTab === 2 &&
-          certificatesTitle &&
-          certificatesTitle.map((item, index) => (
-            <Title key={index} color={item.titlecolor}>
-              {item.titletext}
-            </Title>
-          ))}
-        {selectedTab === 0 && (
+      
+   {selectedTab === 0 && (
           <FormBasic
             basicButton={basicButton}
             basicTitle={basicTitle}
@@ -45,6 +34,16 @@ const CardComponent = ({
             basicCheckbox={basicCheckbox}
           />
         )}
+        
+          {selectedTab === 1 && (
+          <FormSocial
+            socialTitle={socialTitle}
+            socialInput={socialInput}
+            socialButton={socialButton}
+          />
+        )}    
+          ))}   
+
       </Card>
     </Container>
   );
