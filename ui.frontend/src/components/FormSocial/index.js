@@ -6,27 +6,28 @@ import Input from "../Input";
 import Button from "../Buttons";
 import {useForm} from "react-hook-form";
 import {
-    InputContainer,
     ContainerInputs,
     ContainerForm,
     ButtonContainer,
-    ContainerButtons,
     ErrorMessage,
 } from "./style";
+import {UserDataContext} from "../../contexts/UserDataProvider";
 
 const FormSocial = ({socialTitle, socialInput, socialButton}) => {
     const [selectedTab, setSelectedTab] = useContext(TabsContext);
+    const [userData, setUserData] = useContext(UserDataContext);
 
     const {
         register,
         handleSubmit,
-        watch,
         formState: {errors},
-        setValue,
-        getValues,
     } = useForm();
 
-    const onSubmit = () => {
+    const onSubmit = (data) => {
+        const result = Object.entries(data).map(([label, value]) => {
+            return {label, value};
+        });
+        setUserData([...userData, ...result]);
         setSelectedTab(selectedTab + 1);
     };
 
@@ -34,6 +35,7 @@ const FormSocial = ({socialTitle, socialInput, socialButton}) => {
         text: /^[a-zA-Zà-úÀ-Ú]+(?:\s[a-zA-Zà-úÀ-Ú]+)+$/,
         email: /^[a-z0-9._-]+(?:\.[a-z0-9._-]+)*@(?:[a-z0-9](?:[a-z-]*[a-z])?.)+[a-z](?:[a-z]*[a-z]){1,}?$/,
         phone: /^[0-9]$/,
+        link: /^^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$/,
     };
     return (
         <>
