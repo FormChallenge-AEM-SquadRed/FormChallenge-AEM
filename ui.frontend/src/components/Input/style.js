@@ -17,6 +17,7 @@ export const InputGlobal = styled.input`
 `;
 
 export const ContainerEmail = styled.div`
+    position: relative;
     flex: 2 1 50%;
     @media (max-width: 768px) {
         flex: unset;
@@ -27,6 +28,7 @@ export const ContainerEmail = styled.div`
 export const InputEmail = styled(InputGlobal)``;
 
 export const ContainerTel = styled.div`
+    position: relative;
     flex: 1 1 25%;
     @media (max-width: 768px) {
         flex: unset;
@@ -43,5 +45,6 @@ export const Label = styled.label`
 `;
 
 export const Container = styled.div`
+    position: relative;
     width: 100%;
 `;
