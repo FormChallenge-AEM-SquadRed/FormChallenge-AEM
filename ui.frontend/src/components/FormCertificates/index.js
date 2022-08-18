@@ -1,4 +1,4 @@
-import {useContext} from "react";
+import {useContext, useEffect} from "react";
 import {useForm} from "react-hook-form";
 import {TabsContext} from "../../contexts/TabsProvider";
 import Certificates from "../Certificates";
@@ -7,7 +7,7 @@ import Tabs from "../Tabs";
 import Input from "../Input";
 import Button from "../Buttons";
 
-import {Form, ButtonContainer, Container, Inputs, ErrorMessage} from "./style";
+import {Form, ButtonContainer, Inputs, ErrorMessage} from "./style";
 import {CertificatesContext} from "../../contexts/CertificatesProvider";
 import {UserDataContext} from "../../contexts/UserDataProvider";
 
@@ -40,12 +40,49 @@ const FormCertificates = ({
             value: certificates,
         });
         setSelectedTab(selectedTab + 1);
+        SetData();
     };
     const regexp = {
         text: /^[a-zA-Zà-úÀ-Ú]+(?:\s[a-zA-Zà-úÀ-Ú]+)+$/,
         email: /^[a-z0-9._-]+(?:\.[a-z0-9._-]+)*@(?:[a-z0-9](?:[a-z-]*[a-z])?.)+[a-z](?:[a-z]*[a-z]){1,}?$/,
         phone: /^[0-9]$/,
+        link: /^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$/,
     };
+    const SetData = () => {
+        localStorage.setItem(
+            "StorageCertificates",
+            JSON.stringify(getValues()),
+        );
+    };
+
+    useEffect(() => {
+        if (userData) {
+            const keys = Object.keys(userData);
+            keys.forEach((key) => {
+                setValue(key, userData[key]);
+            });
+        }
+    }, []);
+
+    const GetData = () => {
+        if (localStorage.getItem("StorageCertificates")) {
+            const StorageData = JSON.parse(
+                localStorage.getItem("StorageCertificates"),
+            );
+            const keys = Object.keys(StorageData);
+            keys.forEach((key) => {
+                setValue(key, StorageData[key]);
+            });
+        }
+    };
+
+    useEffect(() => {
+        GetData();
+        window.addEventListener("beforeunload", SetData());
+        return () => {
+            window.removeEventListener("beforeunload", SetData());
+        };
+    }, []);
 
     return (
         <>
@@ -64,6 +101,7 @@ const FormCertificates = ({
                             key={index}
                             placeholder={item.placeholdertext}
                             id={index}
+                            fonts={item.fonts}
                         >
                             {item.labeltext}
                         </Certificates>
@@ -99,6 +137,7 @@ const FormCertificates = ({
                                 buttons={item.buttons}
                                 bgcolor={item.buttonbckgcolor}
                                 colortext={item.buttonlabelcolor}
+                                fonts={item.fonts}
                             />
                         </ButtonContainer>
                     ))}

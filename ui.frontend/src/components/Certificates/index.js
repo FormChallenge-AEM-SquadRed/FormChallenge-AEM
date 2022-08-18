@@ -17,7 +17,7 @@ import {
 import Button from "../Buttons";
 import {CertificatesContext} from "../../contexts/CertificatesProvider";
 
-const Certificates = ({placeholder, children, id}) => {
+const Certificates = ({placeholder, children, id, fonts}) => {
     const [certificates, setCertificates] = useContext(CertificatesContext);
     const [errorCertificates, setErrorCertificates] = useState(false);
     const [invalidLink, setInvalidLink] = useState(false);
@@ -61,11 +61,12 @@ const Certificates = ({placeholder, children, id}) => {
     return (
         <>
             <InputContainer>
-                <Label>{children}</Label>
+                <Label fonts={fonts}>{children}</Label>
                 <InputGlobal
                     type='text'
                     placeholder={placeholder}
                     {...register(`certificates${id}`)}
+                    fonts={fonts}
                 />
             </InputContainer>
 
@@ -74,6 +75,7 @@ const Certificates = ({placeholder, children, id}) => {
                     <Button
                         buttons='certificates'
                         onClick={() => setShowCertificates(!showCertificates)}
+                        fonts={fonts}
                     />
                     <RemoveCertificate>
                         {showCertificates &&
@@ -94,6 +96,7 @@ const Certificates = ({placeholder, children, id}) => {
                         buttons='more'
                         type='button'
                         onClick={() => addCertificate(`certificates${id}`)}
+                        fonts={fonts}
                     />
                 </AddCertificate>
             </CertificatesContainer>
