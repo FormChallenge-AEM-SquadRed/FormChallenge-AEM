@@ -178,7 +178,7 @@
 															value="link"/>
 														<password jcr:primaryType="nt:unstructured"
 															text="Password"
-															value="password"/>														
+															value="password"/>
 													</items>
 												</types>
 												<required jcr:primaryType="nt:unstructured"
@@ -297,6 +297,12 @@
 															value="Nunito"/>
 													</items>
 												</fonts>
+												<required jcr:primaryType="nt:unstructured"
+													name="./required"
+													sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+													text="Required?"
+													uncheckedValue="{Boolean}false"
+													value="{Boolean}true"/>
 											</items>
 										</field>
 									</basicCheckbox>
