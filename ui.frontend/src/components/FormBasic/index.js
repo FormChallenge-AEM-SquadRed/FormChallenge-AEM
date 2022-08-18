@@ -101,6 +101,7 @@ const FormBasic = ({
               labelyear={item.labelyear}
               labelage={item.labelage}
               colorinput={item.colorinput}
+              fonts={item.fonts}
             />
           ))}
 
