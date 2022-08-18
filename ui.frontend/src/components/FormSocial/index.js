@@ -35,7 +35,7 @@ const FormSocial = ({socialTitle, socialInput, socialButton}) => {
         text: /^[a-zA-Zà-úÀ-Ú]+(?:\s[a-zA-Zà-úÀ-Ú]+)+$/,
         email: /^[a-z0-9._-]+(?:\.[a-z0-9._-]+)*@(?:[a-z0-9](?:[a-z-]*[a-z])?.)+[a-z](?:[a-z]*[a-z]){1,}?$/,
         phone: /^[0-9]$/,
-        link: /^^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$/,
+        link: /^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$/,
     };
     return (
         <>
@@ -81,7 +81,8 @@ const FormSocial = ({socialTitle, socialInput, socialButton}) => {
                                 text={item.buttonlabel}
                                 bgcolor={item.backgroundcolor}
                                 colortext={item.buttonlabelcolor}
-                            ></Button>
+                                fonts={item.fonts}
+                            />
                         </ButtonContainer>
                     ))}
             </ContainerForm>
