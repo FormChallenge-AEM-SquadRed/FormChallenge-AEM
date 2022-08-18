@@ -18,7 +18,7 @@ const FormCertificates = ({
     certificatesFinish,
 }) => {
     const [selectedTab, setSelectedTab] = useContext(TabsContext);
-    const [certificates] = useContext(CertificatesContext);
+    const [certificates, setCertificates] = useContext(CertificatesContext);
     const [userData, setUserData] = useContext(UserDataContext);
 
     const {
@@ -34,11 +34,11 @@ const FormCertificates = ({
         const result = Object.entries(data).map(([label, value]) => {
             return {label, value};
         });
-        setUserData([
-            ...userData,
-            {label: certificatesBlock[0].labeltext, value: certificates},
-            ...result,
-        ]);
+        setUserData([...userData, ...result]);
+        setCertificates({
+            label: certificatesBlock[0].labeltext,
+            value: certificates,
+        });
         setSelectedTab(selectedTab + 1);
     };
     const regexp = {
@@ -46,6 +46,7 @@ const FormCertificates = ({
         email: /^[a-z0-9._-]+(?:\.[a-z0-9._-]+)*@(?:[a-z0-9](?:[a-z-]*[a-z])?.)+[a-z](?:[a-z]*[a-z]){1,}?$/,
         phone: /^[0-9]$/,
     };
+
     return (
         <>
             {selectedTab === 2 &&
