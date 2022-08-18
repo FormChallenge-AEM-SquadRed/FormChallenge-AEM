@@ -7,6 +7,7 @@ import {UserDataContext} from "../../contexts/UserDataProvider";
 import FormBasic from "../FormBasic";
 import FormSocial from "../FormSocial";
 import FormCertificates from "../FormCertificates";
+import FormSucess from "../FormSuccess";
 
 const CardComponent = ({
     cardColor,
@@ -56,7 +57,7 @@ const CardComponent = ({
                     />
                 )}
 
-                {selectedTab === 3 && console.log(userData)}
+                {selectedTab === 3 && <FormSucess />}
             </Card>
         </Container>
     );
