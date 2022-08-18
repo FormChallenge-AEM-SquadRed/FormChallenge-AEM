@@ -6,9 +6,10 @@ import { Constants, ModelManager } from '@adobe/aem-spa-page-model-manager';
 import { createBrowserHistory } from 'history';
 import React from 'react';
 import { render } from 'react-dom';
-import { Router } from 'react-router-dom';
+import { Router, Route } from 'react-router-dom';
 import App from './App';
 import LocalDevModelClient from './LocalDevModelClient';
+import ErrorPage404 from "../src/components/ErrorPage/";
 import './components/import-components';
 import './index.css';
 
@@ -21,15 +22,16 @@ const renderApp = () => {
     ModelManager.initialize(modelManagerOptions).then(pageModel => {
         const history = createBrowserHistory();
         render(
-            <Router history={history}>
-                <App
+            <Router navigate={history}>
+                <Route path="/" element={<App
                     history={history}
                     cqChildren={pageModel[Constants.CHILDREN_PROP]}
                     cqItems={pageModel[Constants.ITEMS_PROP]}
                     cqItemsOrder={pageModel[Constants.ITEMS_ORDER_PROP]}
                     cqPath={pageModel[Constants.PATH_PROP]}
                     locationPathname={window.location.pathname}
-                />
+                />} />
+                <Route path="*" element={<ErrorPage404 />} />       
             </Router>,
             document.getElementById('spa-root')
         );
