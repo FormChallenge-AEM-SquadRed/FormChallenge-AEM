@@ -8,6 +8,8 @@ import {
     InputEmail,
 } from "./style.js";
 
+import phoneMask from "../../utils/phoneMask.js";
+
 const Input = ({
     placeholder,
     register,
@@ -47,6 +49,7 @@ const Input = ({
                     placeholder={placeholder}
                     placeholdercolor={placeholdercolor}
                     {...register}
+                    onChangeCapture={(e) => phoneMask(e)}
                 />
             </ContainerTel>
         );
