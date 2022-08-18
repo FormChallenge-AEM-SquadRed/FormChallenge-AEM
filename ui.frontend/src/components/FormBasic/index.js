@@ -1,4 +1,4 @@
-import React, {useContext, useEffect} from 'react';
+import React, {useContext, useEffect} from "react";
 import Button from "../Buttons";
 import {TabsContext} from "../../contexts/TabsProvider";
 import Title from "../Title";
@@ -11,11 +11,10 @@ import {useForm} from "react-hook-form";
 import {
     ErrorMessage,
     ContainerCheckbox,
-    ContainerButton,
     ContainerInput,
     Form,
-    ContainerSmall,
     ErrorMessageCheckbox,
+    ButtonContainer,
 } from "./style.js";
 import {UserDataContext} from "../../contexts/UserDataProvider";
 
@@ -37,7 +36,7 @@ const FormBasic = ({
         setValue,
         getValues,
     } = useForm();
-    
+
     const regexp = {
         text: /^[a-zA-Zà-úÀ-Ú]+(?:\s[a-zA-Zà-úÀ-Ú]+)+$/,
         email: /^[a-z0-9._-]+(?:\.[a-z0-9._-]+)*@(?:[a-z0-9](?:[a-z-]*[a-z])?.)+[a-z](?:[a-z]*[a-z]){1,}?$/,
@@ -55,9 +54,9 @@ const FormBasic = ({
     };
 
     const SetData = () => {
-        localStorage.setItem('StorageBasic', JSON.stringify(getValues()));
+        localStorage.setItem("StorageBasic", JSON.stringify(getValues()));
     };
-  
+
     useEffect(() => {
         if (userData) {
             const keys = Object.keys(userData);
@@ -68,9 +67,9 @@ const FormBasic = ({
     }, []);
 
     const GetData = () => {
-        if (localStorage.getItem('StorageBasic')) {
+        if (localStorage.getItem("StorageBasic")) {
             const StorageData = JSON.parse(
-                localStorage.getItem('StorageBasic'),
+                localStorage.getItem("StorageBasic"),
             );
 
             const keys = Object.keys(StorageData);
@@ -82,9 +81,9 @@ const FormBasic = ({
 
     useEffect(() => {
         GetData();
-        window.addEventListener('beforeunload', SetData());
+        window.addEventListener("beforeunload", SetData());
         return () => {
-            window.removeEventListener('beforeunload', SetData());
+            window.removeEventListener("beforeunload", SetData());
         };
     }, []);
 
@@ -130,20 +129,20 @@ const FormBasic = ({
                         ))}
                 </ContainerInput>
 
-        {basicBirthday &&
-          basicBirthday.map((item, index) => (
-            <Birthday
-              key={index}
-              labeltitle={item.labeltitle}
-              colortitle={item.colortitle}
-              labelday={item.labelday}
-              labelmonth={item.labelmonth}
-              labelyear={item.labelyear}
-              labelage={item.labelage}
-              colorinput={item.colorinput}
-              fonts={item.fonts}
-            />
-          ))}
+                {basicBirthday &&
+                    basicBirthday.map((item, index) => (
+                        <Birthday
+                            key={index}
+                            labeltitle={item.labeltitle}
+                            colortitle={item.colortitle}
+                            labelday={item.labelday}
+                            labelmonth={item.labelmonth}
+                            labelyear={item.labelyear}
+                            labelage={item.labelage}
+                            colorinput={item.colorinput}
+                            fonts={item.fonts}
+                        />
+                    ))}
 
                 {basicCheckbox &&
                     basicCheckbox.map((item, index) => (
@@ -167,16 +166,15 @@ const FormBasic = ({
 
                 {basicButton &&
                     basicButton.map((item, index) => (
-                        <ContainerButton key={index}>
-                            <ContainerSmall>
-                                <Button
-                                    text={item.buttonlabel}
-                                    buttons={item.buttons}
-                                    bgcolor={item.buttonbckgcolor}
-                                    colortext={item.buttonlabelcolor}
-                                />
-                            </ContainerSmall>
-                        </ContainerButton>
+                        <ButtonContainer key={index}>
+                            <Button
+                                text={item.buttonlabel}
+                                buttons={item.buttons}
+                                bgcolor={item.buttonbckgcolor}
+                                colortext={item.buttonlabelcolor}
+                                fonts={item.fonts}
+                            />
+                        </ButtonContainer>
                     ))}
             </Form>
         </>

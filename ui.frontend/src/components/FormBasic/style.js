@@ -30,18 +30,12 @@ export const DivKey = styled.div`
 
 export const ContainerBirthday = styled.div``;
 
-export const ContainerButton = styled.div`
+export const ButtonContainer = styled.div`
     width: 100%;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
     flex: 1;
-`;
-
-export const ContainerSmall = styled.div`
-    display: flex;
-    width: 100%;
-    justify-content: flex-end;
 `;
 
 export const ContainerCheckbox = styled.div`
