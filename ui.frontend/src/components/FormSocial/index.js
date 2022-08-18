@@ -6,11 +6,9 @@ import Input from "../Input";
 import Button from "../Buttons";
 import {useForm} from "react-hook-form";
 import {
-    InputContainer,
     ContainerInputs,
     ContainerForm,
     ButtonContainer,
-    ContainerButtons,
     ErrorMessage,
 } from "./style";
 import {UserDataContext} from "../../contexts/UserDataProvider";
@@ -22,10 +20,7 @@ const FormSocial = ({socialTitle, socialInput, socialButton}) => {
     const {
         register,
         handleSubmit,
-        watch,
         formState: {errors},
-        setValue,
-        getValues,
     } = useForm();
 
     const onSubmit = (data) => {
@@ -41,7 +36,7 @@ const FormSocial = ({socialTitle, socialInput, socialButton}) => {
         text: /^[a-zA-Zà-úÀ-Ú]+(?:\s[a-zA-Zà-úÀ-Ú]+)+$/,
         email: /^[a-z0-9._-]+(?:\.[a-z0-9._-]+)*@(?:[a-z0-9](?:[a-z-]*[a-z])?.)+[a-z](?:[a-z]*[a-z]){1,}?$/,
         phone: /^[0-9]$/,
-        link: /^^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$/,
+        link: /^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$/,
     };
 
     const SetData = () => {
@@ -123,7 +118,8 @@ const FormSocial = ({socialTitle, socialInput, socialButton}) => {
                                 text={item.buttonlabel}
                                 bgcolor={item.backgroundcolor}
                                 colortext={item.buttonlabelcolor}
-                            ></Button>
+                                fonts={item.fonts}
+                            />
                         </ButtonContainer>
                     ))}
             </ContainerForm>
