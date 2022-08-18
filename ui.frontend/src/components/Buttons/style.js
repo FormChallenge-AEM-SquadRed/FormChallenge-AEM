@@ -21,6 +21,7 @@ export const ButtonNextStyled = styled.button`
     border: none;
     color: ${({colortext}) => colortext || "#FFFFFF"};
     padding: 1.1rem 1.6rem 1.1rem 1.2rem;
+    font-family: ${({fonts}) => fonts || "Nunito"};
 
     &:hover {
         cursor: pointer;
@@ -39,6 +40,7 @@ export const ButtonMoreStyled = styled.button`
     justify-content: space-around;
     color: ${({colortext}) => colortext || "#FFFFFF"};
     border: none;
+    font-family: ${({fonts}) => fonts || "Nunito"};
 
     &:hover {
         cursor: pointer;
@@ -58,6 +60,7 @@ export const ButtonFinishStyled = styled.button`
     justify-content: space-around;
     color: ${({colortext}) => colortext || "#FFFFFF"};
     border: none;
+    font-family: ${({fonts}) => fonts || "Nunito"};
 
     &:hover {
         cursor: pointer;
@@ -67,6 +70,7 @@ export const ButtonFinishStyled = styled.button`
 
 export const ButtonReturnStyled = styled(ButtonFinishStyled)`
     min-width: 9.7rem;
+    font-family: ${({fonts}) => fonts || "Nunito"};
 `;
 
 export const ButtonCertificatesStyled = styled(ButtonMoreStyled)`
@@ -76,6 +80,7 @@ export const ButtonCertificatesStyled = styled(ButtonMoreStyled)`
         min-width: 9.35rem;
         padding-left: 1rem;
         background-position: 7.35em;
+        font-family: ${({fonts}) => fonts || "Nunito"};
     }
 `;
 

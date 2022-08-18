@@ -24,6 +24,7 @@ const Button = ({
     colortext,
     children,
     onClick,
+    fonts,
 }) => {
     if (buttons === "next")
         return (
@@ -31,6 +32,7 @@ const Button = ({
                 type={"submit"}
                 bgcolor={bgcolor}
                 colortext={colortext}
+                fonts={fonts}
             >
                 {text ? text : "Next"}
                 <ContainerIcons>
@@ -46,6 +48,7 @@ const Button = ({
                 bgcolor={bgcolor}
                 colortext={colortext}
                 onClick={onClick}
+                fonts={fonts}
             >
                 <ContainerIcons>
                     <TbPlus color={"white"} size={"2rem"} />
@@ -63,6 +66,7 @@ const Button = ({
                 type={"submit"}
                 bgcolor={bgcolor}
                 colortext={colortext}
+                fonts={fonts}
             >
                 <ContainerIcons>
                     <HiCheck color={"white"} size={"2rem"} />
@@ -76,9 +80,9 @@ const Button = ({
             <ButtonReturnStyled
                 type={"button"}
                 onClick={onClick}
-
                 bgcolor={bgcolor}
                 colortext={colortext}
+                fonts={fonts}
             >
                 <ContainerIcons>
                     <HiCheck color={"white"} size={"2rem"} />
@@ -86,7 +90,7 @@ const Button = ({
                 {text ? text : "Return"}
             </ButtonReturnStyled>
         );
-        
+
     if (buttons === "certificates")
         return (
             <ButtonCertificatesStyled
@@ -94,6 +98,7 @@ const Button = ({
                 bgcolor={bgcolor}
                 colortext={colortext}
                 onClick={onClick}
+                fonts={fonts}
             >
                 {text ? text : "Certificates"}
                 <ContainerIcons>
@@ -101,7 +106,6 @@ const Button = ({
                 </ContainerIcons>
             </ButtonCertificatesStyled>
         );
-
 
     if (buttons === "removeCertificate")
         return (
