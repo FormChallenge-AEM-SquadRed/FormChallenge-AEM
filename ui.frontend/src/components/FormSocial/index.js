@@ -21,6 +21,8 @@ const FormSocial = ({socialTitle, socialInput, socialButton}) => {
         register,
         handleSubmit,
         formState: {errors},
+        setValue,
+        getValues,
     } = useForm();
 
     const onSubmit = (data) => {
