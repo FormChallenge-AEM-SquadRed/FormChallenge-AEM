@@ -18,10 +18,10 @@ const days = Array.from({length: 31}, (_, i) => i + 1);
 
 const Birthday = ({
     labeltitle,
-    labelday,
-    labelmonth,
-    labelyear,
-    labelage,
+    labelday="Day",
+    labelmonth="Month",
+    labelyear="Year",
+    labelage="Age",
     colortitle,
     fonts,
     colorinput,
