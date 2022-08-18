@@ -57,7 +57,7 @@ const FormBasic = ({
       {selectedTab === 0 &&
         basicTitle &&
         basicTitle.map((item, index) => (
-          <Title key={index} color={item.titlecolor} fonts={fonts}>
+          <Title key={index} color={item.titlecolor} fonts={item.fonts}>
             {item.titletext}
           </Title>
         ))}
