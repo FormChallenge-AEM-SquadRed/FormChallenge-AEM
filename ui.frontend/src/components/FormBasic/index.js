@@ -1,4 +1,4 @@
-import React, {useContext} from "react";
+import React, {useContext, useEffect} from 'react';
 import Button from "../Buttons";
 import {TabsContext} from "../../contexts/TabsProvider";
 import Title from "../Title";
@@ -7,6 +7,7 @@ import Input from "../Input";
 import Birthday from "../Birthday";
 import Checkbox from "../Checkbox";
 import {useForm} from "react-hook-form";
+
 import {
     ErrorMessage,
     ContainerCheckbox,
@@ -36,6 +37,13 @@ const FormBasic = ({
         setValue,
         getValues,
     } = useForm();
+    
+    const regexp = {
+        text: /^[a-zA-Zà-úÀ-Ú]+(?:\s[a-zA-Zà-úÀ-Ú]+)+$/,
+        email: /^[a-z0-9._-]+(?:\.[a-z0-9._-]+)*@(?:[a-z0-9](?:[a-z-]*[a-z])?.)+[a-z](?:[a-z]*[a-z]){1,}?$/,
+        phone: /^[0-9]$/,
+        link: /^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$/,
+    };
 
     const onSubmit = (data) => {
         const result = Object.entries(data).map(([label, value]) => {
@@ -43,14 +51,42 @@ const FormBasic = ({
         });
         setUserData([...result, ...userData]);
         setSelectedTab(selectedTab + 1);
+        SetData();
     };
 
-    const regexp = {
-        text: /^[a-zA-Zà-úÀ-Ú]+(?:\s[a-zA-Zà-úÀ-Ú]+)+$/,
-        email: /^[a-z0-9._-]+(?:\.[a-z0-9._-]+)*@(?:[a-z0-9](?:[a-z-]*[a-z])?.)+[a-z](?:[a-z]*[a-z]){1,}?$/,
-        phone: /^[0-9]$/,
-        link: /^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$/,
+    const SetData = () => {
+        localStorage.setItem('StorageBasic', JSON.stringify(getValues()));
     };
+  
+    useEffect(() => {
+        if (userData) {
+            const keys = Object.keys(userData);
+            keys.forEach((key) => {
+                setValue(key, userData[key]);
+            });
+        }
+    }, []);
+
+    const GetData = () => {
+        if (localStorage.getItem('StorageBasic')) {
+            const StorageData = JSON.parse(
+                localStorage.getItem('StorageBasic'),
+            );
+
+            const keys = Object.keys(StorageData);
+            keys.forEach((key) => {
+                setValue(key, StorageData[key]);
+            });
+        }
+    };
+
+    useEffect(() => {
+        GetData();
+        window.addEventListener('beforeunload', SetData());
+        return () => {
+            window.removeEventListener('beforeunload', SetData());
+        };
+    }, []);
 
     return (
         <>
