@@ -136,7 +136,6 @@
 													value="false">
 													<items jcr:primaryType="nt:unstructured">
 														<inter jcr:primaryType="nt:unstructured"
-															selected="true"
 															text="Inter"
 															value="Inter"/>
 														<montserrat jcr:primaryType="nt:unstructured"
@@ -146,6 +145,7 @@
 															text="Roboto"
 															value="Roboto"/>
 														<nunito jcr:primaryType="nt:unstructured"
+															selected="true"
 															text="Nunito"
 															value="Nunito"/>
 													</items>
@@ -178,7 +178,7 @@
 															value="link"/>
 														<password jcr:primaryType="nt:unstructured"
 															text="Password"
-															value="password"/>														
+															value="password"/>
 													</items>
 												</types>
 												<required jcr:primaryType="nt:unstructured"
@@ -235,7 +235,6 @@
 													value="false">
 													<items jcr:primaryType="nt:unstructured">
 														<inter jcr:primaryType="nt:unstructured"
-															selected="true"
 															text="Inter"
 															value="Inter"/>
 														<montserrat jcr:primaryType="nt:unstructured"
@@ -245,6 +244,7 @@
 															text="Roboto"
 															value="Roboto"/>
 														<nunito jcr:primaryType="nt:unstructured"
+															selected="true"
 															text="Nunito"
 															value="Nunito"/>
 													</items>
@@ -283,7 +283,6 @@
 													value="false">
 													<items jcr:primaryType="nt:unstructured">
 														<inter jcr:primaryType="nt:unstructured"
-															selected="true"
 															text="Inter"
 															value="Inter"/>
 														<montserrat jcr:primaryType="nt:unstructured"
@@ -293,10 +292,17 @@
 															text="Roboto"
 															value="Roboto"/>
 														<nunito jcr:primaryType="nt:unstructured"
+															selected="true"
 															text="Nunito"
 															value="Nunito"/>
 													</items>
 												</fonts>
+												<required jcr:primaryType="nt:unstructured"
+													name="./required"
+													sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+													text="Required?"
+													uncheckedValue="{Boolean}false"
+													value="{Boolean}true"/>
 											</items>
 										</field>
 									</basicCheckbox>
@@ -329,7 +335,6 @@
 													value="false">
 													<items jcr:primaryType="nt:unstructured">
 														<inter jcr:primaryType="nt:unstructured"
-															selected="true"
 															text="Inter"
 															value="Inter"/>
 														<montserrat jcr:primaryType="nt:unstructured"
@@ -339,6 +344,7 @@
 															text="Roboto"
 															value="Roboto"/>
 														<nunito jcr:primaryType="nt:unstructured"
+															selected="true"
 															text="Nunito"
 															value="Nunito"/>
 													</items>
@@ -462,7 +468,6 @@
 													value="false">
 													<items jcr:primaryType="nt:unstructured">
 														<inter jcr:primaryType="nt:unstructured"
-															selected="true"
 															text="Inter"
 															value="Inter"/>
 														<montserrat jcr:primaryType="nt:unstructured"
@@ -472,6 +477,7 @@
 															text="Roboto"
 															value="Roboto"/>
 														<nunito jcr:primaryType="nt:unstructured"
+															selected="true"
 															text="Nunito"
 															value="Nunito"/>
 													</items>
@@ -545,7 +551,6 @@
 													value="false">
 													<items jcr:primaryType="nt:unstructured">
 														<inter jcr:primaryType="nt:unstructured"
-															selected="true"
 															text="Inter"
 															value="Inter"/>
 														<montserrat jcr:primaryType="nt:unstructured"
@@ -555,6 +560,7 @@
 															text="Roboto"
 															value="Roboto"/>
 														<nunito jcr:primaryType="nt:unstructured"
+															selected="true"
 															text="Nunito"
 															value="Nunito"/>
 													</items>
@@ -694,7 +700,6 @@
 													value="false">
 													<items jcr:primaryType="nt:unstructured">
 														<inter jcr:primaryType="nt:unstructured"
-															selected="true"
 															text="Inter"
 															value="Inter"/>
 														<montserrat jcr:primaryType="nt:unstructured"
@@ -704,6 +709,7 @@
 															text="Roboto"
 															value="Roboto"/>
 														<nunito jcr:primaryType="nt:unstructured"
+															selected="true"
 															text="Nunito"
 															value="Nunito"/>
 													</items>
@@ -754,7 +760,6 @@
 													value="false">
 													<items jcr:primaryType="nt:unstructured">
 														<inter jcr:primaryType="nt:unstructured"
-															selected="true"
 															text="Inter"
 															value="Inter"/>
 														<montserrat jcr:primaryType="nt:unstructured"
@@ -764,6 +769,7 @@
 															text="Roboto"
 															value="Roboto"/>
 														<nunito jcr:primaryType="nt:unstructured"
+															selected="true"
 															text="Nunito"
 															value="Nunito"/>
 													</items>
@@ -837,7 +843,6 @@
 													value="false">
 													<items jcr:primaryType="nt:unstructured">
 														<inter jcr:primaryType="nt:unstructured"
-															selected="true"
 															text="Inter"
 															value="Inter"/>
 														<montserrat jcr:primaryType="nt:unstructured"
@@ -847,6 +852,7 @@
 															text="Roboto"
 															value="Roboto"/>
 														<nunito jcr:primaryType="nt:unstructured"
+															selected="true"
 															text="Nunito"
 															value="Nunito"/>
 													</items>
@@ -958,7 +964,6 @@
 													value="false">
 													<items jcr:primaryType="nt:unstructured">
 														<inter jcr:primaryType="nt:unstructured"
-															selected="true"
 															text="Inter"
 															value="Inter"/>
 														<montserrat jcr:primaryType="nt:unstructured"
@@ -968,6 +973,7 @@
 															text="Roboto"
 															value="Roboto"/>
 														<nunito jcr:primaryType="nt:unstructured"
+															selected="true"
 															text="Nunito"
 															value="Nunito"/>
 													</items>
@@ -1004,7 +1010,6 @@
 													value="false">
 													<items jcr:primaryType="nt:unstructured">
 														<inter jcr:primaryType="nt:unstructured"
-															selected="true"
 															text="Inter"
 															value="Inter"/>
 														<montserrat jcr:primaryType="nt:unstructured"
@@ -1014,6 +1019,7 @@
 															text="Roboto"
 															value="Roboto"/>
 														<nunito jcr:primaryType="nt:unstructured"
+															selected="true"
 															text="Nunito"
 															value="Nunito"/>
 													</items>

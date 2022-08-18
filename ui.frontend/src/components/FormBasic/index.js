@@ -44,10 +44,12 @@ const FormBasic = ({
         setUserData([...result, ...userData]);
         setSelectedTab(selectedTab + 1);
     };
+
     const regexp = {
         text: /^[a-zA-Zà-úÀ-Ú]+(?:\s[a-zA-Zà-úÀ-Ú]+)+$/,
         email: /^[a-z0-9._-]+(?:\.[a-z0-9._-]+)*@(?:[a-z0-9](?:[a-z-]*[a-z])?.)+[a-z](?:[a-z]*[a-z]){1,}?$/,
         phone: /^[0-9]$/,
+        link: /^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$/,
     };
 
     return (
@@ -55,7 +57,11 @@ const FormBasic = ({
             {selectedTab === 0 &&
                 basicTitle &&
                 basicTitle.map((item, index) => (
-                    <Title key={index} color={item.titlecolor}>
+                    <Title
+                        key={index}
+                        color={item.titlecolor}
+                        fonts={item.fonts}
+                    >
                         {item.titletext}
                     </Title>
                 ))}
@@ -117,7 +123,7 @@ const FormBasic = ({
                                 }}
                             />
                             <ErrorMessageCheckbox>
-                                {errors[index] && `Please confirm the terms`}
+                                {errors?.Checkbox && "Please confirm the terms"}
                             </ErrorMessageCheckbox>
                         </ContainerCheckbox>
                     ))}

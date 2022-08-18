@@ -26,6 +26,7 @@ const CardComponent = ({
     successTitle,
     successText,
     successButton,
+
 }) => {
     const [selectedTab, setSelectedTab] = useContext(TabsContext);
     const [userData] = useContext(UserDataContext);
@@ -58,6 +59,7 @@ const CardComponent = ({
                         certificatesFinish={certificatesFinish}
                     />
                 )}
+
 
                 {selectedTab === 3 && (
                     <FormSucess
