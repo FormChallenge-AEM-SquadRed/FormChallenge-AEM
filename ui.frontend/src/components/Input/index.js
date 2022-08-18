@@ -53,6 +53,22 @@ const Input = ({
                 />
             </ContainerTel>
         );
+    if (type === "link")
+        return (
+            <Container>
+                <Label fonts={fonts} labelcolor={labelcolor}>
+                    {children}
+                </Label>
+                <InputGlobal
+                    fonts={fonts}
+                    textcolor={textcolor}
+                    type='text'
+                    placeholder={placeholder}
+                    placeholdercolor={placeholdercolor}
+                    {...register}
+                />
+            </Container>
+        );
     else
         return (
             <Container>
