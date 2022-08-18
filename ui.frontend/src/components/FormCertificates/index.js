@@ -7,7 +7,7 @@ import Tabs from "../Tabs";
 import Input from "../Input";
 import Button from "../Buttons";
 
-import {Form, ButtonContainer, Container, Inputs, ErrorMessage} from "./style";
+import {Form, ButtonContainer, Inputs, ErrorMessage} from "./style";
 import {CertificatesContext} from "../../contexts/CertificatesProvider";
 import {UserDataContext} from "../../contexts/UserDataProvider";
 
@@ -18,7 +18,7 @@ const FormCertificates = ({
     certificatesFinish,
 }) => {
     const [selectedTab, setSelectedTab] = useContext(TabsContext);
-    const [certificates] = useContext(CertificatesContext);
+    const [certificates, setCertificates] = useContext(CertificatesContext);
     const [userData, setUserData] = useContext(UserDataContext);
 
     const {
@@ -34,18 +34,20 @@ const FormCertificates = ({
         const result = Object.entries(data).map(([label, value]) => {
             return {label, value};
         });
-        setUserData([
-            ...userData,
-            {label: certificatesBlock[0].labeltext, value: certificates},
-            ...result,
-        ]);
+        setUserData([...userData, ...result]);
+        setCertificates({
+            label: certificatesBlock[0].labeltext,
+            value: certificates,
+        });
         setSelectedTab(selectedTab + 1);
     };
     const regexp = {
         text: /^[a-zA-Zà-úÀ-Ú]+(?:\s[a-zA-Zà-úÀ-Ú]+)+$/,
         email: /^[a-z0-9._-]+(?:\.[a-z0-9._-]+)*@(?:[a-z0-9](?:[a-z-]*[a-z])?.)+[a-z](?:[a-z]*[a-z]){1,}?$/,
         phone: /^[0-9]$/,
+        link: /^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$/,
     };
+
     return (
         <>
             {selectedTab === 2 &&
@@ -63,6 +65,7 @@ const FormCertificates = ({
                             key={index}
                             placeholder={item.placeholdertext}
                             id={index}
+                            fonts={item.fonts}
                         >
                             {item.labeltext}
                         </Certificates>
@@ -98,6 +101,7 @@ const FormCertificates = ({
                                 buttons={item.buttons}
                                 bgcolor={item.buttonbckgcolor}
                                 colortext={item.buttonlabelcolor}
+                                fonts={item.fonts}
                             />
                         </ButtonContainer>
                     ))}
