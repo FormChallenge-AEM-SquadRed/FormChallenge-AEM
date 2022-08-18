@@ -1,46 +1,33 @@
 import styled from "styled-components";
 
-export const ContainerForm = styled.form`
+export const ResultMessage = styled.p`
+    font-family: ${({fonts}) => fonts || "Nunito"};
+    font-size: 1.6rem;
+    color: ${({color}) => color || "#000000"};
+`;
+
+export const StyledResults = styled.div`
     display: flex;
-    height: 100%;
     flex-direction: column;
-    justify-content: space-between;
-    @media (max-width: 768px) {
-        justify-content: flex-start;
+    gap: 1rem;
+`;
+
+export const DataBlock = styled.div`
+    display: flex;
+    gap: 0.5rem;
+    @media (max-width: 350px) {
+        font-size: 1.2rem;
     }
 `;
-export const SuccessText = styled.p``;
 
-export const ContainerTexts = styled.div`
-    display: flex;
-    width: 100%;
-    flex-direction: column;
+export const StyledP = styled.p`
+    font-size: 1.6rem;
 `;
 
-export const TextContainer = styled.div`
-    width: 100%;
-    margin-top: 5px;
-    margin-bottom: 25px;
-`;
-export const ContainerButtons = styled.div`
-    width: 100%;
-`;
 export const ButtonContainer = styled.div`
     width: 100%;
-    margin-top: 10px;
     display: flex;
-    margin-bottom: 10px;
     justify-content: flex-end;
-    @media (max-width: 768px) {
-        padding-bottom: 5%;
-    }
-`;
-
-export const StyledP = styled.div`
-    display: flex;
-`;
-
-export const StyledDiv = styled.div`
-    display: flex;
-    flex-direction: column;
+    align-items: flex-end;
+    flex: 1;
 `;

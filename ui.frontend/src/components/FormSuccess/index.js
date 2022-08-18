@@ -1,18 +1,14 @@
 import React, {useContext, useEffect} from "react";
 import {TabsContext} from "../../contexts/TabsProvider";
 import Title from "../Title";
-import Tabs from "../Tabs";
 import Button from "../Buttons";
 import {useForm} from "react-hook-form";
 import {
-    SuccessText,
-    ContainerTexts,
-    TextContainer,
-    ContainerForm,
-    ContainerButtons,
-    ButtonContainer,
+    DataBlock,
+    StyledResults,
     StyledP,
-    StyledDiv,
+    ResultMessage,
+    ButtonContainer,
 } from "./style";
 import {UserDataContext} from "../../contexts/UserDataProvider";
 import {CertificatesContext} from "../../contexts/CertificatesProvider";
@@ -31,36 +27,61 @@ const FormSucess = ({successTitle, successText, successButton}) => {
     } = useForm();
 
     const onSubmit = () => {
-        setSelectedTab((selectedTab = 0));
+        setSelectedTab(0);
     };
 
     return (
         <>
-            {selectedTab === 1 &&
+            {selectedTab === 3 &&
                 successTitle &&
                 successTitle.map((item, index) => (
                     <Title key={index} color={item.titlecolor}>
                         {item.titletext}
                     </Title>
                 ))}
+            <StyledResults>
+                {successText &&
+                    successText.map((item, index) => (
+                        <ResultMessage
+                            key={index}
+                            color={item.resultcolor}
+                            fonts={item.fonts}
+                        >
+                            {item.resulttext
+                                ? item.resulttext
+                                : "Your data has been sent successfully!"}
+                        </ResultMessage>
+                    ))}
 
-            <Tabs />
-
-            {Object.entries(userData).map(([key, data]) => (
-                <StyledP key={key}>
-                    <StyledDiv>{data.label}: </StyledDiv>
-                    <StyledDiv>{data.value}</StyledDiv>
-                </StyledP>
-            ))}
-
-            <StyledDiv>
-                {certificates.label}:
-                {certificates.value.map((item, index) => (
-                    <StyledP key={index}>
-                        <StyledDiv>{item}</StyledDiv>
-                    </StyledP>
+                {Object.entries(userData).map(([key, data]) => (
+                    <DataBlock key={key}>
+                        <StyledP>{data.label}: </StyledP>
+                        <StyledP>{data.value}</StyledP>
+                    </DataBlock>
                 ))}
-            </StyledDiv>
+
+                <div>
+                    {certificates.label}:
+                    {certificates.value.map((item, index) => (
+                        <DataBlock key={index}>
+                            <StyledP>{item}</StyledP>
+                        </DataBlock>
+                    ))}
+                </div>
+            </StyledResults>
+            {successButton &&
+                successButton.map((item, index) => (
+                    <ButtonContainer key={index}>
+                        <Button
+                            text={item.resulttext}
+                            buttons={item.buttons}
+                            bgcolor={item.buttonbckgcolor}
+                            colortext={item.resultcolor}
+                            fonts={item.fonts}
+                            onClick={() => onSubmit()}
+                        />
+                    </ButtonContainer>
+                ))}
         </>
     );
 };
