@@ -47,7 +47,7 @@ const Birthday = ({
     const age = Math.abs(year - 1970);
 
     useEffect(() => {
-        age && setValue(`${labelage}`, age);
+        setValue(`${labelage}`, age);
         setUserData([
             {
                 label: labeltitle,

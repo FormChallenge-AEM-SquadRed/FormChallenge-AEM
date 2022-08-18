@@ -8,4 +8,5 @@ export const ContainerTitle = styled.div`
 export const TitleStyled = styled.h1`
     font-size: 1.8rem;
     color: ${({color}) => color || "#111111"};
+    font-family: ${({fonts}) => fonts || "Inter"};
 `;
