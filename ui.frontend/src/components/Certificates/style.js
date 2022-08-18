@@ -10,6 +10,7 @@ export const InputContainer = styled.div`
 export const Label = styled.label`
     font-size: 1.4rem;
     color: #767676;
+    font-family: ${({fonts}) => fonts || "Nunito"};
 `;
 
 export const InputGlobal = styled.input`
@@ -19,6 +20,7 @@ export const InputGlobal = styled.input`
     border-radius: 4px;
     height: 4rem;
     font-size: 1.6rem;
+    font-family: ${({fonts}) => fonts || "Nunito"};
 
     ::placeholder {
         font-size: 1.6rem;
