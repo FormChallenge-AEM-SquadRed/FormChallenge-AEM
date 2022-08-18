@@ -49,8 +49,10 @@ const FormCertificates = ({
         link: /^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$/,
     };
     const SetData = () => {
-        localStorage.setItem("StorageCertificates", JSON.stringify(getValues()));
-        localStorage.setItem("StorageLinksCertificates", JSON.stringify(certificates));
+        localStorage.setItem(
+            "StorageCertificates",
+            JSON.stringify(getValues()),
+        );
     };
 
     useEffect(() => {
@@ -67,17 +69,6 @@ const FormCertificates = ({
             const StorageData = JSON.parse(
                 localStorage.getItem("StorageCertificates"),
             );
-
-            const keys = Object.keys(StorageData);
-            keys.forEach((key) => {
-                setValue(key, StorageData[key]);
-            });
-        }
-        if (localStorage.getItem("StorageLinksCertificates")) {
-            const StorageData = JSON.parse(
-                localStorage.getItem("StorageLinksCertificates"),
-            );
-
             const keys = Object.keys(StorageData);
             keys.forEach((key) => {
                 setValue(key, StorageData[key]);
