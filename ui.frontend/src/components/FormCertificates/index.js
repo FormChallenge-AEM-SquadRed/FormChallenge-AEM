@@ -1,4 +1,4 @@
-import {useContext} from "react";
+import {useContext, useEffect} from "react";
 import {useForm} from "react-hook-form";
 import {TabsContext} from "../../contexts/TabsProvider";
 import Certificates from "../Certificates";
@@ -40,6 +40,7 @@ const FormCertificates = ({
             value: certificates,
         });
         setSelectedTab(selectedTab + 1);
+        SetData();
     };
     const regexp = {
         text: /^[a-zA-Zà-úÀ-Ú]+(?:\s[a-zA-Zà-úÀ-Ú]+)+$/,
@@ -47,6 +48,50 @@ const FormCertificates = ({
         phone: /^[0-9]$/,
         link: /^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$/,
     };
+    const SetData = () => {
+        localStorage.setItem("StorageCertificates", JSON.stringify(getValues()));
+        localStorage.setItem("StorageLinksCertificates", JSON.stringify(certificates));
+    };
+
+    useEffect(() => {
+        if (userData) {
+            const keys = Object.keys(userData);
+            keys.forEach((key) => {
+                setValue(key, userData[key]);
+            });
+        }
+    }, []);
+
+    const GetData = () => {
+        if (localStorage.getItem("StorageCertificates")) {
+            const StorageData = JSON.parse(
+                localStorage.getItem("StorageCertificates"),
+            );
+
+            const keys = Object.keys(StorageData);
+            keys.forEach((key) => {
+                setValue(key, StorageData[key]);
+            });
+        }
+        if (localStorage.getItem("StorageLinksCertificates")) {
+            const StorageData = JSON.parse(
+                localStorage.getItem("StorageLinksCertificates"),
+            );
+
+            const keys = Object.keys(StorageData);
+            keys.forEach((key) => {
+                setValue(key, StorageData[key]);
+            });
+        }
+    };
+
+    useEffect(() => {
+        GetData();
+        window.addEventListener("beforeunload", SetData());
+        return () => {
+            window.removeEventListener("beforeunload", SetData());
+        };
+    }, []);
 
     return (
         <>
