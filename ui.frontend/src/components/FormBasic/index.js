@@ -46,7 +46,7 @@ const FormBasic = ({
 
     const onSubmit = (data) => {
         const result = Object.entries(data).map(([label, value]) => {
-            return [label, value];
+            return {label, value};
         });
         setUserData([...result, ...userData]);
         setSelectedTab(selectedTab + 1);
