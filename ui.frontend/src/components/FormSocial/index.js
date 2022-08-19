@@ -4,7 +4,7 @@ import Title from "../Title";
 import Tabs from "../Tabs";
 import Input from "../Input";
 import Button from "../Buttons";
-import {useForm} from "react-hook-form";
+import {set, useForm} from "react-hook-form";
 import {
     ContainerInputs,
     ContainerForm,
@@ -25,12 +25,37 @@ const FormSocial = ({socialTitle, socialInput, socialButton}) => {
         getValues,
     } = useForm();
 
+    const SetData = () => {
+        localStorage.setItem("StorageSocial", JSON.stringify(getValues()));
+    };
+
+    const GetData = () => {
+        if (localStorage.getItem("StorageSocial")) {
+            const StorageData = JSON.parse(
+                localStorage.getItem("StorageSocial"),
+            );
+            const keys = Object.keys(StorageData);
+            keys.forEach((key) => {
+                setValue(key, StorageData[key]);
+            });
+        }
+    };
+
+    useEffect(() => {
+        GetData();
+        window.addEventListener("beforeunload", SetData());
+        return () => {
+            window.removeEventListener("beforeunload", SetData());
+        };
+    }, []);
+
     const onSubmit = (data) => {
         const result = Object.entries(data).map(([label, value]) => {
             return {label, value};
         });
         setUserData([...userData, ...result]);
         setSelectedTab(selectedTab + 1);
+        SetData();
     };
 
     const regexp = {
