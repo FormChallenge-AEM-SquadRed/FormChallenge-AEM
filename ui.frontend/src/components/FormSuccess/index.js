@@ -29,6 +29,7 @@ const FormSucess = ({successTitle, successText, successButton}) => {
     } = useForm();
 
     const onSubmit = () => {
+        localStorage.clear();
         setSelectedTab(0);
     };
 
