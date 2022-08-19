@@ -11,11 +11,9 @@ import Input from "./index.js";
             fonts={"Nunito"}
             textcolor={"#000000"}
             type={"text"}
-            placeholder={"Foo Bar"}
-            placeholdercolor={"#000000"}
-            >Full Name</Input>
+            ></Input>
         );
-        expect(screen.queryByText('Full Name')).toBeInTheDocument();
-        expect(screen.getByPlaceholderText('Foo Bar')).toBeInTheDocument();
+        expect(screen.queryByText('Label')).toBeInTheDocument();
+        expect(screen.getByPlaceholderText('Placeholder')).toBeInTheDocument();
         })
     })
