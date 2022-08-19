@@ -29,6 +29,32 @@ const FormCertificates = ({
         formState: {errors},
         setValue,
     } = useForm();
+    const SetData = () => {
+        localStorage.setItem(
+            "StorageCertificates",
+            JSON.stringify(getValues()),
+        );
+    };
+
+    const GetData = () => {
+        if (localStorage.getItem("StorageCertificates")) {
+            const StorageData = JSON.parse(
+                localStorage.getItem("StorageCertificates"),
+            );
+            const keys = Object.keys(StorageData);
+            keys.forEach((key) => {
+                setValue(key, StorageData[key]);
+            });
+        }
+    };
+
+    useEffect(() => {
+        GetData();
+        window.addEventListener("beforeunload", SetData());
+        return () => {
+            window.removeEventListener("beforeunload", SetData());
+        };
+    }, []);
 
     const onSubmit = (data) => {
         const result = Object.entries(data).map(([label, value]) => {
@@ -40,6 +66,7 @@ const FormCertificates = ({
             value: certificates,
         });
         setSelectedTab(selectedTab + 1);
+        SetData();
     };
     const regexp = {
         text: /^[a-zA-Zà-úÀ-Ú]+(?:\s[a-zA-Zà-úÀ-Ú]+)+$/,

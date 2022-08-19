@@ -44,11 +44,36 @@ const FormBasic = ({
         link: /^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$/,
     };
 
+    const SetData = () => {
+        localStorage.setItem("StorageBasic", JSON.stringify(getValues()));
+    };
+
+    const GetData = () => {
+        if (localStorage.getItem("StorageBasic")) {
+            const StorageData = JSON.parse(
+                localStorage.getItem("StorageBasic"),
+            );
+            const keys = Object.keys(StorageData);
+            keys.forEach((key) => {
+                setValue(key, StorageData[key]);
+            });
+        }
+    };
+
+    useEffect(() => {
+        GetData();
+        window.addEventListener("beforeunload", SetData());
+        return () => {
+            window.removeEventListener("beforeunload", SetData());
+        };
+    }, []);
+
     const onSubmit = (data) => {
         const result = Object.entries(data).map(([label, value]) => {
             return {label, value};
         });
         setUserData([...result, ...userData]);
+        SetData();
         setSelectedTab(selectedTab + 1);
     };
 
