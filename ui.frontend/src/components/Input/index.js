@@ -11,9 +11,9 @@ import {
 import phoneMask from "../../utils/phoneMask.js";
 
 const Input = ({
-    placeholder = "Placeholder",
+    placeholder,
     register,
-    labeltext = "Label",
+    children,
     type,
     labelcolor,
     placeholdercolor,
@@ -24,7 +24,7 @@ const Input = ({
         return (
             <ContainerEmail>
                 <Label fonts={fonts} labelcolor={labelcolor}>
-                    {labeltext}
+                    {children}
                 </Label>
                 <InputEmail
                     fonts={fonts}
@@ -40,7 +40,7 @@ const Input = ({
         return (
             <ContainerTel>
                 <Label fonts={fonts} labelcolor={labelcolor}>
-                    {labeltext}
+                    {children}
                 </Label>
                 <InputPhone
                     fonts={fonts}
@@ -57,7 +57,7 @@ const Input = ({
         return (
             <Container>
                 <Label fonts={fonts} labelcolor={labelcolor}>
-                    {labeltext}
+                    {children}
                 </Label>
                 <InputGlobal
                     fonts={fonts}
@@ -73,7 +73,7 @@ const Input = ({
         return (
             <Container>
                 <Label fonts={fonts} labelcolor={labelcolor}>
-                    {labeltext}
+                    {children}
                 </Label>
                 <InputGlobal
                     fonts={fonts}

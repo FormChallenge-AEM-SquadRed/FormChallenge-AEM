@@ -46,46 +46,11 @@ const FormBasic = ({
 
     const onSubmit = (data) => {
         const result = Object.entries(data).map(([label, value]) => {
-            return {label, value};
+            return [label, value];
         });
         setUserData([...result, ...userData]);
         setSelectedTab(selectedTab + 1);
-        SetData();
     };
-
-    const SetData = () => {
-        localStorage.setItem("StorageBasic", JSON.stringify(getValues()));
-    };
-
-    useEffect(() => {
-        if (userData) {
-            const keys = Object.keys(userData);
-            keys.forEach((key) => {
-                setValue(key, userData[key]);
-            });
-        }
-    }, []);
-
-    const GetData = () => {
-        if (localStorage.getItem("StorageBasic")) {
-            const StorageData = JSON.parse(
-                localStorage.getItem("StorageBasic"),
-            );
-
-            const keys = Object.keys(StorageData);
-            keys.forEach((key) => {
-                setValue(key, StorageData[key]);
-            });
-        }
-    };
-
-    useEffect(() => {
-        GetData();
-        window.addEventListener("beforeunload", SetData());
-        return () => {
-            window.removeEventListener("beforeunload", SetData());
-        };
-    }, []);
 
     return (
         <>

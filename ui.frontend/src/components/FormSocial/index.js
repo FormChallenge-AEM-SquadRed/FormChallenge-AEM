@@ -31,7 +31,6 @@ const FormSocial = ({socialTitle, socialInput, socialButton}) => {
         });
         setUserData([...userData, ...result]);
         setSelectedTab(selectedTab + 1);
-        SetData();
     };
 
     const regexp = {
@@ -42,41 +41,6 @@ const FormSocial = ({socialTitle, socialInput, socialButton}) => {
         phone: /^[0-9]$/,
         link: /^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$/,
     };
-
-    const SetData = () => {
-        localStorage.setItem('StorageSocial', JSON.stringify(getValues()));
-    };
-  
-    useEffect(() => {
-        if (userData) {
-            const keys = Object.keys(userData);
-            keys.forEach((key) => {
-                setValue(key, userData[key]);
-            });
-        }
-    }, []);
-
-    const GetData = () => {
-        if (localStorage.getItem('StorageSocial')) {
-            const StorageData = JSON.parse(
-                localStorage.getItem('StorageSocial'),
-            );
-
-            const keys = Object.keys(StorageData);
-            keys.forEach((key) => {
-                setValue(key, StorageData[key]);
-            });
-        }
-    };
-
-    useEffect(() => {
-        GetData();
-        window.addEventListener('beforeunload', SetData());
-        return () => {
-            window.removeEventListener('beforeunload', SetData());
-        };
-    }, []);
-
 
     return (
         <>
