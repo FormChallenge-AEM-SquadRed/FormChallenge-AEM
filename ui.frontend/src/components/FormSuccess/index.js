@@ -4,14 +4,16 @@ import Title from "../Title";
 import Button from "../Buttons";
 import {useForm} from "react-hook-form";
 import {
-    DataBlock,
-    StyledResults,
-    StyledP,
-    ResultMessage,
-    ButtonContainer,
+    Text,
+    Certificates,
+    ContainerButton,
+    MainContainer,
+    CertificatesContainer,
+    LinkCertificate,
 } from "./style";
 import {UserDataContext} from "../../contexts/UserDataProvider";
 import {CertificatesContext} from "../../contexts/CertificatesProvider";
+import {LinkCertificates} from "../Buttons/style";
 
 const FormSucess = ({successTitle, successText, successButton}) => {
     const [selectedTab, setSelectedTab] = useContext(TabsContext);
@@ -31,7 +33,7 @@ const FormSucess = ({successTitle, successText, successButton}) => {
     };
 
     return (
-        <>
+        <MainContainer>
             {selectedTab === 3 &&
                 successTitle &&
                 successTitle.map((item, index) => (
@@ -39,39 +41,39 @@ const FormSucess = ({successTitle, successText, successButton}) => {
                         {item.titletext}
                     </Title>
                 ))}
-            <StyledResults>
-                {successText &&
-                    successText.map((item, index) => (
-                        <ResultMessage
-                            key={index}
-                            color={item.resultcolor}
-                            fonts={item.fonts}
-                        >
-                            {item.resulttext
-                                ? item.resulttext
-                                : "Your data has been sent successfully!"}
-                        </ResultMessage>
-                    ))}
 
-                {Object.entries(userData).map(([key, data]) => (
-                    <DataBlock key={key}>
-                        <StyledP>{data.label}: </StyledP>
-                        <StyledP>{data.value}</StyledP>
-                    </DataBlock>
+            {successText &&
+                successText.map((item, index) => (
+                    <Text
+                        key={index}
+                        color={item.resultcolor}
+                        fonts={item.fonts}
+                    >
+                        {item.resulttext
+                            ? item.resulttext
+                            : "Your data has been sent successfully!"}
+                    </Text>
                 ))}
 
-                <div>
-                    {certificates.label}:
-                    {certificates.value.map((item, index) => (
-                        <DataBlock key={index}>
-                            <StyledP>{item}</StyledP>
-                        </DataBlock>
-                    ))}
-                </div>
-            </StyledResults>
+            {Object.entries(userData).map(([key, data]) => (
+                <Certificates key={key}>
+                    <LinkCertificate>{data.label}: </LinkCertificate>
+                    <LinkCertificate>{data.value}</LinkCertificate>
+                </Certificates>
+            ))}
+
+            <CertificatesContainer>
+                {certificates.label}:
+                {certificates.value.map((item, index) => (
+                    <Certificates key={index}>
+                        <LinkCertificate>{item}</LinkCertificate>
+                    </Certificates>
+                ))}
+            </CertificatesContainer>
+
             {successButton &&
                 successButton.map((item, index) => (
-                    <ButtonContainer key={index}>
+                    <ContainerButton key={index}>
                         <Button
                             text={item.resulttext}
                             buttons={item.buttons}
@@ -80,9 +82,9 @@ const FormSucess = ({successTitle, successText, successButton}) => {
                             fonts={item.fonts}
                             onClick={() => onSubmit()}
                         />
-                    </ButtonContainer>
+                    </ContainerButton>
                 ))}
-        </>
+        </MainContainer>
     );
 };
 export default FormSucess;
