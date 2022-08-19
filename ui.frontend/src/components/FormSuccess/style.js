@@ -32,9 +32,12 @@ export const LinkCertificate = styled.p`
     overflow: hidden;
     text-overflow: ellipsis;
     height: 2rem;
-    width: 100%;
     white-space: nowrap;
     margin: 0;
+
+    @media (max-width: 768px) {
+        width: 100%;
+    }
 `;
 export const ContainerButton = styled.div`
     display: flex;
@@ -48,11 +51,19 @@ export const CertificatesContainer = styled.div`
     display: flex;
     gap: 1.5rem;
     flex-direction: column;
+
+    @media (max-width: 768px) {
+        gap: 0;
+    }
 `;
 
 export const Certificates = styled.div`
-    flex-direction: column;
-    width: 100%;
     display: flex;
-    align-items: center;
+    gap: 0.5rem;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    } ;
 `;
