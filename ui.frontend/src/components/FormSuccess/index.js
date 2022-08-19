@@ -57,13 +57,13 @@ const FormSucess = ({successTitle, successText, successButton}) => {
 
             {Object.entries(userData).map(([key, data]) => (
                 <Certificates key={key}>
-                    <LinkCertificate>{data.label}: </LinkCertificate>
+                    <LinkCertificate>{data.label + ":"} </LinkCertificate>
                     <LinkCertificate>{data.value}</LinkCertificate>
                 </Certificates>
             ))}
 
             <CertificatesContainer>
-                {certificates.label}:
+                {certificates.label + ":"}
                 {certificates.value.map((item, index) => (
                     <Certificates key={index}>
                         <LinkCertificate>{item}</LinkCertificate>
