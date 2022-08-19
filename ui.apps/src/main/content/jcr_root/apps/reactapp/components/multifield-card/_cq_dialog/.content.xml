@@ -275,6 +275,10 @@
 													jcr:primaryType="nt:unstructured"
 													name="./checkboxcolor"
 													sling:resourceType="granite/ui/components/coral/foundation/form/colorfield"/>
+												<checkboxtextcolor fieldLabel="Escolha a cor da label do checkbox:"
+													jcr:primaryType="nt:unstructured"
+													name="./checkboxtextcolor"
+													sling:resourceType="granite/ui/components/coral/foundation/form/colorfield"/>	
 												<fonts defaultValue="fonts"
 													fieldLabel="Fonte para o texto"
 													jcr:primaryType="nt:unstructured"

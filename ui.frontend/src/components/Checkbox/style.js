@@ -34,7 +34,7 @@ export const Terms = styled.span`
   margin-left: 0.8rem;
   display: inline-block;
   font-family: ${({ fonts }) => fonts || "Nunito"};
-  color: ${({ checkboxcolor }) => checkboxcolor || "#111111"};
+  color: ${({ checkboxtextcolor }) => checkboxtextcolor || "#111111"};
   border-color: #074ee8;
   @media (max-width: 300px) {
     font-size: 1.4rem;
